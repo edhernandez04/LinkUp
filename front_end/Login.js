@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { TextInput, View, Text, Button, StyleSheet, ImageBackground } from 'react-native';
+import { TextInput, View, Text, Button, StyleSheet, ImageBackground, AsyncStorage } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-
 
 export default class Login extends React.Component {
 
@@ -10,36 +9,39 @@ export default class Login extends React.Component {
       password: ""
     }
   
-    handleLogIn = (e) => {
+    handleLogIn = () => {
       fetch('http://10.0.2.2:3000/login', {
-        method: 'POST',
+          method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
-          body: JSON.stringify(this.state)
+            body: JSON.stringify ({
+              userName: this.state.username,
+              password: this.state.password
+            })
       })
       .then(resp => resp.json())
       .then(response => {
         if (response.errors){
           alert(response.errors)
         } else {
+            AsyncStorage.getItem('token').then((data) => {dispatch(getToken(data))})
           this.props.setUser(response)
         }
       })
     }
   
     render() {
-      console.log(this.state)
       return (
         <View style={styles.container}>
         <ImageBackground  style= { styles.backgroundImage } source={require('./assets/atlas.jpg')} >
         <Text style={styles.theTitle}>QuestGPS</Text>
           <View style={styles.loginForm}>
-            <TextInput style={styles.inputText} placeholder="username" value={this.state.username} name="username" onChange={username => {this.setState({username})}}/>
-            <TextInput style={styles.inputText} placeholder="password" value={this.state.password} name="password" onChange={username => {this.setState({password})}}/>
-            <Button title="Login" onPress={() => {this.handleLogIn()}} />
-            <Text style={styles.newAccLine} >Dont have an account? </Text>
+            <TextInput style={styles.inputText} placeholder="username" value={this.state.username} name="username" onChangeText={username => {this.setState({username})}}/>
+            <TextInput style={styles.inputText} placeholder="password" value={this.state.password} name="password" onChangeText={password => {this.setState({password})}}/>
+            <Button title="Login" onPress={this.handleLogIn} />
+            <Text style={styles.newAccLine} >Dont have an account?</Text>
             <Button title="Sign Up" onPress={() => {Actions.signup()}} />
           </View>
           </ImageBackground>
