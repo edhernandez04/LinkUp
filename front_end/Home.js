@@ -20,15 +20,15 @@ render() {
     return (
         <View style={styles.container}>
 
-            <MapView style={styles.mapStyle} showsCompass={true} showsMyLocationButton={true}
+            <MapView style={styles.mapStyle} showsCompass={true}
                 region={{
                     latitude: 40.863042,
-                    longitude: 73.853909,
+                    longitude: -73.853909,
                     latitudeDelta: 0.003,
                     longitudeDelta: 0.0003
                 }}>
 
-            {this.state.allUsers.map(user =>
+            {this.state.allUsers.slice(2).map(user =>
                 <MapView.Marker key={user.id} image={user.avatar} coordinate={{"latitude":user.latitude, "longitude":user.longitude}} title={user.userName} />
             )}
             </MapView>

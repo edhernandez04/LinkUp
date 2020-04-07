@@ -1581,3 +1581,133 @@ Migrating to CreateMessages (20200330202241)
   [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "iamlistening"], ["LIMIT", 1]]
   [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Frasier Crane"], ["userName", "iamlistening"], ["password_digest", "$2a$12$pkxsGhD7ao9B9BVUhGdLDOPOIcBqpqoi86HBop/GxzhxQ8LWzbZty"], ["avatar", "https://www.ssbwiki.com/images/thumb/c/c1/Charizard_SSB4.png/300px-Charizard_SSB4.png"], ["latitude", 40.861406], ["longitude", -73.824531], ["created_at", "2020-04-07 20:10:18.914881"], ["updated_at", "2020-04-07 20:10:18.914881"]]
   [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/login" for 127.0.0.1 at 2020-04-07 16:11:43 -0400
+  [1m[35m (8.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (19.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 410ms (Views: 0.7ms | ActiveRecord: 33.0ms | Allocations: 7959)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-07 16:11:45 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.9ms | Allocations: 2171)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-07 16:16:06 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 519ms (Views: 3.5ms | ActiveRecord: 1.4ms | Allocations: 911)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-07 16:16:07 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.8ms | Allocations: 2152)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-07 16:18:27 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 46ms (Views: 35.6ms | ActiveRecord: 3.3ms | Allocations: 2133)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-07 16:18:32 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 2.8ms | Allocations: 2133)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-07 16:19:24 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 83ms (Views: 69.5ms | ActiveRecord: 3.5ms | Allocations: 2135)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-07 16:20:08 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 414ms (Views: 9.5ms | ActiveRecord: 10.7ms | Allocations: 896)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-07 16:20:09 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 9.7ms | ActiveRecord: 8.4ms | Allocations: 2133)
+
+
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (318.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "QuestGPS_development"[0m
+  [1m[35m (57.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "QuestGPS_test"[0m
+  [1m[35m (488.0ms)[0m  [1m[35mCREATE DATABASE "QuestGPS_development" ENCODING = 'unicode'[0m
+  [1m[35m (212.7ms)[0m  [1m[35mCREATE DATABASE "QuestGPS_test" ENCODING = 'unicode'[0m
+  [1m[35m (47.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (23.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7770935978816327940)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200330202137)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (29.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "fullName" character varying, "userName" character varying, "password_digest" character varying, "avatar" character varying, "latitude" float, "longitude" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200330202137"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateChannels (20200330202203)
+  [1m[35m (5.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.5ms)[0m  [1m[35mCREATE TABLE "channels" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200330202203"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMessages (20200330202241)
+  [1m[35m (6.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.5ms)[0m  [1m[35mCREATE TABLE "messages" ("id" bigserial primary key, "content" character varying, "channel_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200330202241"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-04-07 20:34:19.273736"], ["updated_at", "2020-04-07 20:34:19.273736"]]
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7770935978816327940)[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mChannel Load (7.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  [1m[36mMessage Load (7.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "B. F. Skinner"], ["userName", "aircrib"], ["password_digest", "$2a$12$XJJ7scStEH61vuyoWaFH3uJtFuUuvYll6giKHiGXJDiXlRoynW9JK"], ["avatar", "https://i.ya-webdesign.com/images/pokemon-red-sprite-gen-1-png-10.png"], ["latitude", 40.881757], ["longitude", -73.854691], ["created_at", "2020-04-07 20:34:32.304402"], ["updated_at", "2020-04-07 20:34:32.304402"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "genejean"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Jean Piaget"], ["userName", "genejean"], ["password_digest", "$2a$12$zkISwpr9bPp8/IUAIxEHvuSQsrKtzKik0oO/IAedoDshj438EvjDO"], ["avatar", "https://i.ya-webdesign.com/images/transparent-sprite-mewtwo-12.png"], ["latitude", 40.862229], ["longitude", -73.840843], ["created_at", "2020-04-07 20:34:32.630135"], ["updated_at", "2020-04-07 20:34:32.630135"]]
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Sigmund Freud"], ["userName", "lolconscious"], ["password_digest", "$2a$12$ArySlD/u34xOLpjHm1v/1eDi9jPwqiApeV/H7KteK2Oa1hgvAGl7G"], ["avatar", "https://i.ya-webdesign.com/images/transparent-sprite-pacman-14.png"], ["latitude", 40.853313], ["longitude", -73.863738], ["created_at", "2020-04-07 20:34:32.963393"], ["updated_at", "2020-04-07 20:34:32.963393"]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "ohcanada"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Albert Bandura"], ["userName", "ohcanada"], ["password_digest", "$2a$12$FZfbd.r5ddIhWSahU4ziROmIbNMIQpw2K/dr4y29UnaattN1d5.nq"], ["avatar", "https://forums.launchbox-app.com/uploads/monthly_2017_09/Metroid.png.81a4cb0972e2be106a470f5ebc5cbd79.png"], ["latitude", 40.847449], ["longitude", -73.851692], ["created_at", "2020-04-07 20:34:33.304173"], ["updated_at", "2020-04-07 20:34:33.304173"]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "dissonance"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Leon Festinger"], ["userName", "dissonance"], ["password_digest", "$2a$12$3KQSMAviSA9cHPvxMYxPq.mLR.hWS.8MY/2m13TwJMp8ICtX/tbWO"], ["avatar", "https://static-cdn.jtvnw.net/jtv_user_pictures/tycoonmike-profile_image-88cc5b1c65bf3bb5-300x300.png"], ["latitude", 40.859544], ["longitude", -73.851996], ["created_at", "2020-04-07 20:34:33.646471"], ["updated_at", "2020-04-07 20:34:33.646471"]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "iamlistening"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Frasier Crane"], ["userName", "iamlistening"], ["password_digest", "$2a$12$AS2BVuVwNUz9A9bimkrNHe6ZRKtVnWZtZqBaBsUYPaxIP8D4mOb8S"], ["avatar", "https://cdn2.scratch.mit.edu/get_image/user/7394452_60x60.png"], ["latitude", 40.861406], ["longitude", -73.824531], ["created_at", "2020-04-07 20:34:33.983953"], ["updated_at", "2020-04-07 20:34:33.983953"]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
