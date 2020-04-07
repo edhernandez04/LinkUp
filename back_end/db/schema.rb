@@ -32,7 +32,9 @@ ActiveRecord::Schema.define(version: 2020_03_30_202241) do
     t.string "fullName"
     t.string "userName"
     t.string "password_digest"
-    t.integer "avatar_id"
+    t.string "avatar"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

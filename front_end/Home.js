@@ -5,6 +5,16 @@ import { Actions } from 'react-native-router-flux';
 
 export default class Home extends React.Component {
 
+state = {
+    allUsers: []
+}
+
+componentDidMount(){
+    fetch('http://10.0.2.2:3000/users')
+        .then(resp => resp.json())
+        .then(allUsers => this.setState({allUsers}))
+}
+
 render() {
     console.log(this.props.latitude, this.props.longitude)
     return (
@@ -12,12 +22,15 @@ render() {
 
             <MapView style={styles.mapStyle} showsCompass={true} showsMyLocationButton={true}
                 region={{
-                    latitude: this.props.latitude,
-                    longitude: this.props.longitude,
+                    latitude: 40.863042,
+                    longitude: 73.853909,
                     latitudeDelta: 0.003,
                     longitudeDelta: 0.0003
                 }}>
-            <MapView.Marker image={require('./assets/turtle.png')} coordinate={{"latitude":this.props.latitude, "longitude":this.props.longitude}} title={"You"}/>
+
+            {this.state.allUsers.map(user =>
+                <MapView.Marker key={user.id} image={user.avatar} coordinate={{"latitude":user.latitude, "longitude":user.longitude}} title={user.userName} />
+            )}
             </MapView>
 
         <View style={styles.menuContainer}>
