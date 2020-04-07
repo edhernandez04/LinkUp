@@ -3,54 +3,53 @@ import { TextInput, View, Text, Button, StyleSheet, ImageBackground, Actions } f
 
 export default class SignUp extends React.Component {
 
-  state = { 
+state = {
     username: "",
     password: "",
     passwordConfirmation: ""
-  }
+}
 
-  handleSubmit = () => {
+handleSubmit = () => {
     if (this.state.password === this.state.passwordConfirmation){
-      fetch('http://10.0.2.2:3000/signup', {
-        method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          username: this.state.username,
-          password: this.state.password
+        fetch('http://10.0.2.2:3000/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                userName: this.state.username,
+                password: this.state.password
+            })
         })
-      })
-      .then(resp => resp.json())
-      .then(response => {
-        if (response.errors) {
-          alert(response.errors)
-        } else {
-          this.props.setUser(response)
-          Actions.home()
-        }
-      }
-      )
+            .then(resp => resp.json())
+            .then(response => {
+                if (response.errors) {
+                alert(response.errors)
+                } else {
+                    this.props.setUser(response)
+                    Actions.home()
+                }
+            })
     } else {
-      alert("Passwords don't match")
+        alert("Passwords don't match")
     }
-  }
+}
 
-  render(){
-  return (
-    <View style={styles.container}>
-    <ImageBackground  style= { styles.backgroundImage } source={require('./assets/atlas.jpg')} >
-    <Text style={styles.theTitle}>QuestGPS</Text>
-      <View style={styles.signupForm}>
-        <TextInput style={styles.inputText} placeholder="username" value={this.state.username} name="username" onChangeText={username => {this.setState({username})}}/>
-        <TextInput style={styles.inputText} placeholder="password" value={this.state.password} name="password" onChangeText={password => {this.setState({password})}}/>
-        <TextInput style={styles.inputText} placeholder="confirm password" value={this.state.passwordConfirmation} name="passwordConfirmation" onChangeText={passwordConfirmation => {this.setState({passwordConfirmation})}}/>
-        <Button title="register" onPress={() => {this.handleSubmit()}} />
-      </View>
-    </ImageBackground>
-    </View>
-  );
+render(){
+    return (
+        <View style={styles.container}>
+        <ImageBackground  style= { styles.backgroundImage } source={require('./assets/atlas.jpg')} >
+        <Text style={styles.theTitle}>QuestGPS</Text>
+            <View style={styles.signupForm}>
+                <TextInput style={styles.inputText} placeholder="username" value={this.state.username} name="username" onChangeText={username => {this.setState({username})}}/>
+                <TextInput style={styles.inputText} placeholder="password" value={this.state.password} name="password" onChangeText={password => {this.setState({password})}}/>
+                <TextInput style={styles.inputText} placeholder="confirm password" value={this.state.passwordConfirmation} name="passwordConfirmation" onChangeText={passwordConfirmation => {this.setState({passwordConfirmation})}}/>
+                <Button title="register" onPress={() => {this.handleSubmit()}} />
+            </View>
+        </ImageBackground>
+        </View>
+    );
 }
 
 }

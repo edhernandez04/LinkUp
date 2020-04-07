@@ -5,47 +5,50 @@ import { Actions } from 'react-native-router-flux';
 
 export default class Login extends React.Component {
 
-    state = {
-      username: "",
-      password: ""
-    }
+state = {
+    username: "",
+    password: ""
+}
   
-    handleLogIn = (e) => {
-      fetch('http://10.0.2.2:3000/login', {
+handleLogIn = () => {
+    fetch('http://10.0.2.2:3000/login', {
         method: 'POST',
-          headers: {
+        headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
-          },
-          body: JSON.stringify(this.state)
-      })
-      .then(resp => resp.json())
-      .then(response => {
-        if (response.errors){
-          alert(response.errors)
-        } else {
-          this.props.setUser(response)
-        }
-      })
-    }
+        },
+        body: JSON.stringify({
+            userName: this.state.username,
+            password: this.state.password
+        })
+    })
+        .then(resp => resp.json())
+        .then(response => {
+            if (response.errors){
+            alert(response.errors)
+            } else {
+            this.props.setUser(response)
+            }
+        })
+}
   
-    render() {
-      console.log(this.state)
-      return (
+render() {
+    return (
         <View style={styles.container}>
         <ImageBackground  style= { styles.backgroundImage } source={require('./assets/atlas.jpg')} >
-        <Text style={styles.theTitle}>QuestGPS</Text>
-          <View style={styles.loginForm}>
+            <Text style={styles.theTitle}>QuestGPS</Text>
+            <View style={styles.loginForm}>
             <TextInput style={styles.inputText} placeholder="username" value={this.state.username} name="username" onChangeText={username => {this.setState({username})}}/>
-            <TextInput style={styles.inputText} placeholder="password" value={this.state.password} name="password" onChangeText={username => {this.setState({password})}}/>
+            <TextInput style={styles.inputText} placeholder="password" value={this.state.password} name="password" onChangeText={password => {this.setState({password})}}/>
             <Button title="Login" onPress={() => {this.handleLogIn()}} />
-            <Text style={styles.newAccLine} >Dont have an account? </Text>
-            <Button title="Sign Up" onPress={() => {Actions.signup()}} />
-          </View>
-          </ImageBackground>
+                <Text style={styles.newAccLine} >Dont have an account? </Text>
+                <Button title="Sign Up" onPress={() => {Actions.signup()}} />
+            </View>
+        </ImageBackground>
         </View>
-      )
-    }
+    )
+}
+
   }
 
   const styles = StyleSheet.create({

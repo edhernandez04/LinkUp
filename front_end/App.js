@@ -47,6 +47,18 @@ componentDidMount(){
         }
 }
 
+_getLocation = async () => {
+    navigator.geolocation.getCurrentPosition(position => {
+        const region = {
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+            latitudeDelta: 0.003,
+            longitudeDelta: 0.0003
+            };
+    this.map.animateToRegion(region, 500);
+    });
+};
+
 setUser = response => {
     this.setState({ currentUser: response.user },
         () => {
