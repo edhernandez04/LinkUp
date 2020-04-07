@@ -6,6 +6,7 @@ import { Actions } from 'react-native-router-flux';
 export default class Home extends React.Component {
 
 render() {
+    console.log(this.props.latitude, this.props.longitude)
     return (
         <View style={styles.container}>
 
@@ -31,7 +32,7 @@ render() {
                 <Button title={"Login"} onPress={() => Actions.login()} color="gold"/>
             </View>
             <View style={styles.buttonContainer}>
-                <Button title={"Edit"} onPress={() => Actions.signup()} color="green"/>
+                <Button title={"Find Me"} onPress={this.props.getLocation} color="green"/>
             </View>
             <View style={styles.buttonContainer}>
                 <Button title={"Log Out"} onPress={this.props.logout} color="blue"/>

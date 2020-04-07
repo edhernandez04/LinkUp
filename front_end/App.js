@@ -13,7 +13,6 @@ state = {
 
 componentDidMount(){
     const token = AsyncStorage.token
-
     if(token){
         fetch("http://10.0.2.2:3000/auto_login", {
             headers: {
@@ -32,35 +31,28 @@ componentDidMount(){
     } else {
         Actions.login()
     }
+}
+
+getLocation = () => {
     const granted = PermissionsAndroid.check( PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION );
         if (granted) {
             console.log( "TRACKER ACTIVATED" )
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    let latitude = JSON.stringify(position.coords.latitude)
-                    let longitude = JSON.stringify(position.coords.longitude)
-                    this.setState({ latitude: parseFloat(latitude), longitude: parseFloat(longitude) })
-                }, { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
-            )
+            navigator.geolocation.getCurrentPosition(position => {console.log(position)})
+//                {
+//                     console.log(position)
+//                    let latitude = JSON.stringify(position.coords.latitude)
+//                    let longitude = JSON.stringify(position.coords.longitude)
+//                    this.setState({ latitude: parseFloat(latitude), longitude: parseFloat(longitude) })
+//                    console.log('in here', this.state)
+//                }, { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
+
         } else {
             console.log( "ACCESS_FINE_LOCATION permission denied" )
         }
 }
 
-_getLocation = async () => {
-    navigator.geolocation.getCurrentPosition(position => {
-        const region = {
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-            latitudeDelta: 0.003,
-            longitudeDelta: 0.0003
-            };
-    this.map.animateToRegion(region, 500);
-    });
-};
-
 setUser = response => {
-    this.setState({ currentUser: response },
+    this.setState({ currentUser: response.user },
         () => {
             AsyncStorage.token = response.token
             Actions.home()
@@ -94,6 +86,7 @@ logout = () => {
              setUser={this.setUser}
              setEditUser={this.setEditUser}
              logout={this.logout}
+             getLocation={this.getLocation}
          />
       )
    }

@@ -49,7 +49,7 @@ render() {
     )
 }
 
-  }
+}
 
   const styles = StyleSheet.create({
     container: {
