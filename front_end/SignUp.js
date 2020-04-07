@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TextInput, View, Text, Button, StyleSheet, ImageBackground, Actions, AsyncStorage } from 'react-native';
+import { TextInput, View, Text, Button, StyleSheet, ImageBackground, Actions } from 'react-native';
 
 export default class SignUp extends React.Component {
 
@@ -18,7 +18,7 @@ export default class SignUp extends React.Component {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          userName: this.state.username,
+          username: this.state.username,
           password: this.state.password
         })
       })
@@ -27,9 +27,8 @@ export default class SignUp extends React.Component {
         if (response.errors) {
           alert(response.errors)
         } else {
-          AsyncStorage.setItem('token').then((data) => { dispatch(saveToken('token saved')) });
-          this.props.setUser(response);
-          Actions.home();
+          this.props.setUser(response)
+          Actions.home()
         }
       }
       )
@@ -41,7 +40,7 @@ export default class SignUp extends React.Component {
   render(){
   return (
     <View style={styles.container}>
-    <ImageBackground  style={styles.backgroundImage} source={require('./assets/atlas.jpg')} >
+    <ImageBackground  style= { styles.backgroundImage } source={require('./assets/atlas.jpg')} >
     <Text style={styles.theTitle}>QuestGPS</Text>
       <View style={styles.signupForm}>
         <TextInput style={styles.inputText} placeholder="username" value={this.state.username} name="username" onChangeText={username => {this.setState({username})}}/>

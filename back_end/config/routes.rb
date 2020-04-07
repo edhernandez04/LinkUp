@@ -12,7 +12,6 @@ Rails.application.routes.draw do
     delete '/users/:id', to: 'users#destroy'
 
     post '/signup', to: 'users#create'
-
     post '/login', to: 'auth#login'
 
     get '/auto_login', to: 'auth#auto_login'

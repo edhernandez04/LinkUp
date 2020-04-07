@@ -7,8 +7,8 @@ class UsersController < ApplicationController
 
   def create
     user = User.new(
-      userName: params[:userName],
-      password: params[:password]
+      username: params[:username],
+      password: params[:password],
     )
     if user.save
       token = encode_token(user.id)

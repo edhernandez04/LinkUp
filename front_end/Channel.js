@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, Button, TextInput, AsyncStorage } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
 export default class Channel extends React.Component{
 
@@ -16,6 +16,7 @@ componentDidMount(){
     createChannelWebsocketConnection(event, channelId) {
         event.preventDefault()
         let socket = new WebSocket('ws://10.0.2.2:3000/cable');
+        console.log(WebSocket)
 
         socket.onopen = function(event) {
             console.log('WebSocket is connected.');
