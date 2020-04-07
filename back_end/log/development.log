@@ -676,3 +676,99 @@ Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrad
   ↳ app/channels/channel_channel.rb:4:in `subscribed'
 ChannelChannel is transmitting the subscription confirmation
 ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvMQ
+Started POST "/login" for 127.0.0.1 at 2020-04-07 12:36:31 -0400
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"salty", "password"=>"[FILTERED]", "auth"=>{"userName"=>"salty", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (42.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "salty"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 500 Internal Server Error in 565ms (ActiveRecord: 115.8ms | Allocations: 7856)
+
+
+  
+NameError (uninitialized constant ApplicationController::JWT):
+  
+app/controllers/application_controller.rb:4:in `encode_token'
+app/controllers/auth_controller.rb:6:in `login'
+Started POST "/login" for 127.0.0.1 at 2020-04-07 12:37:47 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"salty", "password"=>"[FILTERED]", "auth"=>{"userName"=>"salty", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "salty"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 500 Internal Server Error in 440ms (ActiveRecord: 5.6ms | Allocations: 2099)
+
+
+  
+NameError (uninitialized constant ApplicationController::JWT):
+  
+app/controllers/application_controller.rb:4:in `encode_token'
+app/controllers/auth_controller.rb:6:in `login'
+Started POST "/login" for 127.0.0.1 at 2020-04-07 12:38:32 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"who", "password"=>"[FILTERED]", "auth"=>{"userName"=>"who", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "who"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 29ms (Views: 3.6ms | ActiveRecord: 3.5ms | Allocations: 659)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-07 12:39:08 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"salty", "password"=>"[FILTERED]", "auth"=>{"userName"=>"salty", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "salty"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 500 Internal Server Error in 405ms (ActiveRecord: 1.8ms | Allocations: 2082)
+
+
+  
+NameError (uninitialized constant ApplicationController::JWT):
+  
+app/controllers/application_controller.rb:4:in `encode_token'
+app/controllers/auth_controller.rb:6:in `login'
+Started POST "/login" for 127.0.0.1 at 2020-04-07 12:40:19 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"salty", "password"=>"[FILTERED]", "auth"=>{"userName"=>"salty", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "salty"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 500 Internal Server Error in 410ms (ActiveRecord: 1.6ms | Allocations: 2099)
+
+
+  
+NameError (uninitialized constant ApplicationController::JWT):
+  
+app/controllers/application_controller.rb:4:in `encode_token'
+app/controllers/auth_controller.rb:6:in `login'
+Started POST "/login" for 127.0.0.1 at 2020-04-07 12:40:49 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"salty", "password"=>"[FILTERED]", "auth"=>{"userName"=>"salty", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "salty"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 500 Internal Server Error in 381ms (ActiveRecord: 1.2ms | Allocations: 2080)
+
+
+  
+NameError (uninitialized constant ApplicationController::JWT):
+  
+app/controllers/application_controller.rb:4:in `encode_token'
+app/controllers/auth_controller.rb:6:in `login'
+Started POST "/login" for 127.0.0.1 at 2020-04-07 12:44:11 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"salty", "password"=>"[FILTERED]", "auth"=>{"userName"=>"salty", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "salty"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 500 Internal Server Error in 416ms (ActiveRecord: 6.6ms | Allocations: 2081)
+
+
+  
+NameError (uninitialized constant ApplicationController::JWT):
+  
+app/controllers/application_controller.rb:4:in `encode_token'
+app/controllers/auth_controller.rb:6:in `login'
+Started POST "/login" for 127.0.0.1 at 2020-04-07 12:47:26 -0400
+  [1m[35m (9.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"salty", "password"=>"[FILTERED]", "auth"=>{"userName"=>"salty", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "salty"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 374ms (Views: 1.6ms | ActiveRecord: 12.0ms | Allocations: 6624)
+
+

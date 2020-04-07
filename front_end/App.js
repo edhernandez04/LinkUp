@@ -60,7 +60,7 @@ _getLocation = async () => {
 };
 
 setUser = response => {
-    this.setState({ currentUser: response.user },
+    this.setState({ currentUser: response },
         () => {
             AsyncStorage.token = response.token
             Actions.home()

@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::API
 
     def encode_token(id)
-     JWT.encode({user_id: id}, "super_secret_code")
+        JWT.encode({user_id: id}, "super_secret_code")
     end
 
     def get_auth_header
-     request.headers["Authorization"]
+        request.headers["Authorization"]
     end
 
     def decoded_token
@@ -21,7 +21,7 @@ class ApplicationController < ActionController::API
     end
 
     def logged_in?
-     !!session_user
+        !!session_user
     end
 
 end

@@ -25,16 +25,16 @@ render() {
 
         <View style={styles.menuContainer}>
             <View style={styles.buttonContainer}>
-                <Button title={"Chat"} style={styles.buttonStyle} onPress={() => Actions.chat()} color="red"/>
+                <Button title={"Open Chats"} style={styles.buttonStyle} onPress={() => Actions.chat()} color="red"/>
             </View>
             <View style={styles.buttonContainer}>
-                <Button title={"Login"} onPress={() => Actions.login()} color="blue"/>
+                <Button title={"Login"} onPress={() => Actions.login()} color="gold"/>
             </View>
             <View style={styles.buttonContainer}>
-                <Button title={"Sign Up"} onPress={() => Actions.signup()} color="green"/>
+                <Button title={"Edit"} onPress={() => Actions.signup()} color="green"/>
             </View>
             <View style={styles.buttonContainer}>
-                <Button title={"Log Out"} onPress={this.props.logout} color="grey"/>
+                <Button title={"Log Out"} onPress={this.props.logout} color="blue"/>
             </View>
         </View>
 
