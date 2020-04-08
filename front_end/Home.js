@@ -24,7 +24,7 @@ render() {
     return (
         <View style={styles.container}>
 
-            <MapView style={styles.mapStyle} showsCompass={true}
+            <MapView style={styles.mapStyle} showsCompass={true} showsUserLocation={true}
                 region={{
                     latitude: 40.853313,
                     longitude: -73.863738,

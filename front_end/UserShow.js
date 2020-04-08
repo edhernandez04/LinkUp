@@ -7,7 +7,7 @@ const UserShow = (props) => (
         <ImageBackground  style= { styles.backgroundImage } source={require('./assets/scroll.png')} >
         <View style={styles.mainContainer}>
             <View style={styles.avatarCard}>
-                <Image source={props.avatar} />
+                <Image style={{width: 150, height: 150}} source={{uri: props.avatar}} resizeMode={'cover'}/>
                 <Text style={styles.inputs}>{props.userName}</Text>
             </View>
             <View style={styles.infoCard}>
@@ -31,9 +31,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderBottomColor: 'black',
-        borderRadius: 25,
-        width: 200,
-        height: 200
+        borderRadius: 25
     },
     infoCard: {
         alignItems: 'center',

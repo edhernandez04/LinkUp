@@ -1881,3 +1881,54 @@ Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrad
   [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
   ↳ app/channels/channel_channel.rb:4:in `subscribed'
 Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"id\":0,\"channel\":\"ChannelChannel\"}"}) [ActiveRecord::RecordNotFound - Couldn't find Channel with 'id'=0]: /Users/Tina/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.2.2/lib/active_record/core.rb:177:in `find' | /Users/Tina/Desktop/QuestGPS/back_end/app/channels/channel_channel.rb:4:in `subscribed' | /Users/Tina/.rvm/gems/ruby-2.6.1/gems/actioncable-6.0.2.2/lib/action_cable/channel/base.rb:181:in `block in subscribe_to_channel' | /Users/Tina/.rvm/gems/ruby-2.6.1/gems/activesupport-6.0.2.2/lib/active_support/callbacks.rb:112:in `block in run_callbacks' | /Users/Tina/.rvm/gems/ruby-2.6.1/gems/activesupport-6.0.2.2/lib/active_support/execution_wrapper.rb:84:in `wrap'
+Started GET "/users" for 127.0.0.1 at 2020-04-07 21:32:46 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (38.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 83ms (Views: 38.0ms | ActiveRecord: 38.5ms | Allocations: 1794)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-07 21:32:47 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.9ms | Allocations: 1794)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-07 21:33:06 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.7ms | Allocations: 772)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-07 21:33:14 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-07 21:33:14 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (68.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"id\":0,\"channel\":\"ChannelChannel\"}"}) [ActiveRecord::RecordNotFound - Couldn't find Channel with 'id'=0]: /Users/Tina/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.2.2/lib/active_record/core.rb:177:in `find' | /Users/Tina/Desktop/QuestGPS/back_end/app/channels/channel_channel.rb:4:in `subscribed' | /Users/Tina/.rvm/gems/ruby-2.6.1/gems/actioncable-6.0.2.2/lib/action_cable/channel/base.rb:181:in `block in subscribe_to_channel' | /Users/Tina/.rvm/gems/ruby-2.6.1/gems/activesupport-6.0.2.2/lib/active_support/callbacks.rb:112:in `block in run_callbacks' | /Users/Tina/.rvm/gems/ruby-2.6.1/gems/activesupport-6.0.2.2/lib/active_support/execution_wrapper.rb:84:in `wrap'
+Started GET "/users" for 127.0.0.1 at 2020-04-07 21:36:08 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 40ms (Views: 31.4ms | ActiveRecord: 4.0ms | Allocations: 1794)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-07 21:36:10 -0400
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-07 21:36:10 -0400
+Started POST "/login" for 127.0.0.1 at 2020-04-07 21:37:40 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (18.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 442ms (Views: 5.5ms | ActiveRecord: 18.3ms | Allocations: 896)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-07 21:37:41 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.6ms | Allocations: 1794)
+
+
