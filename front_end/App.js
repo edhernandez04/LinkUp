@@ -37,15 +37,12 @@ getLocation = () => {
     const granted = PermissionsAndroid.check( PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION );
         if (granted) {
             console.log( "TRACKER ACTIVATED" )
-            navigator.geolocation.getCurrentPosition(position => {console.log(position)})
-//                {
-//                     console.log(position)
-//                    let latitude = JSON.stringify(position.coords.latitude)
-//                    let longitude = JSON.stringify(position.coords.longitude)
-//                    this.setState({ latitude: parseFloat(latitude), longitude: parseFloat(longitude) })
-//                    console.log('in here', this.state)
-//                }, { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
-
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    let latitude = JSON.stringify(position.coords.latitude)
+                    let longitude = JSON.stringify(position.coords.longitude)
+                    this.setState({ latitude: parseFloat(latitude), longitude: parseFloat(longitude) })
+                }, { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 } )
         } else {
             console.log( "ACCESS_FINE_LOCATION permission denied" )
         }

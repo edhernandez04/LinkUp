@@ -47,7 +47,7 @@ componentDidMount(){
     }
 
     newMessage = event => {
-        fetch(`http://10.0.2.2:3000/messages`,{
+        fetch('http://10.0.2.2:3000/messages', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

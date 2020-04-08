@@ -4,6 +4,7 @@ import Home from './Home.js'
 import Channel from './Channel.js'
 import Login from './Login.js'
 import SignUp from './SignUp.js'
+import UserShow from './UserShow.js'
 
 const Routes = (props) => (
    <Router>
@@ -15,7 +16,7 @@ const Routes = (props) => (
             latitude={props.latitude}
             longitude={props.longitude}
          />
-         <Scene key = "chat" component = {Channel} title = "Channel"
+         <Scene key = "chat" component = {Channel} title = "Create Chat"
             currentUser={props.currentUser}
          />
          <Scene key = "login" component = {Login} title = "Login"
@@ -25,6 +26,7 @@ const Routes = (props) => (
          <Scene key = "signup" component = {SignUp} title = "Sign Up"
             setUser={props.setUser}
          />
+         <Scene key = "userShow" component = {UserShow} title = "Profile" />
       </Scene>
    </Router>
 )

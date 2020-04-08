@@ -2,6 +2,7 @@ import React from 'react';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import UserShow from './UserShow.js'
 
 export default class Home extends React.Component {
 
@@ -15,26 +16,29 @@ componentDidMount(){
         .then(allUsers => this.setState({allUsers}))
 }
 
+showUser = (user) => {
+    <UserShow key={user.id} user={user}/>
+}
+
 render() {
-    console.log(this.props.latitude, this.props.longitude)
     return (
         <View style={styles.container}>
 
             <MapView style={styles.mapStyle} showsCompass={true}
                 region={{
-                    latitude: 40.863042,
-                    longitude: -73.853909,
-                    latitudeDelta: 0.003,
-                    longitudeDelta: 0.0003
+                    latitude: 40.853313,
+                    longitude: -73.863738,
+                    latitudeDelta: 0.008,
+                    longitudeDelta: 0.003
                 }}>
 
-            {this.state.allUsers.slice(2).map(user =>
-                <MapView.Marker key={user.id} image={user.avatar} coordinate={{"latitude":user.latitude, "longitude":user.longitude}} title={user.userName} />
+            {this.state.allUsers.slice(0,3).map(user =>
+                <MapView.Marker key={user.id} image={user.avatar} coordinate={{"latitude":user.latitude, "longitude":user.longitude}} title={user.userName} onPress={() => Actions.userShow(user)}/>
             )}
             </MapView>
 
         <View style={styles.menuContainer}>
-            <Text style={styles.text}>{console.log(this.props.currentUser)}</Text>
+            <Text style={styles.text}>QuestGPS by Ed Cache</Text>
         </View>
 
         <View style={styles.menuContainer}>
