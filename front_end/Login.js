@@ -25,9 +25,9 @@ handleLogIn = () => {
         .then(resp => resp.json())
         .then(response => {
             if (response.errors){
-            alert(response.errors)
+                alert(response.errors)
             } else {
-            this.props.setUser(response)
+                this.props.setUser(response)
             }
         })
 }

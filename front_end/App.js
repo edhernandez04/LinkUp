@@ -49,7 +49,8 @@ getLocation = () => {
 }
 
 setUser = response => {
-    this.setState({ currentUser: response.user },
+    console.log("setUser", response)
+    this.setState({ currentUser: response },
         () => {
             AsyncStorage.token = response.token
             Actions.home()
@@ -58,17 +59,13 @@ setUser = response => {
 }
 
 setEditUser = response => {
-    this.setState({
-        currentUser: response
-    }, () => {
-        Actions.home()
-    })
+    this.setState({ currentUser: response },
+        () => { Actions.home() })
 }
 
 logout = () => {
-    this.setState({
-        currentUser: null
-    }, () => {
+    this.setState({ currentUser: null },
+    () => {
         AsyncStorage.removeItem("token")
         Actions.login()
     })
