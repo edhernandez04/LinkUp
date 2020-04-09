@@ -20,7 +20,7 @@ const Routes = (props) => (
          <Scene key = "chat" component = {Channel} title = "Chat Rooms"
             currentUser={props.currentUser}
          />
-          <Scene key = "messages" component = {ChatRoom} title = "Chat"
+          <Scene key = "messages" component = {ChatRoom} title = "Send Message"
              currentUser={props.currentUser}
           />
          <Scene key = "login" component = {Login} title = "Login"

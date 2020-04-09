@@ -21,6 +21,7 @@ showUser = (user) => {
 }
 
 render() {
+console.log(this.props.currentUser)
     return (
         <View style={styles.container}>
 

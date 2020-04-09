@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput, ImageBackground, Modal } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-import ChatRoom from './ChatRoom.js'
+import ChatRoom from './ChatRoom.js';
 
 export default class Channel extends React.Component {
 
@@ -10,10 +10,14 @@ state = {
     newRoomName: ''
 }
 
-componentDidMount(){
+componentDidMount() {
     fetch('http://10.0.2.2:3000/channels')
         .then(resp => resp.json())
         .then(chatRooms => this.setState({chatRooms}))
+}
+
+renderMessage = (message) => {
+    return ( <View><Text>{message.content}</Text></View> )
 }
 
 newChatSubmit = () => {
@@ -25,19 +29,10 @@ newChatSubmit = () => {
         },
         body: JSON.stringify({ name: this.state.newRoomName })
     }).then(response => response.json())
-        .then(chatRoom => this.setState({
-            chatRooms: [...this.state.chatRooms, chatRoom]
-        })
-    )
+        .then(chatRoom => this.setState({ chatRooms: [...this.state.chatRooms, chatRoom] }) )
 }
 
-renderMessage = (message) => {
-    <View>
-        <Text>{message.content}</Text>
-    <View>
-}
-
-createChannelWebsocketConnection(event, channelId) {
+createChannelWebsocketConnection = channelId => {
     let socket = new WebSocket('ws://10.0.2.2:3000/cable')
 
     socket.onopen = function(event) {
@@ -45,8 +40,8 @@ createChannelWebsocketConnection(event, channelId) {
         const msg = {
             command: 'subscribe',
             identifier: JSON.stringify({
-            id: channelId,
-            channel: 'ChannelChannel'
+                id: channelId,
+                channel: 'ChannelChannel'
             }),
         };
         socket.send(JSON.stringify(msg));
@@ -58,18 +53,17 @@ createChannelWebsocketConnection(event, channelId) {
     socket.onmessage = function(event) {
         const response = event.data;
         const msg = JSON.parse(response);
-            if (msg.type === "ping") { return; }
-                console.log("FROM RAILS: ", msg);
-            if (msg.message) { renderMessage(msg.message) }
+            if (msg.type === "ping") { return }
+            console.log("FROM RAILS: ", msg)
+            if (msg.message) { this.renderMessage(msg.message) }
     };
 
     socket.onerror = function(error) {
         console.log('WebSocket Error: ' + error.message);
     };
 }
-
     render() {
-        return(
+        return (
             <View style={styles.container}>
                 <View style={styles.roomContainer}>
                     <Text>Start New Chat Room</Text>
@@ -80,7 +74,7 @@ createChannelWebsocketConnection(event, channelId) {
                     <Text>All Rooms</Text>
                     <View>
                         {this.state.chatRooms.map(room =>
-                            <View style={styles.allRooms}>
+                            <View style={styles.allRooms} key={room.id}>
                                 <Text>{room.name}</Text>
                                 <Button title="Join" onPress={() => Actions.messages(room)}></Button>
                             </View>
@@ -119,4 +113,4 @@ const styles = StyleSheet.create({
     buttonContainer: {
         flex: 1,
     }
-});
+})
