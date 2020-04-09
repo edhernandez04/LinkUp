@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text, Button, Image, ImageBackground, TextInput } from 'react-native';
+import { View, StyleSheet, Text, Button, Image, ImageBackground, TextInput, ScrollView } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
 export default class ChatRoom extends React.Component {
@@ -18,9 +18,8 @@ componentDidMount() {
 }
 
 setChat = () => {
-    this.setState({
-        chatMessages: this.state.allMessages.map(message => message.channel_id === this.props.id)
-    })
+ let pertinentInfo = this.state.allMessages.map(message => message.channel_id === this.props.id)
+    this.setState({ chatMessages: pertinentInfo })
 }
 
 newMessage = () => {
@@ -39,23 +38,11 @@ newMessage = () => {
 }
 
 render() {
-console.log(this.state.chatMessages)
+console.log(this.state.allMessages)
     return (
         <View style={styles.container}>
             <View style={styles.titleContainer}>
                 <Text style={styles.title}> {this.props.navigation.state.params.name} </Text>
-            </View>
-            <View style={styles.messageContainer}>
-                {this.state.allMessages.map(message =>
-                    <View style={styles.messageBubble} key={message.id}>
-                        <Text>{message.content}</Text>
-                    </View>
-                )}
-            </View>
-            <View style={styles.roomContainer}>
-                <Text>New Message</Text>
-                <TextInput style={styles.roomContainer} placeholder="message..." onChangeText={content => this.setState({content})}/>
-                <Button title="submit" onPress={() => {this.newMessage()}} />
             </View>
             <View style={styles.menuContainer}>
                 <View style={styles.buttonContainer}>
@@ -71,6 +58,17 @@ console.log(this.state.chatMessages)
                     <Button title={"Log Out"} onPress={this.props.logout} color="blue"/>
                 </View>
             </View>
+            <ScrollView style={styles.messageContainer}>
+                {this.state.chatMessages.map(message =>
+                    <View style={styles.messageBubble} key={message.id}>
+                        <Text style={styles.theMessage}>{message.content}</Text>
+                    </View>
+                )}
+            </ScrollView>
+            <View style={styles.sendNewMessage}>
+                <TextInput placeholder="message..." onChangeText={content => this.setState({content})}/>
+                <Button title="send" onPress={() => {this.newMessage()}} />
+            </View>
         </View>
     )
 }
@@ -81,36 +79,47 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        padding: 20,
+        padding: 20
     },
     titleContainer: {
         alignItems: 'center'
     },
     title: {
         fontSize: 20,
-        fontWeight: 'bold',
-        paddingBottom: 10
+        fontWeight: 'bold'
     },
     menuContainer: {
         flex: 1,
         flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        top: 10
     },
     buttonContainer: {
         flex: 1,
     },
-    messageContainer: {
-        backgroundColor: 'blue',
-        width: 370,
-        height: 'auto',
-        padding: 10,
-        borderRadius: 5
+    theMessage: {
+        color: 'white'
     },
     messageBubble: {
-        backgroundColor: 'white',
+        backgroundColor: 'blue',
+        fontSize: 12,
         borderRadius: 15,
-        paddingLeft: 10,
-        margin: 2
+        padding: 15,
+        margin: 2,
+        height: 25,
+        justifyContent: 'center'
+    },
+    sendNewMessage: {
+        bottom: '1%',
+        position: 'absolute',
+        width: '100%',
+        left: '6%'
+    },
+    messageContainer: {
+        position: 'absolute',
+        height: 445,
+        width: 370,
+        left: 20,
+        top: 100
     }
 })

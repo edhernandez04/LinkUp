@@ -100,15 +100,13 @@ const styles = StyleSheet.create({
     },
     allRooms: {
         flexDirection: 'row',
-        alignItems: 'center',
         padding: 5,
-        justifyContent: 'space-around'
+        justifyContent: 'space-between',
+        alignItems: 'center'
     },
     menuContainer: {
         flex: 1,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
+        flexDirection: 'row'
     },
     buttonContainer: {
         flex: 1,
