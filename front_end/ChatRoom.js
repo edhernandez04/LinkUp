@@ -14,12 +14,12 @@ componentDidMount() {
     fetch('http://10.0.2.2:3000/messages')
         .then(resp => resp.json())
         .then(allMessages => this.setState({allMessages}))
-        .then(this.setChat())
+        .then(() => this.setChat())
 }
 
 setChat = () => {
- let pertinentInfo = this.state.allMessages.map(message => message.channel_id === this.props.id)
-    this.setState({ chatMessages: pertinentInfo })
+    let rightInfo = this.state.allMessages.filter(message => message.channel_id === this.props.id)
+    this.setState({ chatMessages: rightInfo })
 }
 
 newMessage = () => {
@@ -38,7 +38,6 @@ newMessage = () => {
 }
 
 render() {
-console.log(this.state.allMessages)
     return (
         <View style={styles.container}>
             <View style={styles.titleContainer}>
@@ -110,10 +109,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     sendNewMessage: {
-        bottom: '1%',
+        bottom: '0%',
         position: 'absolute',
         width: '100%',
-        left: '6%'
+        left: '6%',
+        backgroundColor: 'white'
     },
     messageContainer: {
         position: 'absolute',

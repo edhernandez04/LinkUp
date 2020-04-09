@@ -9065,3 +9065,381 @@ puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
 puma (4.3.3) lib/puma/server.rb:472:in `process_client'
 puma (4.3.3) lib/puma/server.rb:328:in `block in run'
 puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 16:40:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/messages"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 16:40:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/messages"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-09 16:40:49 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 25ms (Views: 4.8ms | ActiveRecord: 7.0ms | Allocations: 1363)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-09 16:58:32 -0400
+  [1m[35m (18.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 397ms (Views: 0.7ms | ActiveRecord: 25.0ms | Allocations: 7958)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-09 16:58:34 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 2171)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-09 16:58:39 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (3.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 108ms (Views: 37.2ms | ActiveRecord: 48.4ms | Allocations: 4442)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 16:58:42 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 30ms (Views: 16.2ms | ActiveRecord: 8.6ms | Allocations: 10384)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 16:59:29 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 36ms (Views: 29.7ms | ActiveRecord: 1.3ms | Allocations: 6586)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:00:04 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.8ms | Allocations: 6567)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:00:39 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 1.0ms | Allocations: 6567)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:02:07 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (4.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 110ms (Views: 97.7ms | ActiveRecord: 4.7ms | Allocations: 6567)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:02:17 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (2.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 2.3ms | Allocations: 6567)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:03:51 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.6ms | Allocations: 6567)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:04:03 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.9ms | Allocations: 6567)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:04:40 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 99ms (Views: 97.3ms | ActiveRecord: 1.0ms | Allocations: 6570)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:05:22 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 1.1ms | Allocations: 6567)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:05:35 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 1.7ms | Allocations: 6567)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-09 17:05:45 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 20ms (Views: 1.0ms | ActiveRecord: 7.1ms | Allocations: 1482)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-09 17:08:02 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 762ms (Views: 24.1ms | ActiveRecord: 1.9ms | Allocations: 896)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-09 17:08:03 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.9ms | Allocations: 2133)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-09 17:08:10 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 0.8ms | Allocations: 1073)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:08:13 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (6.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 36ms (Views: 29.1ms | ActiveRecord: 6.2ms | Allocations: 6567)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:10:20 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (13.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 72ms (Views: 53.8ms | ActiveRecord: 13.1ms | Allocations: 6567)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:10:27 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.9ms | Allocations: 6567)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:10:44 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.6ms | Allocations: 6567)
+
+
+Started POST "/messages" for 127.0.0.1 at 2020-04-09 17:10:59 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"add new feature", "channel_id"=>2, "message"=>{"content"=>"add new feature", "channel_id"=>2}}
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[36mChannel Load (6.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[36mMessage Create (24.5ms)[0m  [1m[32mINSERT INTO "messages" ("content", "channel_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "add new feature"], ["channel_id", 2], ["created_at", "2020-04-09 21:11:00.028740"], ["updated_at", "2020-04-09 21:11:00.028740"]]
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[35m (132.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+Completed 200 OK in 327ms (Views: 2.9ms | ActiveRecord: 167.0ms | Allocations: 6324)
+
+
+Started POST "/channels" for 127.0.0.1 at 2020-04-09 17:11:39 -0400
+Processing by ChannelsController#create as JSON
+  Parameters: {"name"=>"New Chatz Fax", "channel"=>{"name"=>"New Chatz Fax"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[36mChannel Create (49.4ms)[0m  [1m[32mINSERT INTO "channels" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "New Chatz Fax"], ["created_at", "2020-04-09 21:11:39.802434"], ["updated_at", "2020-04-09 21:11:39.802434"]]
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[35m (24.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+Completed 200 OK in 93ms (Views: 2.9ms | ActiveRecord: 75.0ms | Allocations: 2337)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:11:43 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 81ms (Views: 79.7ms | ActiveRecord: 0.9ms | Allocations: 6679)
+
+
+Started POST "/messages" for 127.0.0.1 at 2020-04-09 17:12:05 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"message swag crazy", "channel_id"=>4, "message"=>{"content"=>"message swag crazy", "channel_id"=>4}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[36mChannel Load (0.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[36mMessage Create (5.1ms)[0m  [1m[32mINSERT INTO "messages" ("content", "channel_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "message swag crazy"], ["channel_id", 4], ["created_at", "2020-04-09 21:12:05.816767"], ["updated_at", "2020-04-09 21:12:05.816767"]]
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+Completed 200 OK in 29ms (Views: 1.4ms | ActiveRecord: 12.9ms | Allocations: 3366)
+
+
+Started POST "/messages" for 127.0.0.1 at 2020-04-09 17:12:14 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"we out here boy", "channel_id"=>4, "message"=>{"content"=>"we out here boy", "channel_id"=>4}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[36mMessage Create (7.4ms)[0m  [1m[32mINSERT INTO "messages" ("content", "channel_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "we out here boy"], ["channel_id", 4], ["created_at", "2020-04-09 21:12:14.579288"], ["updated_at", "2020-04-09 21:12:14.579288"]]
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+Completed 200 OK in 28ms (Views: 0.9ms | ActiveRecord: 14.4ms | Allocations: 3365)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-09 17:12:54 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (1.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 1.3ms | Allocations: 1175)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:13:09 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.8ms | Allocations: 6894)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:13:15 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 1.0ms | Allocations: 6894)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-09 17:18:18 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 442ms (Views: 3.5ms | ActiveRecord: 6.4ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-09 17:18:19 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.6ms | Allocations: 2133)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-09 17:18:23 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 1175)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-09 17:18:51 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.7ms | Allocations: 1175)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:19:45 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 21.9ms | ActiveRecord: 1.4ms | Allocations: 6894)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:20:05 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (7.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 42ms (Views: 33.1ms | ActiveRecord: 7.8ms | Allocations: 6894)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:20:18 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 1.1ms | Allocations: 6894)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-09 17:20:35 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (4.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 159ms (Views: 152.3ms | ActiveRecord: 4.8ms | Allocations: 6897)
+
+
+Started POST "/messages" for 127.0.0.1 at 2020-04-09 17:20:46 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"new message", "channel_id"=>1, "message"=>{"content"=>"new message", "channel_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[36mChannel Load (6.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[36mMessage Create (17.4ms)[0m  [1m[32mINSERT INTO "messages" ("content", "channel_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "new message"], ["channel_id", 1], ["created_at", "2020-04-09 21:20:46.033046"], ["updated_at", "2020-04-09 21:20:46.033046"]]
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[35m (65.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+Completed 200 OK in 115ms (Views: 3.7ms | ActiveRecord: 90.0ms | Allocations: 3365)
+
+

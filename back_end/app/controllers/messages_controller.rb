@@ -1,5 +1,16 @@
 class MessagesController < ApplicationController
 
+    def index
+        messages = Message.all
+        render json: messages
+    end
+
+    def show
+        message = Message.all.find do |message|
+        message.id === params[:id]
+        end
+    end
+
     def create
         message = Message.new(message_params)
         if message.save
