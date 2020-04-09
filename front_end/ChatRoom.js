@@ -35,6 +35,11 @@ newMessage = () => {
         })
     }).then(response => response.json())
     .then(message => this.setState({ chatMessages: [...this.state.chatMessages, message] }) )
+    .then(() => this.submitAndClear())
+}
+
+submitAndClear = () => {
+    this.setState({content: ''})
 }
 
 render() {
@@ -65,7 +70,7 @@ render() {
                 )}
             </ScrollView>
             <View style={styles.sendNewMessage}>
-                <TextInput placeholder="message..." onChangeText={content => this.setState({content})}/>
+                <TextInput placeholder="message..." value={this.state.content} onChangeText={content => this.setState({content})}/>
                 <Button title="send" onPress={() => {this.newMessage()}} />
             </View>
         </View>
@@ -103,10 +108,11 @@ const styles = StyleSheet.create({
         backgroundColor: 'blue',
         fontSize: 12,
         borderRadius: 15,
-        padding: 15,
+        padding: 17,
         margin: 2,
         height: 25,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        alignSelf: 'flex-start'
     },
     sendNewMessage: {
         bottom: '0%',
@@ -117,7 +123,7 @@ const styles = StyleSheet.create({
     },
     messageContainer: {
         position: 'absolute',
-        height: 445,
+        height: 440,
         width: 370,
         left: 20,
         top: 100
