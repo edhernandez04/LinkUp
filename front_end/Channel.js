@@ -17,7 +17,11 @@ componentDidMount() {
 }
 
 renderMessage = (message) => {
-    return ( <View><Text>{message.content}</Text></View> )
+    return (
+        <View key={message.id}>
+            <Text>{message.content}</Text>
+        </View>
+        )
 }
 
 newChatSubmit = () => {
@@ -32,11 +36,16 @@ newChatSubmit = () => {
         .then(chatRoom => this.setState({ chatRooms: [...this.state.chatRooms, chatRoom] }) )
 }
 
-//deleteChatRoom = (room) => {
-//    fetch(`http://10.0.2.2:3000/channels/${room.id}`, {
-//            method: 'DELETE'
-//        })
-//}
+joinChatRoom = (room) => {
+    this.createChannelWebsocketConnection(room.id);
+    Actions.messages(room)
+}
+
+deleteChatRoom = (room) => {
+    fetch('http://10.0.2.2:3000/channels/${room.id}', {
+            method: 'DELETE'
+        })
+}
 
 createChannelWebsocketConnection = channelId => {
     let socket = new WebSocket('ws://10.0.2.2:3000/cable')
@@ -81,7 +90,7 @@ createChannelWebsocketConnection = channelId => {
                     <View>
                         {this.state.chatRooms.map(room =>
                             <View style={styles.allRooms} key={room.id}>
-                                <Button title="Join" onPress={() => Actions.messages(room)}/>
+                                <Button title="Join" onPress={() => this.joinChatRoom(room)}/>
                                 <Text>{room.name}</Text>
                                 <Button title="Delete" onPress={() => this.deleteChatRoom(room)}/>
                             </View>
