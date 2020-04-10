@@ -10092,3 +10092,912 @@ Finished "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-10 11:48:01 -0400
 ChannelChannel stopped streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvMQ
 Finished "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-10 11:48:01 -0400
 ChannelChannel stopped streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvMQ
+Started POST "/login" for 127.0.0.1 at 2020-04-10 11:50:07 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 473ms (Views: 3.9ms | ActiveRecord: 2.1ms | Allocations: 893)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 11:50:08 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.5ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 11:51:10 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 432ms (Views: 1.6ms | ActiveRecord: 4.1ms | Allocations: 893)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 11:51:11 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 1.9ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 11:53:31 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 399ms (Views: 3.0ms | ActiveRecord: 2.9ms | Allocations: 895)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 11:55:29 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 416ms (Views: 3.2ms | ActiveRecord: 2.5ms | Allocations: 893)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 11:55:30 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.7ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 11:57:38 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 445ms (Views: 3.2ms | ActiveRecord: 2.2ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 11:57:39 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.6ms | Allocations: 2132)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 12:00:17 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 72ms (Views: 2.9ms | ActiveRecord: 7.1ms | Allocations: 764)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 12:00:24 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 759)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 12:00:47 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 19ms (Views: 1.6ms | ActiveRecord: 1.5ms | Allocations: 758)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 12:00:56 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 447ms (Views: 13.7ms | ActiveRecord: 1.9ms | Allocations: 895)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 12:00:57 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.7ms | Allocations: 2133)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 12:02:05 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 27ms (Views: 3.1ms | ActiveRecord: 6.2ms | Allocations: 758)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 12:02:45 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 758)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 12:02:58 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 758)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 12:03:11 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 420ms (Views: 2.6ms | ActiveRecord: 1.2ms | Allocations: 895)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 12:03:12 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.3ms | Allocations: 2133)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 12:04:23 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 433ms (Views: 3.6ms | ActiveRecord: 3.1ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 12:04:24 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.6ms | Allocations: 2133)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 12:05:55 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 758)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 12:06:09 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 440ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 894)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 12:06:50 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 758)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 12:07:03 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 10ms (Views: 1.8ms | ActiveRecord: 0.7ms | Allocations: 759)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 12:07:25 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 454ms (Views: 2.5ms | ActiveRecord: 0.9ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 12:07:26 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 1.9ms | Allocations: 2133)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 12:08:47 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 19ms (Views: 1.8ms | ActiveRecord: 0.9ms | Allocations: 758)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 12:08:56 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 425ms (Views: 2.6ms | ActiveRecord: 1.3ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 12:08:56 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.5ms | Allocations: 2133)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 12:09:22 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 758)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 12:09:33 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 458ms (Views: 1.2ms | ActiveRecord: 2.0ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 12:09:34 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.6ms | Allocations: 2133)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-10 12:11:07 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (20.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 40ms (Views: 16.2ms | ActiveRecord: 20.8ms | Allocations: 1175)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 13:11:10 -0400
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (13.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 69ms (Views: 2.6ms | ActiveRecord: 45.0ms | Allocations: 2371)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 13:15:47 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 21ms (Views: 1.6ms | ActiveRecord: 1.4ms | Allocations: 778)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 13:17:04 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (11.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 539ms (Views: 6.8ms | ActiveRecord: 70.4ms | Allocations: 6381)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 13:17:04 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 97ms (Views: 95.6ms | ActiveRecord: 0.5ms | Allocations: 2172)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 13:20:11 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 33ms (Views: 1.9ms | ActiveRecord: 1.4ms | Allocations: 759)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 13:22:40 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 561ms (Views: 4.6ms | ActiveRecord: 1.5ms | Allocations: 897)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 13:22:42 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (9.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 13.2ms | ActiveRecord: 9.6ms | Allocations: 2133)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 13:23:14 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 37ms (Views: 4.2ms | ActiveRecord: 7.2ms | Allocations: 758)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 13:23:38 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 501ms (Views: 7.7ms | ActiveRecord: 5.3ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 13:23:40 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 1.1ms | Allocations: 2133)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 13:24:22 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 41ms (Views: 35.0ms | ActiveRecord: 1.5ms | Allocations: 2133)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 13:27:09 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (31.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 101ms (Views: 5.7ms | ActiveRecord: 31.6ms | Allocations: 758)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 13:27:31 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 567ms (Views: 2.3ms | ActiveRecord: 0.7ms | Allocations: 895)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 13:27:32 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 3.2ms | Allocations: 2133)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 13:29:30 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 30ms (Views: 1.6ms | ActiveRecord: 1.3ms | Allocations: 758)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 13:29:47 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 717ms (Views: 8.7ms | ActiveRecord: 9.7ms | Allocations: 896)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 13:29:49 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 15.4ms | ActiveRecord: 6.8ms | Allocations: 2133)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 13:31:01 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 35ms (Views: 6.0ms | ActiveRecord: 10.0ms | Allocations: 778)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 13:31:23 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 548ms (Views: 3.1ms | ActiveRecord: 2.0ms | Allocations: 895)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 13:31:25 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 9.4ms | ActiveRecord: 7.2ms | Allocations: 2133)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 13:32:48 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 32ms (Views: 7.2ms | ActiveRecord: 1.3ms | Allocations: 758)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 13:33:04 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 612ms (Views: 5.7ms | ActiveRecord: 5.0ms | Allocations: 895)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 13:33:05 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 2.1ms | Allocations: 2133)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-10 13:41:41 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (30.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 239ms (Views: 39.7ms | ActiveRecord: 95.5ms | Allocations: 4675)
+
+
+Started POST "/channels" for 127.0.0.1 at 2020-04-10 13:41:51 -0400
+Processing by ChannelsController#create as JSON
+  Parameters: {"name"=>"WebSockets", "channel"=>{"name"=>"WebSockets"}}
+  [1m[35m (12.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[36mChannel Create (75.4ms)[0m  [1m[32mINSERT INTO "channels" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "WebSockets"], ["created_at", "2020-04-10 17:41:51.989932"], ["updated_at", "2020-04-10 17:41:51.989932"]]
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+Completed 200 OK in 166ms (Views: 4.2ms | ActiveRecord: 114.8ms | Allocations: 2503)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-10 13:41:57 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-10 13:41:57 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-10 13:41:57 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (39.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 229ms (Views: 150.2ms | ActiveRecord: 66.7ms | Allocations: 11559)
+
+
+  [1m[36mChannel Load (6.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvNQ
+Started POST "/messages" for 127.0.0.1 at 2020-04-10 13:42:06 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"we got a message app", "channel_id"=>5, "message"=>{"content"=>"we got a message app", "channel_id"=>5}}
+  [1m[35m (10.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[36mMessage Create (4.7ms)[0m  [1m[32mINSERT INTO "messages" ("content", "channel_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "we got a message app"], ["channel_id", 5], ["created_at", "2020-04-10 17:42:07.082373"], ["updated_at", "2020-04-10 17:42:07.082373"]]
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[35m (13.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+Completed 200 OK in 106ms (Views: 5.1ms | ActiveRecord: 29.1ms | Allocations: 4720)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 13:46:45 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 38ms (Views: 30.0ms | ActiveRecord: 3.3ms | Allocations: 2156)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-10 13:47:05 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 0.8ms | Allocations: 1275)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-10 13:47:08 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-10 13:47:08 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-10 13:47:08 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.8ms | Allocations: 7874)
+
+
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvMw
+Started GET "/cable" for 127.0.0.1 at 2020-04-10 13:47:15 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-10 13:47:15 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-10 13:47:15 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 1.0ms | Allocations: 7874)
+
+
+  [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvMQ
+Started GET "/users" for 127.0.0.1 at 2020-04-10 13:47:24 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.7ms | Allocations: 2132)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 13:57:57 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 867)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 13:58:09 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 18ms (Views: 1.4ms | ActiveRecord: 0.9ms | Allocations: 757)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 13:58:17 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 410ms (Views: 5.8ms | ActiveRecord: 6.9ms | Allocations: 900)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 13:58:18 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.9ms | Allocations: 2132)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 14:00:09 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 28ms (Views: 1.0ms | ActiveRecord: 1.9ms | Allocations: 757)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:00:23 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 395ms (Views: 2.1ms | ActiveRecord: 1.4ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:00:24 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.6ms | Allocations: 2132)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 14:01:34 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 24ms (Views: 1.2ms | ActiveRecord: 6.4ms | Allocations: 757)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 14:01:48 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 757)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:02:11 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 410ms (Views: 2.0ms | ActiveRecord: 2.0ms | Allocations: 895)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:02:12 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 1.0ms | Allocations: 2132)
+
+
+Started GET "/auto_login" for 127.0.0.1 at 2020-04-10 14:02:41 -0400
+Processing by AuthController#auto_login as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `session_user'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 757)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:02:50 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 461ms (Views: 0.5ms | ActiveRecord: 1.6ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:02:51 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.7ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:03:41 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 453ms (Views: 0.5ms | ActiveRecord: 4.1ms | Allocations: 897)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:03:42 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 2133)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:05:01 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 409ms (Views: 3.4ms | ActiveRecord: 2.6ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:05:02 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 1.0ms | Allocations: 2166)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:06:02 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 444ms (Views: 2.8ms | ActiveRecord: 2.3ms | Allocations: 908)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:06:03 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 1.0ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:07:29 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 443ms (Views: 2.6ms | ActiveRecord: 6.5ms | Allocations: 893)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:07:30 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 1.9ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:08:24 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 413ms (Views: 2.8ms | ActiveRecord: 2.0ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:08:25 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.9ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:09:17 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 19.9ms | ActiveRecord: 3.0ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:09:32 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 428ms (Views: 3.0ms | ActiveRecord: 3.3ms | Allocations: 928)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:09:33 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 1.2ms | Allocations: 2134)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:10:24 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 498ms (Views: 3.1ms | ActiveRecord: 2.6ms | Allocations: 895)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:10:25 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.9ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:10:56 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.6ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:11:51 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 36ms (Views: 30.3ms | ActiveRecord: 1.5ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:12:52 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 1.1ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:13:12 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 412ms (Views: 0.7ms | ActiveRecord: 1.9ms | Allocations: 1160)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:13:13 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.9ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:14:51 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 394ms (Views: 3.9ms | ActiveRecord: 3.0ms | Allocations: 896)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:14:52 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.9ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:15:34 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 546ms (Views: 0.5ms | ActiveRecord: 5.0ms | Allocations: 1029)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:15:34 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.5ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:16:26 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 457ms (Views: 7.4ms | ActiveRecord: 2.7ms | Allocations: 895)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:16:27 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 1.0ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:17:18 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 404ms (Views: 2.9ms | ActiveRecord: 1.1ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:17:19 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 1.6ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:19:24 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 440ms (Views: 2.8ms | ActiveRecord: 3.8ms | Allocations: 895)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:19:25 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 1.2ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:20:06 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 401ms (Views: 3.3ms | ActiveRecord: 3.3ms | Allocations: 894)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:20:24 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 390ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 894)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:20:43 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 409ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 894)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:21:18 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 396ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 893)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:21:19 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 1.0ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:22:12 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 410ms (Views: 2.9ms | ActiveRecord: 2.4ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:22:13 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.8ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-10 14:23:41 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 405ms (Views: 2.5ms | ActiveRecord: 2.4ms | Allocations: 895)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-10 14:23:42 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 1.7ms | Allocations: 2132)
+
+

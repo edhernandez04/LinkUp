@@ -11,28 +11,6 @@ state = {
     longitude: 0
 }
 
-componentDidMount(){
-    const token = AsyncStorage.token
-    if(token){
-        fetch("http://10.0.2.2:3000/auto_login", {
-            headers: {
-                "Authorization": token
-            }
-        })
-            .then(res => res.json())
-            .then(response => {
-                if (response.errors){
-                    alert(response.errors)
-                    Actions.login()
-                } else {
-                    this.setState({ currentUser: response })
-                }
-            })
-    } else {
-        Actions.login()
-    }
-}
-
 getLocation = () => {
     const granted = PermissionsAndroid.check( PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION );
         if (granted) {
@@ -49,26 +27,15 @@ getLocation = () => {
 }
 
 setUser = response => {
-    console.log("setUser", response)
-    this.setState({ currentUser: response },
-        () => {
-            AsyncStorage.token = response.token
-            Actions.home()
-        }
-    )
-}
-
-setEditUser = response => {
-    this.setState({ currentUser: response },
-        () => { Actions.home() })
+    AsyncStorage.setItem('token', response.token);
+    this.setState({ currentUser: response.user })
+    Actions.home(response.user)
 }
 
 logout = () => {
-    this.setState({ currentUser: null },
-    () => {
-        AsyncStorage.removeItem("token")
-        Actions.login()
-    })
+    this.setState({ currentUser: null });
+    AsyncStorage.removeItem('token')
+    Actions.login()
 }
 
    render() {

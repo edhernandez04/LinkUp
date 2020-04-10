@@ -21,7 +21,7 @@ renderMessage = (message) => {
         <View key={message.id}>
             <Text>{message.content}</Text>
         </View>
-        )
+    )
 }
 
 newChatSubmit = () => {

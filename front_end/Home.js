@@ -16,19 +16,14 @@ componentDidMount(){
         .then(allUsers => this.setState({allUsers}))
 }
 
-showUser = (user) => {
-    <UserShow key={user.id} user={user}/>
-}
-
 render() {
-console.log(this.props.currentUser)
     return (
         <View style={styles.container}>
 
             <MapView style={styles.mapStyle} showsCompass={true} showsUserLocation={true}
                 region={{
-                    latitude: 40.853313,
-                    longitude: -73.863738,
+                    latitude: this.props.latitude,
+                    longitude: this.props.longitude,
                     latitudeDelta: 0.008,
                     longitudeDelta: 0.003
                 }}>
@@ -39,7 +34,7 @@ console.log(this.props.currentUser)
             </MapView>
 
         <View style={styles.menuContainer}>
-            <Text style={styles.text}>QuestGPS by Ed Cache</Text>
+            <Text style={styles.text}>{this.props.userName} | {this.props.fullName}</Text>
         </View>
 
         <View style={styles.menuContainer}>
