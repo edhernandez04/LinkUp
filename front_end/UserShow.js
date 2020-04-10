@@ -3,7 +3,6 @@ import { View, StyleSheet, Text, Button, Modal, Image, ImageBackground } from 'r
 import { Actions } from 'react-native-router-flux';
 
 const UserShow = (props) => (
-
         <ImageBackground  style= { styles.backgroundImage } source={require('./assets/scroll.png')} >
         <View style={styles.mainContainer}>
             <View style={styles.avatarCard}>
@@ -14,12 +13,11 @@ const UserShow = (props) => (
                 <Text style={styles.inputs}>{props.fullName}</Text>
                 <Text style={styles.inputs}>Last Known Location:</Text>
                 <Text style={styles.inputs}>{props.latitude}, {props.longitude} </Text>
-                <Button title="Start Chat" onPress={() => Actions.chat()}/>
+                <Button title="Start Chat" onPress={() => Actions.chat(props)}/>
             </View>
         </View>
         </ImageBackground>
 )
-
 export default UserShow
 
 const styles = StyleSheet.create({

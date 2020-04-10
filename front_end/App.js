@@ -19,6 +19,17 @@ getLocation = () => {
                 (position) => {
                     let latitude = JSON.stringify(position.coords.latitude)
                     let longitude = JSON.stringify(position.coords.longitude)
+                        fetch('http://10.0.2.2:3000/users/${this.state.currentUser.id}', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                latitude: latitude,
+                                longitude: longitude
+                             })
+                        })
                     this.setState({ latitude: parseFloat(latitude), longitude: parseFloat(longitude) })
                 }, { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 } )
         } else {

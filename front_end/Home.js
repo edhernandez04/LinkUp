@@ -28,7 +28,7 @@ render() {
                     longitudeDelta: 0.003
                 }}>
 
-            {this.state.allUsers.slice(0,3).map(user =>
+            {this.state.allUsers.map(user =>
                 <MapView.Marker key={user.id} image={user.avatar} coordinate={{"latitude":user.latitude, "longitude":user.longitude}} title={user.userName} onPress={() => Actions.userShow(user)}/>
             )}
             </MapView>

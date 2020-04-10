@@ -17,10 +17,10 @@ const Routes = (props) => (
             latitude={props.latitude}
             longitude={props.longitude}
          />
-         <Scene key = "chat" component = {Channel} title = "Chat Rooms"
+         <Scene key = "chat" component = {Channel} title = "Group Chats"
             currentUser={props.currentUser}
          />
-          <Scene key = "messages" component = {ChatRoom} title = "Send Message"
+          <Scene key = "messages" component = {ChatRoom} title = "Chat Room"
              currentUser={props.currentUser}
           />
          <Scene key = "login" component = {Login} title = "Login"
