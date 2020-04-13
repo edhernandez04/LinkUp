@@ -41,7 +41,7 @@ render(){
     return (
         <View style={styles.container}>
         <ImageBackground  style= { styles.backgroundImage } source={require('./assets/atlas.jpg')} >
-        <Text style={styles.theTitle}>QuestGPS</Text>
+        <Text style={styles.theTitle}>LinkUp</Text>
             <View style={styles.signupForm}>
                 <TextInput style={styles.inputText} placeholder="username" value={this.state.username} name="username" onChangeText={username => {this.setState({username})}}/>
                 <TextInput style={styles.inputText} placeholder="password" value={this.state.password} name="password" onChangeText={password => {this.setState({password})}}/>

@@ -44,10 +44,10 @@ render() {
 
         <View style={styles.menuContainer}>
             <View style={styles.buttonContainer}>
-                <Button title={"Open Chats"} style={styles.buttonStyle} onPress={() => Actions.chat()} color="red"/>
+                <Button title={"Chats"} style={styles.buttonStyle} onPress={() => Actions.chat()} color="red"/>
             </View>
             <View style={styles.buttonContainer}>
-                <Button title={"Login"} onPress={() => Actions.login()} color="gold"/>
+                <Button title={"Log Coord"} onPress={() => Actions.login()} color="goldenrod"/>
             </View>
             <View style={styles.buttonContainer}>
                 <Button title={"Edit Profile"} onPress={() => Actions.profile()} color="green"/>
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     },
     mapStyle: {
         width: '99%',
-        height: '85%'
+        height: '88%'
     },
     markerImage:{
         height: 50,
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center'
     },
     buttonContainer: {
         flex: 1,

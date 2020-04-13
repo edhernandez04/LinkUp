@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TextInput, View, Text, Button, StyleSheet, ImageBackground, Actions } from 'react-native';
+import { TextInput, View, Text, Button, StyleSheet, ImageBackground, Actions, Image, ScrollView, TouchableHighlight } from 'react-native';
 
 export default class UpdateUser extends React.Component {
 
@@ -32,7 +32,7 @@ handleSubmit = () => {
         .then(resp => resp.json())
         .then(response => {
             if (response.errors) {
-            alert(response.errors)
+                alert(response.errors)
             } else {
                 Actions.home()
             }
@@ -43,18 +43,26 @@ render(){
     return (
         <View style={styles.container}>
         <ImageBackground  style= { styles.backgroundImage } source={require('./assets/atlas.jpg')} >
+        <ScrollView>
         <Text style={styles.theTitle}>Edit Profile</Text>
-            <View style={styles.signupForm}>
+            <View>
+                <View style={styles.inputContainer}>
                 <TextInput style={styles.inputText} placeholder="username" value={this.state.username} name="username" onChangeText={username => {this.setState({username})}}/>
                 <TextInput style={styles.inputText} placeholder="full name" value={this.state.fullName} name="fullName" onChangeText={fullName => {this.setState({fullName})}}/>
-                {this.state.avatars.map(tar =>
-                    <View style={styles.avatarCard}>
-                        <Image src={tar.image} />
-                        <Text> tar.name </Text>
-                    </View>
-                )}
+                </View>
+                <View style={styles.avatarContainer}>
+                    {this.state.avatars.map(tar =>
+                        <TouchableHighlight onPress={() => this.setState({avatar: tar.image})}>
+                            <View key={tar.id} style={styles.avatarCard}>
+                                <Image source={{uri: tar.image}} style={styles.avatarImage} />
+                                <Text style={{color: 'white', justifyContent: 'center'}}> {tar.name} </Text>
+                            </View>
+                        </TouchableHighlight>
+                    )}
+                </View>
                 <Button title="Update" onPress={() => {this.handleSubmit()}} />
             </View>
+        </ScrollView>
         </ImageBackground>
         </View>
     );
@@ -63,29 +71,41 @@ render(){
 }
 
 const styles = StyleSheet.create({
+    avatarImage: {
+        width: 130,
+        height: 150,
+        margin: 5
+    },
+    inputContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-around'
+    },
+    avatarContainer: {
+        padding: 15,
+        flex: 1,
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        alignItems: 'flex-start',
+        justifyContent: 'space-around'
+    },
     container: {
          flex: 1,
          alignItems: 'center'
     },
-    signupForm: {
-        backgroundColor: 'black',
-        alignItems: 'center',
-        width: '90%',
-        height: '80%',
-        borderRadius: 50
-    },
     theTitle: {
         fontSize: 50,
         fontWeight: 'bold',
-        position: 'absolute',
-        top: '3%'
+        top: 15,
+        left: 75,
+        margin: 10
     },
     inputText: {
-        width: 200,
+        width: 175,
         padding: 15,
         margin: 20,
         borderWidth: 1,
         borderColor: 'white',
+        backgroundColor: 'black',
         borderRadius: 8,
         color: 'white'
     },
@@ -98,6 +118,12 @@ const styles = StyleSheet.create({
         opacity: 0.9
     },
     avatarCard:{
-        backgroundColor: 'red'
+        backgroundColor: 'black',
+        alignItems: 'center',
+        borderRadius: 20,
+        padding: 5,
+        margin: 5,
+        width: '90%',
+        height: 200
     }
 });

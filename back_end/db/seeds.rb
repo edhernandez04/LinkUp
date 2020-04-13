@@ -20,8 +20,6 @@ User.create!(fullName: "William James", userName: "billydakid", password: "123",
 User.create!(fullName: "Ivan Pavlov", userName: "oculus", password: "123", avatar: "https://www.poppular.eu/wp-content/uploads/2019/10/44503_Marvel_80th_ScarletWitch_FA_POP_GLAM_WEB-300x300.png", latitude: 40.856103, longitude: -73.857839)
 User.create!(fullName: "Frasier Crane", userName: "iamlistening", password: "123", avatar: "https://www.poppular.eu/wp-content/uploads/2019/09/43288_ApexLegends_Bloodhound_POP_GLAM-WEB-300x300.png", latitude: 40.861406, longitude: -73.824531)
 
-Avatar.create!(name:'Mulan',image: "https://secureservercdn.net/198.71.233.129/ggd.3c5.myftpupload.com/wp-content/uploads/2019/11/45325_Mulan_Ping_POP_WEB-6d71d59f67b35628a708b0ada6579682-300x300.png")
-Avatar.create!(name:"Fair God Mother",image:"https://i3.wp.com/mickeyblog.com/wp-content/uploads/2019/11/funkofairygodmother-300x300.png")
 Avatar.create!(name: 'Marty McFly',image:"https://www.tapoutcollectables.com.au/wp-content/uploads/2020/02/fun46913-back-future-marty-mcfly-1955-outfit-pop-vinyl-figure-300x300.png" )
 Avatar.create!(name: "Scarecrow",image:"https://www.medievalcollectibles.com/wp-content/uploads/2019/04/FK-6291-300x300.png" )
 Avatar.create!(name: "Evie Frye",image:"https://www.medievalcollectibles.com/wp-content/uploads/2019/04/FK-7255-300x300.png" )

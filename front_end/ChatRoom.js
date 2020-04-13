@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
         margin: 2,
         height: 25,
         justifyContent: 'center',
-        alignSelf: 'flex-start'
+        alignSelf: 'flex-end'
     },
     sendNewMessage: {
         bottom: '0%',
