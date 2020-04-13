@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
     def create
         user = User.new(
-        username: params[:userName],
+        userName: params[:userName],
         password: params[:password]
         )
             if user.save
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-        params.require(:user).permit(:fullName, :userName, :password, :avatar, latitude, longitude)
+        params.require(:user).permit(:fullName, :userName, :password, :avatar, :latitude, :longitude)
     end
 
 end

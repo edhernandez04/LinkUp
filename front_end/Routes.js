@@ -6,6 +6,7 @@ import Login from './Login.js'
 import SignUp from './SignUp.js'
 import UserShow from './UserShow.js'
 import ChatRoom from './ChatRoom.js'
+import UpdateUser from './UpdateUser.js'
 
 const Routes = (props) => (
    <Router>
@@ -30,7 +31,9 @@ const Routes = (props) => (
          <Scene key = "signup" component = {SignUp} title = "Sign Up"
             setUser={props.setUser}
          />
-         <Scene key = "userShow" component = {UserShow} title = "Profile" />
+         <Scene key = "userShow" component = {UserShow} title = "Friend" />
+
+         <Scene key = "profile" component = {UpdateUser} title = "Your Profile" />
       </Scene>
    </Router>
 )

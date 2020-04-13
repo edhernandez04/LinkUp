@@ -19,16 +19,17 @@ handleSubmit = () => {
             },
             body: JSON.stringify({
                 userName: this.state.username,
-                password: this.state.password
+                password: this.state.password,
+                latitude: 40.7812648,
+                longitude: -73.968828
             })
         })
             .then(resp => resp.json())
             .then(response => {
                 if (response.errors) {
-                alert(response.errors)
+                    alert(response.errors)
                 } else {
-                    this.props.setUser(response)
-                    Actions.home()
+                    this.props.setUser(response);
                 }
             })
     } else {
@@ -45,7 +46,7 @@ render(){
                 <TextInput style={styles.inputText} placeholder="username" value={this.state.username} name="username" onChangeText={username => {this.setState({username})}}/>
                 <TextInput style={styles.inputText} placeholder="password" value={this.state.password} name="password" onChangeText={password => {this.setState({password})}}/>
                 <TextInput style={styles.inputText} placeholder="confirm password" value={this.state.passwordConfirmation} name="passwordConfirmation" onChangeText={passwordConfirmation => {this.setState({passwordConfirmation})}}/>
-                <Button title="register" onPress={() => {this.handleSubmit()}} />
+                <Button title="register" onPress={this.handleSubmit} />
             </View>
         </ImageBackground>
         </View>

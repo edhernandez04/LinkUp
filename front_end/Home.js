@@ -28,9 +28,14 @@ render() {
                     longitudeDelta: 0.003
                 }}>
 
-            {this.state.allUsers.map(user =>
-                <MapView.Marker key={user.id} image={user.avatar} coordinate={{"latitude":user.latitude, "longitude":user.longitude}} title={user.userName} onPress={() => Actions.userShow(user)}/>
-            )}
+                {this.state.allUsers.map(user =>
+                    <MapView.Marker key={user.id}
+                        image={user.avatar}
+                        coordinate={ {'latitude': user.latitude, 'longitude': user.longitude} }
+                        title={user.userName}
+                        onPress={() => Actions.userShow(user)}
+                    />
+                )}
             </MapView>
 
         <View style={styles.menuContainer}>
@@ -45,7 +50,7 @@ render() {
                 <Button title={"Login"} onPress={() => Actions.login()} color="gold"/>
             </View>
             <View style={styles.buttonContainer}>
-                <Button title={"Find Me"} onPress={this.props.getLocation} color="green"/>
+                <Button title={"Edit Profile"} onPress={() => Actions.profile()} color="green"/>
             </View>
             <View style={styles.buttonContainer}>
                 <Button title={"Log Out"} onPress={this.props.logout} color="blue"/>
