@@ -46,7 +46,7 @@ render() {
     return (
         <View style={styles.container}>
             <View style={styles.titleContainer}>
-                <Text style={styles.title}> {this.props.navigation.state.params.name} </Text>
+                <Text style={styles.title}> {this.props.room.name} </Text>
             </View>
 
             <ScrollView style={styles.messageContainer}>

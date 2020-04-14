@@ -38,7 +38,7 @@ newChatSubmit = () => {
 
 joinChatRoom = (room) => {
     this.createChannelWebsocketConnection(room.id);
-    Actions.messages(room)
+    Actions.messages({room, userName: this.props.data})
 }
 
 deleteChatRoom = (room) => {
@@ -93,7 +93,7 @@ createChannelWebsocketConnection = channelId => {
                     <View>
                         {this.state.chatRooms.map(room =>
                             <View style={styles.allRooms} key={room.id}>
-                                <Button title="Join" onPress={() => this.joinChatRoom(room, this.props.data)}/>
+                                <Button title="Join" onPress={() => this.joinChatRoom(room)}/>
                                 <Text>{room.name}</Text>
                                 <Button title="Delete" onPress={() => this.deleteChatRoom(room)}/>
                             </View>

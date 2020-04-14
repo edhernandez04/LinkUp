@@ -17246,3 +17246,923 @@ puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
 puma (4.3.3) lib/puma/server.rb:472:in `process_client'
 puma (4.3.3) lib/puma/server.rb:328:in `block in run'
 puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2020-04-14 16:11:59 -0400
+  [1m[35m (27.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"ohcanada", "password"=>"[FILTERED]", "auth"=>{"userName"=>"ohcanada", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (42.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "ohcanada"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 473ms (Views: 1.7ms | ActiveRecord: 100.6ms | Allocations: 7961)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 16:12:00 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.6ms | Allocations: 2171)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:12:12 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (3.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 55ms (Views: 21.2ms | ActiveRecord: 14.6ms | Allocations: 4241)
+
+
+Started POST "/channels" for 127.0.0.1 at 2020-04-14 16:12:21 -0400
+Processing by ChannelsController#create as JSON
+  Parameters: {"name"=>"4Deletion", "channel"=>{"name"=>"4Deletion"}}
+  [1m[35m (12.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[36mChannel Create (31.5ms)[0m  [1m[32mINSERT INTO "channels" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "4Deletion"], ["created_at", "2020-04-14 20:12:21.569139"], ["updated_at", "2020-04-14 20:12:21.569139"]]
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[35m (25.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+Completed 200 OK in 98ms (Views: 0.6ms | ActiveRecord: 69.4ms | Allocations: 2520)
+
+
+Started DELETE "/channels/5" for 127.0.0.1 at 2020-04-14 16:12:22 -0400
+Processing by ChannelsController#destroy as HTML
+  Parameters: {"id"=>"5"}
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:12:23 -0400
+  [1m[36mChannel Load (6.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:23:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+  [1m[36mChannel Destroy (6.6ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+Completed 204 No Content in 46ms (ActiveRecord: 20.3ms | Allocations: 3286)
+
+
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (3.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 3.4ms | Allocations: 929)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:12:30 -0400
+Started DELETE "/channels/4" for 127.0.0.1 at 2020-04-14 16:12:30 -0400
+Processing by ChannelsController#destroy as HTML
+  Parameters: {"id"=>"4"}
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (1.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 1.4ms | Allocations: 959)
+
+
+  [1m[36mChannel Load (20.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:23:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+  [1m[36mChannel Destroy (2.6ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+  [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+Completed 204 No Content in 71ms (ActiveRecord: 36.6ms | Allocations: 3500)
+
+
+Started POST "/channels" for 127.0.0.1 at 2020-04-14 16:12:40 -0400
+Processing by ChannelsController#create as JSON
+  Parameters: {"name"=>"New One", "channel"=>{"name"=>"New One"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[36mChannel Create (3.2ms)[0m  [1m[32mINSERT INTO "channels" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "New One"], ["created_at", "2020-04-14 20:12:40.157994"], ["updated_at", "2020-04-14 20:12:40.157994"]]
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+Completed 200 OK in 33ms (Views: 2.7ms | ActiveRecord: 9.2ms | Allocations: 2249)
+
+
+Started POST "/channels" for 127.0.0.1 at 2020-04-14 16:12:50 -0400
+Processing by ChannelsController#create as JSON
+  Parameters: {"name"=>"Why cant firstest go?", "channel"=>{"name"=>"Why cant firstest go?"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[36mChannel Create (1.0ms)[0m  [1m[32mINSERT INTO "channels" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Why cant firstest go?"], ["created_at", "2020-04-14 20:12:50.463916"], ["updated_at", "2020-04-14 20:12:50.463916"]]
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+Completed 200 OK in 34ms (Views: 3.4ms | ActiveRecord: 2.3ms | Allocations: 2247)
+
+
+Started DELETE "/channels/6" for 127.0.0.1 at 2020-04-14 16:12:52 -0400
+Processing by ChannelsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:23:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+  [1m[36mChannel Destroy (9.7ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+Completed 204 No Content in 32ms (ActiveRecord: 14.8ms | Allocations: 2179)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:12:52 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (2.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 142ms (Views: 138.1ms | ActiveRecord: 2.5ms | Allocations: 874)
+
+
+Started DELETE "/channels/7" for 127.0.0.1 at 2020-04-14 16:12:57 -0400
+Processing by ChannelsController#destroy as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mChannel Load (0.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:23:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+  [1m[36mChannel Destroy (0.5ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:12:57 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.8ms | Allocations: 871)
+
+
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+Completed 204 No Content in 15ms (ActiveRecord: 9.8ms | Allocations: 3900)
+
+
+Started POST "/channels" for 127.0.0.1 at 2020-04-14 16:13:08 -0400
+Processing by ChannelsController#create as JSON
+  Parameters: {"name"=>"it is gone lol", "channel"=>{"name"=>"it is gone lol"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[36mChannel Create (1.0ms)[0m  [1m[32mINSERT INTO "channels" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "it is gone lol"], ["created_at", "2020-04-14 20:13:08.941402"], ["updated_at", "2020-04-14 20:13:08.941402"]]
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+Completed 200 OK in 16ms (Views: 0.6ms | ActiveRecord: 8.2ms | Allocations: 2247)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:13:10 -0400
+Processing by ChannelsController#index as HTML
+Started DELETE "/channels/8" for 127.0.0.1 at 2020-04-14 16:13:10 -0400
+  [1m[36mChannel Load (1.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 1.1ms | Allocations: 1109)
+
+
+Processing by ChannelsController#destroy as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mChannel Load (1.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:23:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+  [1m[36mChannel Destroy (0.8ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+Completed 204 No Content in 22ms (ActiveRecord: 11.0ms | Allocations: 2179)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:13:12 -0400
+Started DELETE "/channels/8" for 127.0.0.1 at 2020-04-14 16:13:12 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Processing by ChannelsController#destroy as HTML
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.6ms | Allocations: 1122)
+
+
+  Parameters: {"id"=>"8"}
+  [1m[36mChannel Load (11.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:23:in `destroy'
+Completed 404 Not Found in 20ms (ActiveRecord: 11.2ms | Allocations: 653)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Channel with 'id'=8):
+  
+app/controllers/channels_controller.rb:23:in `destroy'
+Started POST "/channels" for 127.0.0.1 at 2020-04-14 16:13:35 -0400
+Processing by ChannelsController#create as JSON
+  Parameters: {"name"=>"passing names for messages", "channel"=>{"name"=>"passing names for messages"}}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[36mChannel Create (4.1ms)[0m  [1m[32mINSERT INTO "channels" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "passing names for messages"], ["created_at", "2020-04-14 20:13:35.223682"], ["updated_at", "2020-04-14 20:13:35.223682"]]
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+Completed 200 OK in 201ms (Views: 1.0ms | ActiveRecord: 12.3ms | Allocations: 2301)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-14 16:13:36 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-14 16:13:36 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:13:36 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (7.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 36ms (Views: 4.0ms | ActiveRecord: 25.8ms | Allocations: 1929)
+
+
+  [1m[36mChannel Load (1.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvOQ
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:14:26 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 15.3ms | ActiveRecord: 1.4ms | Allocations: 771)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:16:56 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (3.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 13.0ms | ActiveRecord: 3.4ms | Allocations: 771)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:20:17 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (110.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 198ms (Views: 34.7ms | ActiveRecord: 110.1ms | Allocations: 872)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-14 16:20:35 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-14 16:20:35 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:20:35 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 771)
+
+
+  [1m[36mChannel Load (1.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvOQ
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:22:09 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (1.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 1.4ms | Allocations: 872)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-14 16:22:20 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-14 16:22:20 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:22:20 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms | Allocations: 771)
+
+
+  [1m[36mChannel Load (2.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvOQ
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:23:02 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (3.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 3.7ms | Allocations: 776)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:23:12 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (25.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 40ms (Views: 10.4ms | ActiveRecord: 25.8ms | Allocations: 771)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:24:30 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (1.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 1.0ms | Allocations: 872)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:25:37 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (1.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 23.9ms | ActiveRecord: 1.2ms | Allocations: 896)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-14 16:25:56 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-14 16:25:56 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:25:56 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 771)
+
+
+  [1m[36mChannel Load (1.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvOQ
+Started POST "/login" for 127.0.0.1 at 2020-04-14 16:28:17 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"ohcanada", "password"=>"[FILTERED]", "auth"=>{"userName"=>"ohcanada", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "ohcanada"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 452ms (Views: 3.1ms | ActiveRecord: 5.7ms | Allocations: 926)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 16:28:18 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.6ms | Allocations: 2132)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:28:23 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 873)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-14 16:28:25 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-14 16:28:25 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:28:25 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 771)
+
+
+  [1m[36mChannel Load (1.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvOQ
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:30:52 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (48.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 74ms (Views: 21.3ms | ActiveRecord: 48.7ms | Allocations: 772)
+
+
+Started POST "/messages" for 127.0.0.1 at 2020-04-14 16:30:58 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"eddie", "message"=>{"content"=>"eddie"}}
+Completed 422 Unprocessable Entity in 724ms (Views: 0.2ms | ActiveRecord: 20.7ms | Allocations: 187146)
+
+
+Started POST "/messages" for 127.0.0.1 at 2020-04-14 16:31:17 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"wait what happen to the text", "message"=>{"content"=>"wait what happen to the text"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 725)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:33:17 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (21.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 52ms (Views: 15.5ms | ActiveRecord: 21.8ms | Allocations: 771)
+
+
+Started POST "/messages" for 127.0.0.1 at 2020-04-14 16:33:22 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"what", "message"=>{"content"=>"what"}}
+Completed 422 Unprocessable Entity in 19ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:34:39 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.8ms | Allocations: 771)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:34:47 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 771)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-14 16:34:52 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-14 16:34:52 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:34:52 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 771)
+
+
+  [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvOQ
+Started POST "/messages" for 127.0.0.1 at 2020-04-14 16:35:00 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"they arent persisting", "message"=>{"content"=>"they arent persisting"}}
+Completed 422 Unprocessable Entity in 15ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:35:18 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms | Allocations: 775)
+
+
+Started POST "/messages" for 127.0.0.1 at 2020-04-14 16:35:28 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"why arent these things persiting anymore", "message"=>{"content"=>"why arent these things persiting anymore"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:35:51 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 771)
+
+
+Started POST "/messages" for 127.0.0.1 at 2020-04-14 16:36:00 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"these messages arent sticking anymore", "message"=>{"content"=>"these messages arent sticking anymore"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:38:26 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (10.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 32ms (Views: 17.1ms | ActiveRecord: 10.5ms | Allocations: 771)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:39:28 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (13.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 37ms (Views: 12.5ms | ActiveRecord: 13.1ms | Allocations: 771)
+
+
+Started POST "/messages" for 127.0.0.1 at 2020-04-14 16:39:35 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"this should worknow", "message"=>{"content"=>"this should worknow"}}
+Completed 422 Unprocessable Entity in 19ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:40:36 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (92.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 116ms (Views: 18.3ms | ActiveRecord: 92.3ms | Allocations: 771)
+
+
+Started POST "/messages" for 127.0.0.1 at 2020-04-14 16:40:42 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"what is going on", "message"=>{"content"=>"what is going on"}}
+Completed 422 Unprocessable Entity in 18ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:40:47 -0400
+Processing by ChannelsController#index as HTML
+Started DELETE "/channels/9" for 127.0.0.1 at 2020-04-14 16:40:47 -0400
+  [1m[36mChannel Load (2.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 14.2ms | ActiveRecord: 2.5ms | Allocations: 1129)
+
+
+Processing by ChannelsController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mChannel Load (3.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:23:in `destroy'
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+  [1m[36mChannel Destroy (6.0ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+  [1m[35m (26.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+Completed 204 No Content in 60ms (ActiveRecord: 38.7ms | Allocations: 2275)
+
+
+Started DELETE "/channels/9" for 127.0.0.1 at 2020-04-14 16:40:48 -0400
+Processing by ChannelsController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mChannel Load (0.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:23:in `destroy'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.7ms | Allocations: 597)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Channel with 'id'=9):
+  
+app/controllers/channels_controller.rb:23:in `destroy'
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:40:48 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.7ms | Allocations: 944)
+
+
+Started POST "/channels" for 127.0.0.1 at 2020-04-14 16:40:52 -0400
+Processing by ChannelsController#create as JSON
+  Parameters: {"name"=>"One more time", "channel"=>{"name"=>"One more time"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[36mChannel Create (7.8ms)[0m  [1m[32mINSERT INTO "channels" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "One more time"], ["created_at", "2020-04-14 20:40:52.808964"], ["updated_at", "2020-04-14 20:40:52.808964"]]
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+Completed 200 OK in 28ms (Views: 0.8ms | ActiveRecord: 14.1ms | Allocations: 2245)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-14 16:40:54 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-14 16:40:54 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:40:54 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.8ms | Allocations: 787)
+
+
+  [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvMTA
+Started POST "/messages" for 127.0.0.1 at 2020-04-14 16:41:01 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"please work", "message"=>{"content"=>"please work"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started POST "/messages" for 127.0.0.1 at 2020-04-14 16:41:06 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"why do you hate me", "message"=>{"content"=>"why do you hate me"}}
+Completed 422 Unprocessable Entity in 5ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-14 16:41:46 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-14 16:41:46 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:41:47 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 8.3ms | ActiveRecord: 1.5ms | Allocations: 771)
+
+
+  [1m[36mChannel Load (6.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvMTA
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:42:40 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.8ms | Allocations: 771)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:42:54 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.8ms | Allocations: 870)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-14 16:42:57 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-14 16:42:57 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:42:57 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 771)
+
+
+  [1m[36mChannel Load (1.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvMTA
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 47]]
+  [1m[35m (29.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (1.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 48]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (1.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 49]]
+  [1m[35m (12.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (12.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 50]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (2.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 51]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (2.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 52]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (6.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 53]]
+  [1m[35m (15.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (3.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 54]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mChannel Load (1.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChannel Destroy (6.3ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = $1[0m  [["id", 10]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  [1m[36mAvatar Load (27.6ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.7ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 95]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.8ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 96]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.6ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 97]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (2.6ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 98]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.6ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 99]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (1.3ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 100]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.9ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 101]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.5ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 102]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.8ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 103]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.6ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 104]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.5ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 105]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 106]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.7ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 107]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (2.8ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 108]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.7ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 109]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (1.9ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 110]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (1.3ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 111]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.5ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 112]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.5ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 113]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (2.3ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 114]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.6ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 115]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.5ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 116]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  [1m[36mUser Create (14.1ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "B. F. Skinner"], ["userName", "aircrib"], ["password_digest", "$2a$12$GYY8DRvPP2x5JPjUmEIcGuhk/QV.6TbKbLzUBCEeIQMg1uRlDTsyW"], ["avatar", "https://cdn.shopify.com/s/files/1/1338/2239/products/12219251-1974726958048463_large.png?v=1578028935"], ["latitude", 40.881757], ["longitude", -73.854691], ["created_at", "2020-04-14 20:44:00.080264"], ["updated_at", "2020-04-14 20:44:00.080264"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "genejean"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Jean Piaget"], ["userName", "genejean"], ["password_digest", "$2a$12$fGRljcoqKZTP4MLHUu8Bau5V4Pii5nTpH68vnp4htGRIROqGx5nr2"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/10/44502_Marvel_80th_BlackWidow_FA_POP_GLAM_WEB-300x300.png"], ["latitude", 40.862229], ["longitude", -73.840843], ["created_at", "2020-04-14 20:44:00.490342"], ["updated_at", "2020-04-14 20:44:00.490342"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Sigmund Freud"], ["userName", "lolconscious"], ["password_digest", "$2a$12$7Ag97mNX7ISOBG3MoHWS9uOZv1pOG54oXS9nTKG7W0iN3T6ATgxVO"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/09/44155_Marvel_WolverineFirstAppearance_POP_GLAM-WEB-300x300.png"], ["latitude", 40.853313], ["longitude", -73.863738], ["created_at", "2020-04-14 20:44:00.881922"], ["updated_at", "2020-04-14 20:44:00.881922"]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "ohcanada"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Albert Bandura"], ["userName", "ohcanada"], ["password_digest", "$2a$12$XzQsv3QnZrSrhz2lkpOpQ.XwnwFmFjoH7.DR3HJOPLFNc6bHY/9Ca"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/09/43286_ApexLegends_Gibraltar_POP_GLAM-WEB-300x300.png"], ["latitude", 40.847449], ["longitude", -73.851692], ["created_at", "2020-04-14 20:44:01.363665"], ["updated_at", "2020-04-14 20:44:01.363665"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "dissonance"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Leon Festinger"], ["userName", "dissonance"], ["password_digest", "$2a$12$YvY1h9ftLuFcrMw0sPKX/.BDREd2bIYTV/R8bgVNGC.NXSPtNCLYC"], ["avatar", "https://marketline-shop.com/wp-content/uploads/2020/04/43343_CrashBandicoot_CrashSpinning_POP_WEB-300x300.png"], ["latitude", 40.859544], ["longitude", -73.851996], ["created_at", "2020-04-14 20:44:01.798115"], ["updated_at", "2020-04-14 20:44:01.798115"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "billydakid"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "William James"], ["userName", "billydakid"], ["password_digest", "$2a$12$mKjH6u1xHutNKhe5YSoy5O4bqLHguxWkUEUp24VJ76yNsLqFvNC96"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/12/46953_Marvel_TheVulture_POP_GLAM-WEB-300x300.png"], ["latitude", 40.868184], ["longitude", -73.853735], ["created_at", "2020-04-14 20:44:02.154798"], ["updated_at", "2020-04-14 20:44:02.154798"]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "oculus"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Ivan Pavlov"], ["userName", "oculus"], ["password_digest", "$2a$12$BS.V3JZQmccZWGbIAWle3uyvUjaNHXVM/zxGVNTrjwm528HQ0Ao7W"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/10/44503_Marvel_80th_ScarletWitch_FA_POP_GLAM_WEB-300x300.png"], ["latitude", 40.856103], ["longitude", -73.857839], ["created_at", "2020-04-14 20:44:02.608410"], ["updated_at", "2020-04-14 20:44:02.608410"]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "iamlistening"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Frasier Crane"], ["userName", "iamlistening"], ["password_digest", "$2a$12$f.YJWgYgluRycdZrVOykqeHXkBlVWVqpcTCiH6KrWUYf381vtnbES"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/09/43288_ApexLegends_Bloodhound_POP_GLAM-WEB-300x300.png"], ["latitude", 40.861406], ["longitude", -73.824531], ["created_at", "2020-04-14 20:44:02.970704"], ["updated_at", "2020-04-14 20:44:02.970704"]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (24.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Marty McFly"], ["image", "https://www.tapoutcollectables.com.au/wp-content/uploads/2020/02/fun46913-back-future-marty-mcfly-1955-outfit-pop-vinyl-figure-300x300.png"], ["created_at", "2020-04-14 20:44:02.983064"], ["updated_at", "2020-04-14 20:44:02.983064"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (1.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Scarecrow"], ["image", "https://www.medievalcollectibles.com/wp-content/uploads/2019/04/FK-6291-300x300.png"], ["created_at", "2020-04-14 20:44:03.019997"], ["updated_at", "2020-04-14 20:44:03.019997"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Evie Frye"], ["image", "https://www.medievalcollectibles.com/wp-content/uploads/2019/04/FK-7255-300x300.png"], ["created_at", "2020-04-14 20:44:03.027854"], ["updated_at", "2020-04-14 20:44:03.027854"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Space Rick"], ["image", "https://s3.thcdn.com/productimg/300/300/12219247-1454726957551195.png"], ["created_at", "2020-04-14 20:44:03.033064"], ["updated_at", "2020-04-14 20:44:03.033064"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SS Vegeta"], ["image", "https://www.drunexplained.com/wp-content/uploads/2019/12/vegeta_oob-300x300.png"], ["created_at", "2020-04-14 20:44:03.037964"], ["updated_at", "2020-04-14 20:44:03.037964"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Harley Quinn"], ["image", "https://www.getreadycomics.com/wp-content/uploads/2020/04/Birds-of-Prey-Pop-Harley-Quinn-Roller-Derby-Figure-300x300.png"], ["created_at", "2020-04-14 20:44:03.042045"], ["updated_at", "2020-04-14 20:44:03.042045"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Deadpool The Duck"], ["image", "https://funkopoptees.com/wp-content/uploads/2020/04/dpd-01-300x300.png"], ["created_at", "2020-04-14 20:44:03.046397"], ["updated_at", "2020-04-14 20:44:03.046397"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Korg"], ["image", "https://www.poppular.eu/wp-content/uploads/2019/09/45140_Avengers_Gamer_Korg_POP_GLAM_WEB-300x300.png"], ["created_at", "2020-04-14 20:44:03.050795"], ["updated_at", "2020-04-14 20:44:03.050795"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Wolverine"], ["image", "https://www.medievalcollectibles.com/wp-content/uploads/2019/04/FK-12458-300x300.png"], ["created_at", "2020-04-14 20:44:03.055281"], ["updated_at", "2020-04-14 20:44:03.055281"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Gumby"], ["image", "https://secureservercdn.net/198.71.233.129/ggd.3c5.myftpupload.com/wp-content/uploads/2019/11/46581_Television_Gumby_POP_GLAM-WEB-bd2a2a661e930f6306f288a052b8f93a-300x300.png"], ["created_at", "2020-04-14 20:44:03.059541"], ["updated_at", "2020-04-14 20:44:03.059541"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tsunade"], ["image", "https://s4.thcdn.com/productimg/300/300/12275525-2804730580514359.png"], ["created_at", "2020-04-14 20:44:03.065545"], ["updated_at", "2020-04-14 20:44:03.065545"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Cable"], ["image", "https://www.medievalcollectibles.com/wp-content/uploads/2019/04/FK-11694-300x300.png"], ["created_at", "2020-04-14 20:44:03.071599"], ["updated_at", "2020-04-14 20:44:03.071599"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mr. Satan"], ["image", "https://www.tapoutcollectables.com.au/wp-content/uploads/2020/02/fun47682-dragon-ball-super-hercule-funko-pop-vinyl-figure-300x300.png"], ["created_at", "2020-04-14 20:44:03.075951"], ["updated_at", "2020-04-14 20:44:03.075951"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Captain America"], ["image", "https://www.poppular.eu/wp-content/uploads/2019/09/45137_Avengers_CaptainAmerica_ShieldMjolnir_POP_GLAM_WEB-300x300.png"], ["created_at", "2020-04-14 20:44:03.080185"], ["updated_at", "2020-04-14 20:44:03.080185"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Thor"], ["image", "https://www.poppular.eu/wp-content/uploads/2019/09/45142_Avengers_Bro_Thor_POP_GLAM_WEB-300x300.png"], ["created_at", "2020-04-14 20:44:03.085671"], ["updated_at", "2020-04-14 20:44:03.085671"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Orochimaru"], ["image", "https://s3.thcdn.com/productimg/300/300/12275524-1014730580388842.png"], ["created_at", "2020-04-14 20:44:03.091010"], ["updated_at", "2020-04-14 20:44:03.091010"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Coco Bandicoot"], ["image", "https://i.ya-webdesign.com/images/crash-bandicoot-coco-png-11.png"], ["created_at", "2020-04-14 20:44:03.097235"], ["updated_at", "2020-04-14 20:44:03.097235"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Michonne"], ["image", "https://www.poppular.eu/wp-content/uploads/2019/09/43536_TWD_Michonne_POP_GLAM-1-300x300.png"], ["created_at", "2020-04-14 20:44:03.103022"], ["updated_at", "2020-04-14 20:44:03.103022"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "MewTwo"], ["image", "https://gamecuddle.com/wp-content/uploads/2020/02/mew-300x300.png"], ["created_at", "2020-04-14 20:44:03.119530"], ["updated_at", "2020-04-14 20:44:03.119530"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lamar Jackson"], ["image", "https://crawfordsgiftshop.com/wp-content/uploads/E2D32275-D0EB-48E1-8D96-04F601422527-300x300.png"], ["created_at", "2020-04-14 20:44:03.124369"], ["updated_at", "2020-04-14 20:44:03.124369"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (2.3ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Poison Ivy"], ["image", "https://www.letstango.com/media/catalog/product/cache/1/thumbnail/300x300/9df78eab33525d08d6e5fb8d27136e95/5/7/5747efd5cdefc4.15544909.png"], ["created_at", "2020-04-14 20:44:03.129821"], ["updated_at", "2020-04-14 20:44:03.129821"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Doc Brown"], ["image", "https://www.tapoutcollectables.com.au/wp-content/uploads/2020/02/fun46914-back-to-the-future-dr-emmett-brown-helmet-funko-pop-vinyl-figure-300x300.png"], ["created_at", "2020-04-14 20:44:03.137514"], ["updated_at", "2020-04-14 20:44:03.137514"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/messages" for 127.0.0.1 at 2020-04-14 16:49:38 -0400
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"please work", "message"=>{"content"=>"please work"}}
+Completed 422 Unprocessable Entity in 541ms (Views: 1.3ms | ActiveRecord: 43.2ms | Allocations: 186513)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-14 16:51:52 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"oculus", "password"=>"[FILTERED]", "auth"=>{"userName"=>"oculus", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (50.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "oculus"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 529ms (Views: 5.0ms | ActiveRecord: 72.4ms | Allocations: 7499)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 16:51:53 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.9ms | Allocations: 2171)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:52:01 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 3.2ms | Allocations: 1086)
+
+
+Started POST "/channels" for 127.0.0.1 at 2020-04-14 16:52:06 -0400
+Processing by ChannelsController#create as JSON
+  Parameters: {"name"=>"new thing", "channel"=>{"name"=>"new thing"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[36mChannel Create (11.0ms)[0m  [1m[32mINSERT INTO "channels" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "new thing"], ["created_at", "2020-04-14 20:52:06.530824"], ["updated_at", "2020-04-14 20:52:06.530824"]]
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[35m (14.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+Completed 200 OK in 66ms (Views: 1.2ms | ActiveRecord: 34.2ms | Allocations: 4545)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-14 16:52:07 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-14 16:52:07 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:52:07 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.6ms | Allocations: 806)
+
+
+  [1m[36mChannel Load (0.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvMTE
+Started POST "/login" for 127.0.0.1 at 2020-04-14 16:52:15 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"", "password"=>"[FILTERED]", "auth"=>{"userName"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", ""], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 615)
+
+
+Started POST "/messages" for 127.0.0.1 at 2020-04-14 16:52:19 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"just render everything", "message"=>{"content"=>"just render everything"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:52:30 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 1.0ms | Allocations: 790)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:52:51 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 771)
+
+
+Started POST "/messages" for 127.0.0.1 at 2020-04-14 16:53:04 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"12", "message"=>{"content"=>"12"}}
+Completed 422 Unprocessable Entity in 25ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 725)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-14 16:53:26 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-14 16:53:26 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 16:53:26 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.9ms | Allocations: 771)
+
+
+  [1m[36mChannel Load (1.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvMTE
+Started DELETE "/channels/11" for 127.0.0.1 at 2020-04-14 16:53:35 -0400
+Processing by ChannelsController#destroy as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:23:in `destroy'
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 16:53:35 -0400
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+  [1m[36mChannel Destroy (1.3ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:24:in `destroy'
+Completed 204 No Content in 33ms (ActiveRecord: 13.0ms | Allocations: 2771)
+
+
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (3.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 3.8ms | Allocations: 827)
+
+
