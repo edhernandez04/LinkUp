@@ -33,7 +33,7 @@ const Routes = (props) => (
          />
          <Scene key = "userShow" component = {UserShow} title = "Friend" />
 
-         <Scene key = "profile" component = {UpdateUser} title = "Your Profile" />
+         <Scene key = "profile" component = {UpdateUser} title = "Update Profile" />
       </Scene>
    </Router>
 )

@@ -14592,3 +14592,521 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms | Allocations: 1098)
 
 
+Started POST "/login" for 127.0.0.1 at 2020-04-13 16:29:41 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"iamlistening", "password"=>"[FILTERED]", "auth"=>{"userName"=>"iamlistening", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "iamlistening"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 439ms (Views: 3.3ms | ActiveRecord: 4.6ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-13 16:29:42 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.6ms | Allocations: 2285)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-13 16:29:58 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (1.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 22.6ms | ActiveRecord: 1.0ms | Allocations: 870)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-13 16:30:07 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 870)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-13 16:30:09 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-13 16:30:09 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-13 16:30:09 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1098)
+
+
+  [1m[36mChannel Load (1.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvMQ
+Started GET "/users" for 127.0.0.1 at 2020-04-13 16:30:11 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.2ms | Allocations: 2285)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-13 16:31:19 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (2.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 18.2ms | ActiveRecord: 2.4ms | Allocations: 1098)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-13 16:31:34 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.6ms | Allocations: 1098)
+
+
+Started GET "/messages" for 127.0.0.1 at 2020-04-13 16:32:08 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 1098)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-13 16:32:10 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.7ms | Allocations: 2285)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-13 16:32:25 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"oculus", "password"=>"[FILTERED]", "auth"=>{"userName"=>"oculus", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "oculus"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 400ms (Views: 0.9ms | ActiveRecord: 1.3ms | Allocations: 927)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-13 16:32:26 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.5ms | Allocations: 2285)
+
+
+Started GET "/avatars" for 127.0.0.1 at 2020-04-13 16:32:37 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (12.0ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 10.3ms | ActiveRecord: 12.0ms | Allocations: 2897)
+
+
+Started GET "/avatars" for 127.0.0.1 at 2020-04-13 16:33:11 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (6.4ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 8.6ms | ActiveRecord: 6.4ms | Allocations: 2897)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-13 16:51:48 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 479ms (Views: 2.6ms | ActiveRecord: 8.8ms | Allocations: 1036)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-13 16:51:50 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.5ms | Allocations: 2287)
+
+
+Started GET "/avatars" for 127.0.0.1 at 2020-04-13 16:51:54 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (12.9ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 31ms (Views: 14.5ms | ActiveRecord: 12.9ms | Allocations: 2897)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-13 16:52:02 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (1.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 1.0ms | Allocations: 874)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-13 16:55:19 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"iamlistening", "password"=>"[FILTERED]", "auth"=>{"userName"=>"iamlistening", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "iamlistening"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 525ms (Views: 2.9ms | ActiveRecord: 1.8ms | Allocations: 895)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-13 16:55:20 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.6ms | Allocations: 2285)
+
+
+Started GET "/avatars" for 127.0.0.1 at 2020-04-13 16:55:37 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (0.7ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.7ms | Allocations: 2897)
+
+
+Started GET "/avatars" for 127.0.0.1 at 2020-04-13 16:56:21 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (1.5ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 27.8ms | ActiveRecord: 1.5ms | Allocations: 2897)
+
+
+Started PATCH "/users/undefined" for 127.0.0.1 at 2020-04-13 16:57:04 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"userName"=>"iamlistening", "fullName"=>"Fraiser Crane", "avatar"=>"https://secureservercdn.net/198.71.233.129/ggd.3c5.myftpupload.com/wp-content/uploads/2019/11/46581_Television_Gumby_POP_GLAM-WEB-bd2a2a661e930f6306f288a052b8f93a-300x300.png", "id"=>"undefined", "user"=>{"fullName"=>"Fraiser Crane", "userName"=>"iamlistening", "avatar"=>"https://secureservercdn.net/198.71.233.129/ggd.3c5.myftpupload.com/wp-content/uploads/2019/11/46581_Television_Gumby_POP_GLAM-WEB-bd2a2a661e930f6306f288a052b8f93a-300x300.png"}}
+  [1m[36mUser Load (14.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+Completed 404 Not Found in 171ms (ActiveRecord: 14.6ms | Allocations: 726)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:30:in `update'
+Started GET "/avatars" for 127.0.0.1 at 2020-04-13 16:57:40 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (3.8ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 36ms (Views: 27.8ms | ActiveRecord: 3.8ms | Allocations: 2896)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-13 16:59:19 -0400
+Started GET "/users" for 127.0.0.1 at 2020-04-13 16:59:19 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 40ms (Views: 31.0ms | ActiveRecord: 4.5ms | Allocations: 2285)
+
+
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 11.9ms | ActiveRecord: 7.2ms | Allocations: 2367)
+
+
+Started GET "/avatars" for 127.0.0.1 at 2020-04-13 16:59:41 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (7.7ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 14.0ms | ActiveRecord: 7.7ms | Allocations: 2897)
+
+
+Started GET "/avatars" for 127.0.0.1 at 2020-04-13 17:01:39 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (1.7ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 43ms (Views: 36.1ms | ActiveRecord: 1.7ms | Allocations: 2898)
+
+
+Started PATCH "/users/34" for 127.0.0.1 at 2020-04-13 17:02:23 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"userName"=>"iamlistening", "fullName"=>"Fraiser Crane", "avatar"=>"https://secureservercdn.net/198.71.233.129/ggd.3c5.myftpupload.com/wp-content/uploads/2019/11/46581_Television_Gumby_POP_GLAM-WEB-bd2a2a661e930f6306f288a052b8f93a-300x300.png", "id"=>"34", "user"=>{"fullName"=>"Fraiser Crane", "userName"=>"iamlistening", "avatar"=>"https://secureservercdn.net/198.71.233.129/ggd.3c5.myftpupload.com/wp-content/uploads/2019/11/46581_Television_Gumby_POP_GLAM-WEB-bd2a2a661e930f6306f288a052b8f93a-300x300.png"}}
+  [1m[36mUser Load (29.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (27.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "iamlistening"], ["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Update (42.0ms)[0m  [1m[33mUPDATE "users" SET "fullName" = $1, "avatar" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["fullName", "Fraiser Crane"], ["avatar", "https://secureservercdn.net/198.71.233.129/ggd.3c5.myftpupload.com/wp-content/uploads/2019/11/46581_Television_Gumby_POP_GLAM-WEB-bd2a2a661e930f6306f288a052b8f93a-300x300.png"], ["updated_at", "2020-04-13 21:02:24.254061"], ["id", 34]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (20.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 446ms (Views: 2.2ms | ActiveRecord: 240.6ms | Allocations: 4149)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-13 17:03:10 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"iamlistening", "password"=>"[FILTERED]", "auth"=>{"userName"=>"iamlistening", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "iamlistening"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 472ms (Views: 1.0ms | ActiveRecord: 4.1ms | Allocations: 898)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-13 17:03:11 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 1.0ms | Allocations: 2285)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-14 10:30:24 -0400
+  [1m[35m (31.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (55.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 680ms (Views: 2.3ms | ActiveRecord: 213.6ms | Allocations: 7960)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 10:30:29 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.8ms | Allocations: 2324)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-14 10:31:03 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"iamlistening", "password"=>"[FILTERED]", "auth"=>{"userName"=>"iamlistening", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "iamlistening"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 456ms (Views: 5.0ms | ActiveRecord: 5.8ms | Allocations: 911)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 10:31:04 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 90ms (Views: 89.1ms | ActiveRecord: 0.7ms | Allocations: 2308)
+
+
+Started GET "/avatars" for 127.0.0.1 at 2020-04-14 10:31:11 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (33.5ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 97ms (Views: 23.7ms | ActiveRecord: 69.5ms | Allocations: 6169)
+
+
+Started PATCH "/users/34" for 127.0.0.1 at 2020-04-14 10:31:50 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"userName"=>"dianakilledme", "fullName"=>"Fraiser Crane", "avatar"=>"https://www.tapoutcollectables.com.au/wp-content/uploads/2020/02/fun47682-dragon-ball-super-hercule-funko-pop-vinyl-figure-300x300.png", "id"=>"34", "user"=>{"fullName"=>"Fraiser Crane", "userName"=>"dianakilledme", "avatar"=>"https://www.tapoutcollectables.com.au/wp-content/uploads/2020/02/fun47682-dragon-ball-super-hercule-funko-pop-vinyl-figure-300x300.png"}}
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (90.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "dianakilledme"], ["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Update (33.5ms)[0m  [1m[33mUPDATE "users" SET "userName" = $1, "avatar" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["userName", "dianakilledme"], ["avatar", "https://www.tapoutcollectables.com.au/wp-content/uploads/2020/02/fun47682-dragon-ball-super-hercule-funko-pop-vinyl-figure-300x300.png"], ["updated_at", "2020-04-14 14:31:51.077240"], ["id", 34]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 387ms (Views: 3.5ms | ActiveRecord: 165.2ms | Allocations: 4526)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 10:31:51 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.8ms | Allocations: 2288)
+
+
+Started GET "/avatars" for 127.0.0.1 at 2020-04-14 10:38:24 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (1.4ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 1.4ms | Allocations: 2956)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 10:38:41 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (17.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 82ms (Views: 22.5ms | ActiveRecord: 41.0ms | Allocations: 4249)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-14 10:38:59 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"iamlistening", "password"=>"[FILTERED]", "auth"=>{"userName"=>"iamlistening", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "iamlistening"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 4.0ms | Allocations: 667)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-14 10:39:17 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"dianekilledme", "password"=>"[FILTERED]", "auth"=>{"userName"=>"dianekilledme", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "dianekilledme"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 12ms (Views: 1.3ms | ActiveRecord: 2.0ms | Allocations: 616)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-14 10:39:29 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 451ms (Views: 2.7ms | ActiveRecord: 0.9ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 10:39:30 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.7ms | Allocations: 2286)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-14 10:40:20 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"dianakilledme", "password"=>"[FILTERED]", "auth"=>{"userName"=>"dianakilledme", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "dianakilledme"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 387ms (Views: 6.1ms | ActiveRecord: 4.1ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 10:40:21 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 1.7ms | Allocations: 2286)
+
+
+Started GET "/avatars" for 127.0.0.1 at 2020-04-14 10:40:29 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (0.6ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.6ms | Allocations: 2898)
+
+
+Started PATCH "/users/34" for 127.0.0.1 at 2020-04-14 10:40:54 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"userName"=>"iamlistening", "fullName"=>"Fraiser Crane", "avatar"=>"https://www.poppular.eu/wp-content/uploads/2019/09/45140_Avengers_Gamer_Korg_POP_GLAM_WEB-300x300.png", "id"=>"34", "user"=>{"fullName"=>"Fraiser Crane", "userName"=>"iamlistening", "avatar"=>"https://www.poppular.eu/wp-content/uploads/2019/09/45140_Avengers_Gamer_Korg_POP_GLAM_WEB-300x300.png"}}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (58.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "iamlistening"], ["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Update (14.9ms)[0m  [1m[33mUPDATE "users" SET "userName" = $1, "avatar" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["userName", "iamlistening"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/09/45140_Avengers_Gamer_Korg_POP_GLAM_WEB-300x300.png"], ["updated_at", "2020-04-14 14:40:54.297220"], ["id", 34]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (20.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 246ms (Views: 6.9ms | ActiveRecord: 107.6ms | Allocations: 4078)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 10:40:54 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.6ms | Allocations: 2286)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 10:41:57 -0400
+Processing by UsersController#index as HTML
+Started GET "/avatars" for 127.0.0.1 at 2020-04-14 10:41:58 -0400
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 22.1ms | ActiveRecord: 3.1ms | Allocations: 2570)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 10:41:58 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 35ms (Views: 24.0ms | ActiveRecord: 6.9ms | Allocations: 2286)
+
+
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (16.5ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 159ms (Views: 141.3ms | ActiveRecord: 16.5ms | Allocations: 2959)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-14 10:43:21 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 674ms (Views: 4.1ms | ActiveRecord: 39.9ms | Allocations: 950)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 10:43:23 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 1.0ms | Allocations: 2286)
+
+
+Started GET "/avatars" for 127.0.0.1 at 2020-04-14 10:43:29 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (0.6ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.6ms | Allocations: 2898)
+
+
+Started PATCH "/users/27" for 127.0.0.1 at 2020-04-14 10:44:05 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"userName"=>"aircrib", "fullName"=>"Leon Swimmer", "avatar"=>"https://s3.thcdn.com/productimg/300/300/12219247-1454726957551195.png", "id"=>"27", "user"=>{"fullName"=>"Leon Swimmer", "userName"=>"aircrib", "avatar"=>"https://s3.thcdn.com/productimg/300/300/12219247-1454726957551195.png"}}
+  [1m[36mUser Load (9.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (9.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "aircrib"], ["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Update (15.5ms)[0m  [1m[33mUPDATE "users" SET "fullName" = $1, "avatar" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["fullName", "Leon Swimmer"], ["avatar", "https://s3.thcdn.com/productimg/300/300/12219247-1454726957551195.png"], ["updated_at", "2020-04-14 14:44:05.963381"], ["id", 27]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 142ms (Views: 5.4ms | ActiveRecord: 54.5ms | Allocations: 4077)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 10:44:06 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.6ms | Allocations: 2286)
+
+
+Started GET "/avatars" for 127.0.0.1 at 2020-04-14 10:44:22 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (1.8ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 1.8ms | Allocations: 2898)
+
+
+Started POST "/signup" for 127.0.0.1 at 2020-04-14 10:45:09 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"userName"=>"newkid", "password"=>"[FILTERED]", "latitude"=>40.7812648, "longitude"=>-73.968828, "user"=>{"userName"=>"newkid", "latitude"=>40.7812648, "longitude"=>-73.968828}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "newkid"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (33.8ms)[0m  [1m[32mINSERT INTO "users" ("userName", "password_digest", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["userName", "newkid"], ["password_digest", "$2a$12$joI4lWPpWT6vuPm0EVeeye9dZi/AmRpG1.a8.cNxkmJK2ZquxT0q2"], ["latitude", 40.7812648], ["longitude", -73.968828], ["created_at", "2020-04-14 14:45:09.606527"], ["updated_at", "2020-04-14 14:45:09.606527"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 548ms (Views: 2.3ms | ActiveRecord: 42.5ms | Allocations: 3508)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 10:45:10 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 1.5ms | Allocations: 2439)
+
+
+Started GET "/avatars" for 127.0.0.1 at 2020-04-14 10:45:20 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (1.4ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 23.2ms | ActiveRecord: 1.4ms | Allocations: 2898)
+
+
+Started PATCH "/users/36" for 127.0.0.1 at 2020-04-14 10:45:46 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"userName"=>"newkid", "fullName"=>"John Smith", "avatar"=>"https://funkopoptees.com/wp-content/uploads/2020/04/dpd-01-300x300.png", "id"=>"36", "user"=>{"fullName"=>"John Smith", "userName"=>"newkid", "avatar"=>"https://funkopoptees.com/wp-content/uploads/2020/04/dpd-01-300x300.png"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "newkid"], ["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "fullName" = $1, "avatar" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["fullName", "John Smith"], ["avatar", "https://funkopoptees.com/wp-content/uploads/2020/04/dpd-01-300x300.png"], ["updated_at", "2020-04-14 14:45:46.166742"], ["id", 36]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 72ms (Views: 4.0ms | ActiveRecord: 11.4ms | Allocations: 4081)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 10:45:46 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 3.3ms | Allocations: 2455)
+
+

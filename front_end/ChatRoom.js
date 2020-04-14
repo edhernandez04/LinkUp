@@ -48,15 +48,15 @@ render() {
             <View style={styles.titleContainer}>
                 <Text style={styles.title}> {this.props.navigation.state.params.name} </Text>
             </View>
-            <View style={styles.menuContainer}>
+                <View style={styles.menuContainer}>
                 <View style={styles.buttonContainer}>
-                    <Button title={"All Chats"} style={styles.buttonStyle} onPress={() => Actions.chat()} color="red"/>
+                    <Button title={"Chats"} style={styles.buttonStyle} onPress={() => Actions.chat()} color="red"/>
                 </View>
                 <View style={styles.buttonContainer}>
-                    <Button title={"Home"} onPress={() => Actions.home()} color="gold"/>
+                    <Button title={"Log Coord"} onPress={() => Actions.login()} color="goldenrod"/>
                 </View>
                 <View style={styles.buttonContainer}>
-                    <Button title={"Find Me"} onPress={this.props.getLocation} color="green"/>
+                    <Button title={"Home"} onPress={() => Actions.home()} color="green"/>
                 </View>
                 <View style={styles.buttonContainer}>
                     <Button title={"Log Out"} onPress={this.props.logout} color="blue"/>

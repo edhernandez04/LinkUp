@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { TextInput, View, Text, Button, StyleSheet, ImageBackground, Actions, Image, ScrollView, TouchableHighlight } from 'react-native';
+import { TextInput, View, Text, Button, StyleSheet, ImageBackground, Image, ScrollView, TouchableHighlight } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
 export default class UpdateUser extends React.Component {
 
@@ -17,7 +18,7 @@ componentDidMount() {
 }
 
 handleSubmit = () => {
-    fetch('http://10.0.2.2:3000/users/${this.props.id}', {
+    fetch(`http://10.0.2.2:3000/users/${this.props.id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
@@ -34,7 +35,7 @@ handleSubmit = () => {
             if (response.errors) {
                 alert(response.errors)
             } else {
-                Actions.home()
+                Actions.home(response)
             }
         })
 }
@@ -52,8 +53,8 @@ render(){
                 </View>
                 <View style={styles.avatarContainer}>
                     {this.state.avatars.map(tar =>
-                        <TouchableHighlight onPress={() => this.setState({avatar: tar.image})}>
-                            <View key={tar.id} style={styles.avatarCard}>
+                        <TouchableHighlight key={tar.id} onPress={() => this.setState({avatar: tar.image})}>
+                            <View style={styles.avatarCard}>
                                 <Image source={{uri: tar.image}} style={styles.avatarImage} />
                                 <Text style={{color: 'white', justifyContent: 'center'}}> {tar.name} </Text>
                             </View>

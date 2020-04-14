@@ -17,6 +17,7 @@ componentDidMount(){
 }
 
 render() {
+console.log(this.props)
     return (
         <View style={styles.container}>
 
@@ -50,7 +51,7 @@ render() {
                 <Button title={"Log Coord"} onPress={() => Actions.login()} color="goldenrod"/>
             </View>
             <View style={styles.buttonContainer}>
-                <Button title={"Edit Profile"} onPress={() => Actions.profile()} color="green"/>
+                <Button title={"Edit Profile"} onPress={() => Actions.profile(this.props)} color="green"/>
             </View>
             <View style={styles.buttonContainer}>
                 <Button title={"Log Out"} onPress={this.props.logout} color="blue"/>
