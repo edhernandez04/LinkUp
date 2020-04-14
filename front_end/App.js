@@ -14,7 +14,7 @@ state = {
 setUser = response => {
     AsyncStorage.setItem('token', response.token);
     this.setState({ currentUser: response.user })
-    Actions.home(response.user)
+    Actions.home({currentUser: response.user})
 }
 
 logout = () => {

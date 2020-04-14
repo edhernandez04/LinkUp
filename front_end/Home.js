@@ -54,7 +54,6 @@ moveMap = (lat, lng) => {
 }
 
 render() {
-    console.log(this.props)
     return (
         <View style={styles.container}>
 
@@ -64,8 +63,8 @@ render() {
                 showsCompass={true}
                 showsMyLocationButton={true}
                 region={{
-                    latitude: this.props.latitude,
-                    longitude: this.props.longitude,
+                    latitude: this.props.currentUser.latitude,
+                    longitude: this.props.currentUser.longitude,
                     latitudeDelta: 0.008,
                     longitudeDelta: 0.003
                 }}>
@@ -81,18 +80,18 @@ render() {
             </MapView>
 
         <View style={styles.menuContainer}>
-            <Text style={styles.text}>{this.props.userName} | {this.props.fullName}</Text>
+            <Text style={styles.text}>{this.props.currentUser.userName} | {this.props.currentUser.fullName}</Text>
         </View>
 
         <View style={styles.menuContainer}>
             <View style={styles.buttonContainer}>
-                <Button title={"Chats"} style={styles.buttonStyle} onPress={() => Actions.chat(this.props.userName)} color="red"/>
+                <Button title={"Chats"} style={styles.buttonStyle} onPress={() => Actions.chat({currentUser: this.props.currentUser})} color="red"/>
             </View>
             <View style={styles.buttonContainer}>
                 <Button title={"Check In"} onPress={this.findMe} color="goldenrod"/>
             </View>
             <View style={styles.buttonContainer}>
-                <Button title={"Edit Profile"} onPress={() => Actions.profile(this.props)} color="green"/>
+                <Button title={"Edit Profile"} onPress={() => Actions.profile({currentUser: this.props.currentUser})} color="green"/>
             </View>
             <View style={styles.buttonContainer}>
                 <Button title={"Log Out"} onPress={this.props.logout} color="blue"/>

@@ -18,7 +18,7 @@ componentDidMount() {
 }
 
 handleSubmit = () => {
-    fetch(`http://10.0.2.2:3000/users/${this.props.id}`, {
+    fetch(`http://10.0.2.2:3000/users/${this.props.currentUser.id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
@@ -35,12 +35,13 @@ handleSubmit = () => {
             if (response.errors) {
                 alert(response.errors)
             } else {
-                Actions.home(response)
+                Actions.home({currentUser: response})
             }
         })
 }
 
 render(){
+console.log(this.props.currentUser)
     return (
         <View style={styles.container}>
         <ImageBackground  style= { styles.backgroundImage } source={require('./assets/atlas.jpg')} >
@@ -48,8 +49,8 @@ render(){
         <Text style={styles.theTitle}>Edit Profile</Text>
             <View>
                 <View style={styles.inputContainer}>
-                <TextInput style={styles.inputText} placeholder="username" value={this.state.username} name="username" onChangeText={username => {this.setState({username})}}/>
-                <TextInput style={styles.inputText} placeholder="full name" value={this.state.fullName} name="fullName" onChangeText={fullName => {this.setState({fullName})}}/>
+                <TextInput style={styles.inputText} placeholder={this.props.currentUser.userName} value={this.state.username} name="username" onChangeText={username => {this.setState({username})}}/>
+                <TextInput style={styles.inputText} placeholder={this.props.currentUser.fullName} value={this.state.fullName} name="fullName" onChangeText={fullName => {this.setState({fullName})}}/>
                 </View>
                 <View style={styles.avatarContainer}>
                     {this.state.avatars.map(tar =>
