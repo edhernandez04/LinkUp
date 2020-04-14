@@ -2,9 +2,9 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 64232,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "packagerPid": 74791,
+  "expoServerNgrokUrl": "https://w8-zvi.anonymous.front-end.exp.direct",
+  "packagerNgrokUrl": "https://packager.w8-zvi.anonymous.front-end.exp.direct",
+  "ngrokPid": 74812,
   "webpackServerPort": null
 }

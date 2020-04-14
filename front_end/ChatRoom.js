@@ -48,20 +48,7 @@ render() {
             <View style={styles.titleContainer}>
                 <Text style={styles.title}> {this.props.navigation.state.params.name} </Text>
             </View>
-                <View style={styles.menuContainer}>
-                <View style={styles.buttonContainer}>
-                    <Button title={"Chats"} style={styles.buttonStyle} onPress={() => Actions.chat()} color="red"/>
-                </View>
-                <View style={styles.buttonContainer}>
-                    <Button title={"Log Coord"} onPress={() => Actions.login()} color="goldenrod"/>
-                </View>
-                <View style={styles.buttonContainer}>
-                    <Button title={"Home"} onPress={() => Actions.home()} color="green"/>
-                </View>
-                <View style={styles.buttonContainer}>
-                    <Button title={"Log Out"} onPress={this.props.logout} color="blue"/>
-                </View>
-            </View>
+
             <ScrollView style={styles.messageContainer}>
                 {this.state.chatMessages.map(message =>
                     <View style={styles.messageBubble} key={message.id}>
@@ -123,9 +110,9 @@ const styles = StyleSheet.create({
     },
     messageContainer: {
         position: 'absolute',
-        height: 440,
+        height: 480,
         width: 370,
         left: 20,
-        top: 100
+        top: 60
     }
 })

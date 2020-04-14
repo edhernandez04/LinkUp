@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'avatars/index'
-  get 'avatars/show'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
     resources :channels, only: [:index, :create, :show]
@@ -19,6 +17,8 @@ Rails.application.routes.draw do
 
     get '/messages', to: 'messages#index'
     get '/messages/:id', to: 'messages#show'
+
+    delete '/channels/:id', to: 'channels#destroy'
 
     post '/signup', to: 'users#create'
     post '/login', to: 'auth#login'

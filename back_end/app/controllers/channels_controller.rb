@@ -19,6 +19,11 @@ class ChannelsController < ApplicationController
         render json: channel, include: [:messages]
    end
 
+   def destroy
+        channel = Channel.find(params[:id])
+        channel.destroy
+   end
+
    private
 
    def channel_params

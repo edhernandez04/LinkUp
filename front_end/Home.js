@@ -1,6 +1,6 @@
 import React from 'react';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, PermissionsAndroid } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import UserShow from './UserShow.js'
 
@@ -16,12 +16,53 @@ componentDidMount(){
         .then(allUsers => this.setState({allUsers}))
 }
 
+findMe = () => {
+    const granted = PermissionsAndroid.check( PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION );
+        if (granted) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => { console.log(JSON.stringify(position))
+                    let lat = JSON.stringify(position.coords.latitude)
+                    let lng = JSON.stringify(position.coords.longitude)
+                        fetch(`http://10.0.2.2:3000/users/${this.props.id}`, {
+                            method: 'PATCH',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                latitude: lat,
+                                longitude: lng
+                             })
+                        })
+                        .then(fetch('http://10.0.2.2:3000/users').then(resp => resp.json())
+                            .then(allUsers => this.setState({allUsers})))
+                                .then(this.moveMap(lat, lng))
+                }, { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 } )
+        } else {
+            console.log( "ACCESS_FINE_LOCATION permission denied" )
+        }
+}
+
+moveMap = (lat, lng) => {
+    let r = {
+        latitude: lat,
+        longitude: lng,
+        latitudeDelta: 0.008,
+        longitudeDelta: 0.003,
+    };
+     this.map.animateToRegion(r, 1000)
+}
+
 render() {
-console.log(this.props)
+    console.log(this.props)
     return (
         <View style={styles.container}>
 
-            <MapView style={styles.mapStyle} showsCompass={true} showsUserLocation={true}
+            <MapView
+                ref={(map) => { this.map = map; }}
+                style={styles.mapStyle}
+                showsCompass={true}
+                showsMyLocationButton={true}
                 region={{
                     latitude: this.props.latitude,
                     longitude: this.props.longitude,
@@ -45,10 +86,10 @@ console.log(this.props)
 
         <View style={styles.menuContainer}>
             <View style={styles.buttonContainer}>
-                <Button title={"Chats"} style={styles.buttonStyle} onPress={() => Actions.chat()} color="red"/>
+                <Button title={"Chats"} style={styles.buttonStyle} onPress={() => Actions.chat(this.props.userName)} color="red"/>
             </View>
             <View style={styles.buttonContainer}>
-                <Button title={"Log Coord"} onPress={() => Actions.login()} color="goldenrod"/>
+                <Button title={"Check In"} onPress={this.findMe} color="goldenrod"/>
             </View>
             <View style={styles.buttonContainer}>
                 <Button title={"Edit Profile"} onPress={() => Actions.profile(this.props)} color="green"/>

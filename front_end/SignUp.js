@@ -20,8 +20,8 @@ handleSubmit = () => {
             body: JSON.stringify({
                 userName: this.state.username,
                 password: this.state.password,
-                latitude: 40.846170,
-                longitude: -73.815011
+                latitude: 40.781191,
+                longitude: -73.966745
             })
         })
             .then(resp => resp.json())

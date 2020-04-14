@@ -42,9 +42,12 @@ joinChatRoom = (room) => {
 }
 
 deleteChatRoom = (room) => {
-    fetch('http://10.0.2.2:3000/channels/${room.id}', {
+    fetch(`http://10.0.2.2:3000/channels/${room.id}`, {
             method: 'DELETE'
         })
+    fetch('http://10.0.2.2:3000/channels')
+        .then(resp => resp.json())
+        .then(chatRooms => this.setState({chatRooms}))
 }
 
 createChannelWebsocketConnection = channelId => {
@@ -90,7 +93,7 @@ createChannelWebsocketConnection = channelId => {
                     <View>
                         {this.state.chatRooms.map(room =>
                             <View style={styles.allRooms} key={room.id}>
-                                <Button title="Join" onPress={() => this.joinChatRoom(room)}/>
+                                <Button title="Join" onPress={() => this.joinChatRoom(room, this.props.data)}/>
                                 <Text>{room.name}</Text>
                                 <Button title="Delete" onPress={() => this.deleteChatRoom(room)}/>
                             </View>

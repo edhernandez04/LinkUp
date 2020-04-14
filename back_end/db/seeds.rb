@@ -38,4 +38,7 @@ Avatar.create!(name: "Thor",image: "https://www.poppular.eu/wp-content/uploads/2
 Avatar.create!(name: "Orochimaru",image: 'https://s3.thcdn.com/productimg/300/300/12275524-1014730580388842.png')
 Avatar.create!(name: "Coco Bandicoot",image: "https://i.ya-webdesign.com/images/crash-bandicoot-coco-png-11.png")
 Avatar.create!(name: "Michonne",image: "https://www.poppular.eu/wp-content/uploads/2019/09/43536_TWD_Michonne_POP_GLAM-1-300x300.png")
-
+Avatar.create!(name: "MewTwo",image: "https://gamecuddle.com/wp-content/uploads/2020/02/mew-300x300.png")
+Avatar.create!(name: "Lamar Jackson",image: "https://crawfordsgiftshop.com/wp-content/uploads/E2D32275-D0EB-48E1-8D96-04F601422527-300x300.png")
+Avatar.create!(name: "Poison Ivy", image: "https://www.letstango.com/media/catalog/product/cache/1/thumbnail/300x300/9df78eab33525d08d6e5fb8d27136e95/5/7/5747efd5cdefc4.15544909.png")
+Avatar.create!(name: "Doc Brown", image: "https://www.tapoutcollectables.com.au/wp-content/uploads/2020/02/fun46914-back-to-the-future-dr-emmett-brown-helmet-funko-pop-vinyl-figure-300x300.png")
