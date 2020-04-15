@@ -44,11 +44,7 @@ success = (position) => {
                 latitude: lat,
                 longitude: lng
             })
-        })
-        .then(response => response.json()).then(resp => {
-            console.log("need to move marker => refresh map?")
-        })
-        .then(this.moveMap(lat, lng))
+        }).then(this.moveMap(lat, lng))
 }
 
 error = (err) => {
@@ -62,7 +58,14 @@ moveMap = (lat, lng) => {
         latitudeDelta: 0.008,
         longitudeDelta: 0.003,
     };
-     this.map.animateToRegion(r, 1000)
+    this.map.animateToRegion(r, 1000)
+    Actions.home({currentUser: this.state.allUsers.find(user => user.id === this.props.currentUser.id)})
+}
+
+resetCurrentUser = () => {
+    fetch('http://10.0.2.2:3000/users')
+        .then(resp => resp.json())
+        .then(allUsers => this.setState({allUsers}))
 }
 
 render() {

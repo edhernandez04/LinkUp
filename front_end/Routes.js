@@ -13,6 +13,7 @@ const Routes = (props) => (
       <Scene key = "root">
          <Scene key = "home" component = {Home} title = "Home"
             currentUser={props.currentUser}
+            setUser={props.setUser}
             logout={props.logout}
             getLocation={props.getLocation}
             latitude={props.latitude}
