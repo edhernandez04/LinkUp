@@ -26,8 +26,8 @@ findMe = () => {
 }
 
 success = (position) => {
-    let lat = JSON.stringify(position.coords.latitude)
-    let lng = JSON.stringify(position.coords.longitude)
+    let lat = parseFloat(JSON.stringify(position.coords.latitude))
+    let lng = parseFloat(JSON.stringify(position.coords.longitude))
         fetch(`http://10.0.2.2:3000/users/${this.props.id}`, {
             method: 'PATCH',
             headers: {
@@ -66,6 +66,7 @@ render() {
                 ref={(map) => { this.map = map; }}
                 style={styles.mapStyle}
                 showsCompass={true}
+                showsUserLocation={true}
                 showsMyLocationButton={true}
                 region={{
                     latitude: this.props.currentUser.latitude,
