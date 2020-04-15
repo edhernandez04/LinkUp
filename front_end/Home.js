@@ -10,6 +10,12 @@ state = {
     allUsers: []
 }
 
+checkInUser = response => {
+    console.log(this.state.currentUser, 'prev state')
+    this.setState({ currentUser: response })
+    console.log(this.state.currentUser, "new state")
+}
+
 componentDidMount(){
     fetch('http://10.0.2.2:3000/users')
         .then(resp => resp.json())
@@ -39,13 +45,9 @@ success = (position) => {
                 longitude: lng
             })
         })
-        .then(response => response.json()).then(resp =>
-            <MapView.Marker key={resp.id}
-                image={resp.avatar}
-                coordinate={ {'latitude': resp.latitude, 'longitude': resp.longitude} }
-                title={resp.userName}
-                onPress={() => Actions.userShow(resp)}
-            />)
+        .then(response => response.json()).then(resp => {
+            console.log("need to move marker => refresh map?")
+        })
         .then(this.moveMap(lat, lng))
 }
 
