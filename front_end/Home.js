@@ -28,7 +28,7 @@ findMe = () => {
 success = (position) => {
     let lat = parseFloat(JSON.stringify(position.coords.latitude))
     let lng = parseFloat(JSON.stringify(position.coords.longitude))
-        fetch(`http://10.0.2.2:3000/users/${this.props.id}`, {
+        fetch(`http://10.0.2.2:3000/users/${this.props.currentUser.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -39,9 +39,14 @@ success = (position) => {
                 longitude: lng
             })
         })
-        .then(fetch('http://10.0.2.2:3000/users').then(resp => resp.json())
-            .then(allUsers => this.setState({allUsers})))
-            .then(this.moveMap(lat, lng))
+        .then(response => response.json()).then(resp =>
+            <MapView.Marker key={resp.id}
+                image={resp.avatar}
+                coordinate={ {'latitude': resp.latitude, 'longitude': resp.longitude} }
+                title={resp.userName}
+                onPress={() => Actions.userShow(resp)}
+            />)
+        .then(this.moveMap(lat, lng))
 }
 
 error = (err) => {

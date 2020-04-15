@@ -21419,3 +21419,100 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.0ms | Allocations: 2133)
 
 
+Started GET "/users" for 127.0.0.1 at 2020-04-15 11:39:53 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 49ms (Views: 28.2ms | ActiveRecord: 12.1ms | Allocations: 2133)
+
+
+Started PATCH "/users/undefined" for 127.0.0.1 at 2020-04-15 11:40:01 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.844565, "longitude"=>-73.8296317, "id"=>"undefined", "user"=>{"latitude"=>40.844565, "longitude"=>-73.8296317}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.7ms | Allocations: 614)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:30:in `update'
+Started GET "/users" for 127.0.0.1 at 2020-04-15 11:40:24 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 1.6ms | Allocations: 2132)
+
+
+Started PATCH "/users/undefined" for 127.0.0.1 at 2020-04-15 11:40:27 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.844565, "longitude"=>-73.8296317, "id"=>"undefined", "user"=>{"latitude"=>40.844565, "longitude"=>-73.8296317}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+Completed 404 Not Found in 6ms (ActiveRecord: 1.1ms | Allocations: 613)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:30:in `update'
+Started GET "/users" for 127.0.0.1 at 2020-04-15 11:40:28 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.7ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 11:41:36 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 36ms (Views: 23.5ms | ActiveRecord: 2.0ms | Allocations: 2133)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2020-04-15 11:41:43 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.844565, "longitude"=>-73.8296317, "id"=>"4", "user"=>{"latitude"=>40.844565, "longitude"=>-73.8296317}}
+  [1m[36mUser Load (49.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+Started GET "/users" for 127.0.0.1 at 2020-04-15 11:41:43 -0400
+  [1m[35m (152.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (248.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "ohcanada"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Processing by UsersController#index as HTML
+  [1m[36mUser Update (823.5ms)[0m  [1m[33mUPDATE "users" SET "latitude" = $1, "longitude" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["latitude", 40.844565], ["longitude", -73.8296317], ["updated_at", "2020-04-15 15:41:44.953743"], ["id", 4]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Load (70.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 9471ms (Views: 9394.8ms | ActiveRecord: 70.3ms | Allocations: 2978)
+
+
+  [1m[35m (325.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 12329ms (Views: 11.9ms | ActiveRecord: 2667.1ms | Allocations: 9584)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 11:45:04 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 41ms (Views: 28.2ms | ActiveRecord: 7.7ms | Allocations: 2133)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 11:45:22 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"oculus", "password"=>"[FILTERED]", "auth"=>{"userName"=>"oculus", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "oculus"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 422ms (Views: 0.9ms | ActiveRecord: 1.1ms | Allocations: 894)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 11:45:23 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.6ms | Allocations: 2133)
+
+
