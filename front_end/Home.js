@@ -10,12 +10,6 @@ state = {
     allUsers: []
 }
 
-checkInUser = response => {
-    console.log(this.state.currentUser, 'prev state')
-    this.setState({ currentUser: response })
-    console.log(this.state.currentUser, "new state")
-}
-
 componentDidMount(){
     fetch('http://10.0.2.2:3000/users')
         .then(resp => resp.json())
@@ -59,13 +53,10 @@ moveMap = (lat, lng) => {
         longitudeDelta: 0.003,
     };
     this.map.animateToRegion(r, 1000)
-    Actions.home({currentUser: this.state.allUsers.find(user => user.id === this.props.currentUser.id)})
 }
 
 resetCurrentUser = () => {
-    fetch('http://10.0.2.2:3000/users')
-        .then(resp => resp.json())
-        .then(allUsers => this.setState({allUsers}))
+    Actions.home({currentUser: this.state.allUsers.find(user => user.id === this.props.currentUser.id)})
 }
 
 render() {

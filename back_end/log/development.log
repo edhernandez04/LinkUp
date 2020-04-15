@@ -22677,3 +22677,946 @@ Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.7ms | Allocations: 2810
 
 =======
 >>>>>>> parent of cfd8ed6d... almost done location looking good
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (13.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (1.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mChannel Load (20.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  [1m[36mMessage Load (13.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  [1m[36mAvatar Load (13.0ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.6ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 23]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (1.9ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 25]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.5ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 26]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.9ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 27]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 28]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.5ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 29]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 30]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 31]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 32]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 33]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.5ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 34]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (1.8ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 35]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 36]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 37]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 38]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 39]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 40]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 41]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 42]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 43]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 44]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  [1m[36mUser Create (11.7ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "B. F. Skinner"], ["userName", "aircrib"], ["password_digest", "$2a$12$/8A4Q2rHjRdTDmILLVUsMepeUDo2b..Tqx9kSsCGUgO3uyYvA01DS"], ["avatar", "https://cdn.shopify.com/s/files/1/1338/2239/products/12219251-1974726958048463_large.png?v=1578028935"], ["latitude", 40.881757], ["longitude", -73.854691], ["created_at", "2020-04-15 18:29:32.438582"], ["updated_at", "2020-04-15 18:29:32.438582"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "genejean"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Jean Piaget"], ["userName", "genejean"], ["password_digest", "$2a$12$/vX9bHhqnMlGo2OQFAGdmOZCrFH/mQCPHoTdDOUsIcjnleYBW9GTi"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/10/44502_Marvel_80th_BlackWidow_FA_POP_GLAM_WEB-300x300.png"], ["latitude", 40.862229], ["longitude", -73.840843], ["created_at", "2020-04-15 18:29:32.779230"], ["updated_at", "2020-04-15 18:29:32.779230"]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Sigmund Freud"], ["userName", "lolconscious"], ["password_digest", "$2a$12$ybn7XFtNJRt4KXva4H3.QOvLcBqqWLOZh8mFDqZRPUfB5vU3WHj.6"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/09/44155_Marvel_WolverineFirstAppearance_POP_GLAM-WEB-300x300.png"], ["latitude", 40.853313], ["longitude", -73.863738], ["created_at", "2020-04-15 18:29:33.123414"], ["updated_at", "2020-04-15 18:29:33.123414"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (8.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "ohcanada"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Albert Bandura"], ["userName", "ohcanada"], ["password_digest", "$2a$12$dA28GzLPh3nuT.k.mcMLoOLS3A4YdxU7A6sLO5.IS1hA2msIdL7au"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/09/43286_ApexLegends_Gibraltar_POP_GLAM-WEB-300x300.png"], ["latitude", 40.847449], ["longitude", -73.851692], ["created_at", "2020-04-15 18:29:33.500625"], ["updated_at", "2020-04-15 18:29:33.500625"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "dissonance"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Leon Festinger"], ["userName", "dissonance"], ["password_digest", "$2a$12$kIiw1b6g62j7yhqipB2.ie7etRQ/T2Ih1JcUjjlbpECju31TkYlAa"], ["avatar", "https://marketline-shop.com/wp-content/uploads/2020/04/43343_CrashBandicoot_CrashSpinning_POP_WEB-300x300.png"], ["latitude", 40.859544], ["longitude", -73.851996], ["created_at", "2020-04-15 18:29:33.832146"], ["updated_at", "2020-04-15 18:29:33.832146"]]
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "billydakid"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "William James"], ["userName", "billydakid"], ["password_digest", "$2a$12$2WFxJE0UpvWatAfyE7sA5enFROeerEMGuqjAZtF22KjvDbVA6wsf."], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/12/46953_Marvel_TheVulture_POP_GLAM-WEB-300x300.png"], ["latitude", 40.868184], ["longitude", -73.853735], ["created_at", "2020-04-15 18:29:34.187750"], ["updated_at", "2020-04-15 18:29:34.187750"]]
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "oculus"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Ivan Pavlov"], ["userName", "oculus"], ["password_digest", "$2a$12$XbonJerH.1px5S6JQD.mCOfopLqmOoD.Q5Gvr0W.W2prN87rzyEC2"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/10/44503_Marvel_80th_ScarletWitch_FA_POP_GLAM_WEB-300x300.png"], ["latitude", 40.856103], ["longitude", -73.857839], ["created_at", "2020-04-15 18:29:34.530778"], ["updated_at", "2020-04-15 18:29:34.530778"]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "iamlistening"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Frasier Crane"], ["userName", "iamlistening"], ["password_digest", "$2a$12$MnzlDC6gzITyjxct6anv2uk/y2OtMj8eUow3/yBaNCpyWb9cmzqyq"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/09/43288_ApexLegends_Bloodhound_POP_GLAM-WEB-300x300.png"], ["latitude", 40.861406], ["longitude", -73.824531], ["created_at", "2020-04-15 18:29:34.869315"], ["updated_at", "2020-04-15 18:29:34.869315"]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (2.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Marty McFly"], ["image", "https://www.tapoutcollectables.com.au/wp-content/uploads/2020/02/fun46913-back-future-marty-mcfly-1955-outfit-pop-vinyl-figure-300x300.png"], ["created_at", "2020-04-15 18:29:34.880895"], ["updated_at", "2020-04-15 18:29:34.880895"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Scarecrow"], ["image", "https://www.medievalcollectibles.com/wp-content/uploads/2019/04/FK-6291-300x300.png"], ["created_at", "2020-04-15 18:29:34.890077"], ["updated_at", "2020-04-15 18:29:34.890077"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Evie Frye"], ["image", "https://www.medievalcollectibles.com/wp-content/uploads/2019/04/FK-7255-300x300.png"], ["created_at", "2020-04-15 18:29:34.895956"], ["updated_at", "2020-04-15 18:29:34.895956"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Space Rick"], ["image", "https://s3.thcdn.com/productimg/300/300/12219247-1454726957551195.png"], ["created_at", "2020-04-15 18:29:34.900315"], ["updated_at", "2020-04-15 18:29:34.900315"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.7ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SS Vegeta"], ["image", "https://www.drunexplained.com/wp-content/uploads/2019/12/vegeta_oob-300x300.png"], ["created_at", "2020-04-15 18:29:34.904140"], ["updated_at", "2020-04-15 18:29:34.904140"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Harley Quinn"], ["image", "https://www.getreadycomics.com/wp-content/uploads/2020/04/Birds-of-Prey-Pop-Harley-Quinn-Roller-Derby-Figure-300x300.png"], ["created_at", "2020-04-15 18:29:34.909018"], ["updated_at", "2020-04-15 18:29:34.909018"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Deadpool The Duck"], ["image", "https://funkopoptees.com/wp-content/uploads/2020/04/dpd-01-300x300.png"], ["created_at", "2020-04-15 18:29:34.913835"], ["updated_at", "2020-04-15 18:29:34.913835"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Korg"], ["image", "https://www.poppular.eu/wp-content/uploads/2019/09/45140_Avengers_Gamer_Korg_POP_GLAM_WEB-300x300.png"], ["created_at", "2020-04-15 18:29:34.917640"], ["updated_at", "2020-04-15 18:29:34.917640"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Wolverine"], ["image", "https://www.medievalcollectibles.com/wp-content/uploads/2019/04/FK-12458-300x300.png"], ["created_at", "2020-04-15 18:29:34.921498"], ["updated_at", "2020-04-15 18:29:34.921498"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Gumby"], ["image", "https://secureservercdn.net/198.71.233.129/ggd.3c5.myftpupload.com/wp-content/uploads/2019/11/46581_Television_Gumby_POP_GLAM-WEB-bd2a2a661e930f6306f288a052b8f93a-300x300.png"], ["created_at", "2020-04-15 18:29:34.925893"], ["updated_at", "2020-04-15 18:29:34.925893"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tsunade"], ["image", "https://s4.thcdn.com/productimg/300/300/12275525-2804730580514359.png"], ["created_at", "2020-04-15 18:29:34.930329"], ["updated_at", "2020-04-15 18:29:34.930329"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Cable"], ["image", "https://www.medievalcollectibles.com/wp-content/uploads/2019/04/FK-11694-300x300.png"], ["created_at", "2020-04-15 18:29:34.934720"], ["updated_at", "2020-04-15 18:29:34.934720"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mr. Satan"], ["image", "https://www.tapoutcollectables.com.au/wp-content/uploads/2020/02/fun47682-dragon-ball-super-hercule-funko-pop-vinyl-figure-300x300.png"], ["created_at", "2020-04-15 18:29:34.938571"], ["updated_at", "2020-04-15 18:29:34.938571"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Captain America"], ["image", "https://www.poppular.eu/wp-content/uploads/2019/09/45137_Avengers_CaptainAmerica_ShieldMjolnir_POP_GLAM_WEB-300x300.png"], ["created_at", "2020-04-15 18:29:34.942918"], ["updated_at", "2020-04-15 18:29:34.942918"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Thor"], ["image", "https://www.poppular.eu/wp-content/uploads/2019/09/45142_Avengers_Bro_Thor_POP_GLAM_WEB-300x300.png"], ["created_at", "2020-04-15 18:29:34.947471"], ["updated_at", "2020-04-15 18:29:34.947471"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Orochimaru"], ["image", "https://s3.thcdn.com/productimg/300/300/12275524-1014730580388842.png"], ["created_at", "2020-04-15 18:29:34.951669"], ["updated_at", "2020-04-15 18:29:34.951669"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Coco Bandicoot"], ["image", "https://i.ya-webdesign.com/images/crash-bandicoot-coco-png-11.png"], ["created_at", "2020-04-15 18:29:34.955593"], ["updated_at", "2020-04-15 18:29:34.955593"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Michonne"], ["image", "https://www.poppular.eu/wp-content/uploads/2019/09/43536_TWD_Michonne_POP_GLAM-1-300x300.png"], ["created_at", "2020-04-15 18:29:34.959474"], ["updated_at", "2020-04-15 18:29:34.959474"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.9ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "MewTwo"], ["image", "https://gamecuddle.com/wp-content/uploads/2020/02/mew-300x300.png"], ["created_at", "2020-04-15 18:29:34.964303"], ["updated_at", "2020-04-15 18:29:34.964303"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (1.7ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lamar Jackson"], ["image", "https://crawfordsgiftshop.com/wp-content/uploads/E2D32275-D0EB-48E1-8D96-04F601422527-300x300.png"], ["created_at", "2020-04-15 18:29:34.972145"], ["updated_at", "2020-04-15 18:29:34.972145"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Poison Ivy"], ["image", "https://www.letstango.com/media/catalog/product/cache/1/thumbnail/300x300/9df78eab33525d08d6e5fb8d27136e95/5/7/5747efd5cdefc4.15544909.png"], ["created_at", "2020-04-15 18:29:34.997311"], ["updated_at", "2020-04-15 18:29:34.997311"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Doc Brown"], ["image", "https://www.tapoutcollectables.com.au/wp-content/uploads/2020/02/fun46914-back-to-the-future-dr-emmett-brown-helmet-funko-pop-vinyl-figure-300x300.png"], ["created_at", "2020-04-15 18:29:35.001881"], ["updated_at", "2020-04-15 18:29:35.001881"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/login" for 127.0.0.1 at 2020-04-15 14:30:17 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"ohcanada", "password"=>"[FILTERED]", "auth"=>{"userName"=>"ohcanada", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "ohcanada"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 400ms (Views: 1.3ms | ActiveRecord: 11.4ms | Allocations: 8725)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:30:18 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.7ms | Allocations: 2171)
+
+
+Started PATCH "/users/24" for 127.0.0.1 at 2020-04-15 14:30:22 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"24", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (26.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (7.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "ohcanada"], ["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "latitude" = $1, "longitude" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["latitude", 40.7920017], ["longitude", -73.8880467], ["updated_at", "2020-04-15 18:30:22.730924"], ["id", 24]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 153ms (Views: 0.7ms | ActiveRecord: 50.1ms | Allocations: 4644)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:30:22 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 2133)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:30:53 -0400
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:30:53 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 32ms (Views: 22.5ms | ActiveRecord: 5.3ms | Allocations: 2403)
+
+
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 5.1ms | Allocations: 2215)
+
+
+Started PATCH "/users/24" for 127.0.0.1 at 2020-04-15 14:30:56 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"24", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "ohcanada"], ["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 46ms (Views: 0.8ms | ActiveRecord: 26.3ms | Allocations: 3334)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:30:56 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.8ms | Allocations: 2133)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 14:31:21 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"dissonance", "password"=>"[FILTERED]", "auth"=>{"userName"=>"dissonance", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "dissonance"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 387ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 897)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:31:21 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 2133)
+
+
+Started PATCH "/users/25" for 127.0.0.1 at 2020-04-15 14:31:26 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"25", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "dissonance"], ["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Update (8.3ms)[0m  [1m[33mUPDATE "users" SET "latitude" = $1, "longitude" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["latitude", 40.7920017], ["longitude", -73.8880467], ["updated_at", "2020-04-15 18:31:26.126687"], ["id", 25]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 52ms (Views: 0.7ms | ActiveRecord: 27.1ms | Allocations: 4109)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:31:26 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.5ms | Allocations: 2133)
+
+
+Started PATCH "/users/25" for 127.0.0.1 at 2020-04-15 14:31:29 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"25", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (3.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "dissonance"], ["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 26ms (Views: 1.4ms | ActiveRecord: 5.9ms | Allocations: 3335)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:31:29 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 2133)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:32:13 -0400
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:32:13 -0400
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:32:13 -0400
+Processing by UsersController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 2.6ms | Allocations: 2133)
+
+
+  [1m[36mUser Load (24.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 51ms (Views: 23.8ms | ActiveRecord: 24.3ms | Allocations: 4506)
+
+
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 3.0ms | Allocations: 2215)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 14:32:21 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"oculus", "password"=>"[FILTERED]", "auth"=>{"userName"=>"oculus", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "oculus"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 503ms (Views: 0.6ms | ActiveRecord: 3.0ms | Allocations: 921)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:32:22 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.5ms | Allocations: 2133)
+
+
+Started PATCH "/users/27" for 127.0.0.1 at 2020-04-15 14:32:25 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"27", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (3.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "oculus"], ["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "latitude" = $1, "longitude" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["latitude", 40.7920017], ["longitude", -73.8880467], ["updated_at", "2020-04-15 18:32:25.306742"], ["id", 27]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 44ms (Views: 2.2ms | ActiveRecord: 12.3ms | Allocations: 4098)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:32:25 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 2133)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:33:40 -0400
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:33:40 -0400
+Processing by UsersController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 39ms (Views: 31.3ms | ActiveRecord: 2.5ms | Allocations: 2250)
+
+
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 166ms (Views: 160.3ms | ActiveRecord: 5.4ms | Allocations: 4409)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 14:45:41 -0400
+  [1m[35m (8.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"iamlistening", "password"=>"[FILTERED]", "auth"=>{"userName"=>"iamlistening", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (43.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "iamlistening"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 582ms (Views: 1.0ms | ActiveRecord: 107.3ms | Allocations: 8725)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:45:44 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.6ms | Allocations: 2171)
+
+
+Started PATCH "/users/28" for 127.0.0.1 at 2020-04-15 14:45:53 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"28", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (23.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (16.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "iamlistening"], ["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Update (174.8ms)[0m  [1m[33mUPDATE "users" SET "latitude" = $1, "longitude" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["latitude", 40.7920017], ["longitude", -73.8880467], ["updated_at", "2020-04-15 18:45:53.345989"], ["id", 28]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (32.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 610ms (Views: 1.7ms | ActiveRecord: 423.9ms | Allocations: 4645)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:45:54 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 7.1ms | ActiveRecord: 5.0ms | Allocations: 2152)
+
+
+Started PATCH "/users/28" for 127.0.0.1 at 2020-04-15 14:45:59 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"28", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (3.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "iamlistening"], ["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 29ms (Views: 2.5ms | ActiveRecord: 5.9ms | Allocations: 3338)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:46:00 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 2133)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:48:24 -0400
+Processing by UsersController#index as HTML
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:48:24 -0400
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 42ms (Views: 25.8ms | ActiveRecord: 7.8ms | Allocations: 2696)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:48:24 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 1.3ms | Allocations: 2133)
+
+
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 1.5ms | Allocations: 2215)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 14:48:49 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"billydakid", "password"=>"[FILTERED]", "auth"=>{"userName"=>"billydakid", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "billydakid"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 421ms (Views: 4.5ms | ActiveRecord: 3.9ms | Allocations: 922)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:48:50 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.9ms | Allocations: 2133)
+
+
+Started PATCH "/users/26" for 127.0.0.1 at 2020-04-15 14:48:53 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"26", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "billydakid"], ["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Update (174.2ms)[0m  [1m[33mUPDATE "users" SET "latitude" = $1, "longitude" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["latitude", 40.7920017], ["longitude", -73.8880467], ["updated_at", "2020-04-15 18:48:54.053980"], ["id", 26]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (20.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 277ms (Views: 0.8ms | ActiveRecord: 251.1ms | Allocations: 4102)
+
+
+Started PATCH "/users/26" for 127.0.0.1 at 2020-04-15 14:48:59 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"26", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "billydakid"], ["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 28ms (Views: 2.9ms | ActiveRecord: 5.4ms | Allocations: 3316)
+
+
+Started PATCH "/users/26" for 127.0.0.1 at 2020-04-15 14:49:05 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"26", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "billydakid"], ["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 21ms (Views: 8.9ms | ActiveRecord: 1.7ms | Allocations: 3316)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:49:29 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 19.5ms | ActiveRecord: 1.8ms | Allocations: 2133)
+
+
+Started PATCH "/users/26" for 127.0.0.1 at 2020-04-15 14:49:33 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"26", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "billydakid"], ["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 32ms (Views: 1.0ms | ActiveRecord: 4.4ms | Allocations: 3313)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:49:33 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.6ms | Allocations: 2133)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 14:49:53 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 389ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 895)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:49:54 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.7ms | Allocations: 2133)
+
+
+Started PATCH "/users/23" for 127.0.0.1 at 2020-04-15 14:49:57 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"23", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "lolconscious"], ["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Update (2.4ms)[0m  [1m[33mUPDATE "users" SET "latitude" = $1, "longitude" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["latitude", 40.7920017], ["longitude", -73.8880467], ["updated_at", "2020-04-15 18:49:57.494414"], ["id", 23]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 36ms (Views: 0.9ms | ActiveRecord: 7.8ms | Allocations: 4108)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:49:57 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.5ms | Allocations: 2133)
+
+
+Started PATCH "/users/23" for 127.0.0.1 at 2020-04-15 14:50:01 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"23", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "lolconscious"], ["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 19ms (Views: 0.6ms | ActiveRecord: 3.4ms | Allocations: 3314)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:50:01 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.7ms | Allocations: 2134)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 14:53:11 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"oculus", "password"=>"[FILTERED]", "auth"=>{"userName"=>"oculus", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "oculus"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 410ms (Views: 6.6ms | ActiveRecord: 8.6ms | Allocations: 896)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:53:12 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.8ms | Allocations: 2133)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 14:53:37 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"genejean", "password"=>"[FILTERED]", "auth"=>{"userName"=>"genejean", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "genejean"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 422ms (Views: 0.7ms | ActiveRecord: 2.7ms | Allocations: 895)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:53:37 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 2133)
+
+
+Started PATCH "/users/22" for 127.0.0.1 at 2020-04-15 14:53:41 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"22", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "genejean"], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "latitude" = $1, "longitude" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["latitude", 40.7920017], ["longitude", -73.8880467], ["updated_at", "2020-04-15 18:53:41.040542"], ["id", 22]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 48ms (Views: 0.7ms | ActiveRecord: 15.0ms | Allocations: 4109)
+
+
+Started PATCH "/users/22" for 127.0.0.1 at 2020-04-15 14:53:59 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"22", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (6.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "genejean"], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 89ms (Views: 5.3ms | ActiveRecord: 12.6ms | Allocations: 3313)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:54:25 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 44ms (Views: 26.4ms | ActiveRecord: 5.5ms | Allocations: 2133)
+
+
+Started PATCH "/users/22" for 127.0.0.1 at 2020-04-15 14:54:29 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"22", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (3.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "genejean"], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 47ms (Views: 3.3ms | ActiveRecord: 5.9ms | Allocations: 3313)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 14:55:08 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 420ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 896)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 14:55:09 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.7ms | Allocations: 2133)
+
+
+Started PATCH "/users/21" for 127.0.0.1 at 2020-04-15 14:55:47 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7920017, "longitude"=>-73.8880467, "id"=>"21", "user"=>{"latitude"=>40.7920017, "longitude"=>-73.8880467}}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (3.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "aircrib"], ["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "latitude" = $1, "longitude" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["latitude", 40.7920017], ["longitude", -73.8880467], ["updated_at", "2020-04-15 18:55:47.230515"], ["id", 21]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 83ms (Views: 2.7ms | ActiveRecord: 14.6ms | Allocations: 4109)
+
+
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (17.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 24]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 25]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 27]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 28]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (1.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 26]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 22]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (2.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 21]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mChannel Load (14.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  [1m[36mMessage Load (13.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  [1m[36mAvatar Load (19.9ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.5ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 45]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.5ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 46]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 47]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 48]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 49]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 50]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 51]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 52]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.8ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 53]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 54]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.5ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 55]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.5ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 56]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 57]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (2.3ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 58]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 59]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 60]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.8ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 61]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 62]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 63]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 64]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 65]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Destroy (2.2ms)[0m  [1m[31mDELETE FROM "avatars" WHERE "avatars"."id" = $1[0m  [["id", 66]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  [1m[36mUser Create (12.2ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "B. F. Skinner"], ["userName", "aircrib"], ["password_digest", "$2a$12$RjZvk/7KExBwpp5z21e5auoJtxpmbqsPqdg0Z.tCMnh.ey14uhaYK"], ["avatar", "https://cdn.shopify.com/s/files/1/1338/2239/products/12219251-1974726958048463_large.png?v=1578028935"], ["latitude", 40.881757], ["longitude", -73.854691], ["created_at", "2020-04-15 18:56:41.867088"], ["updated_at", "2020-04-15 18:56:41.867088"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "genejean"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Jean Piaget"], ["userName", "genejean"], ["password_digest", "$2a$12$xQKIM9nnaKz6fGo3FxOFBeWw/St0e5ZBcQ/BsoWVjGbvXqNhN4Ws2"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/10/44502_Marvel_80th_BlackWidow_FA_POP_GLAM_WEB-300x300.png"], ["latitude", 40.862229], ["longitude", -73.840843], ["created_at", "2020-04-15 18:56:42.215623"], ["updated_at", "2020-04-15 18:56:42.215623"]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Sigmund Freud"], ["userName", "lolconscious"], ["password_digest", "$2a$12$bjJ.uZTdB3I6Ed8wr.kNtO5Coc7LU/81htCn0wqOn6QBeeIlytq8e"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/09/44155_Marvel_WolverineFirstAppearance_POP_GLAM-WEB-300x300.png"], ["latitude", 40.853313], ["longitude", -73.863738], ["created_at", "2020-04-15 18:56:42.556555"], ["updated_at", "2020-04-15 18:56:42.556555"]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "ohcanada"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Albert Bandura"], ["userName", "ohcanada"], ["password_digest", "$2a$12$UwZTBoWkIQfyH8R5y2lLj.Rr/GBzWKUh0V/0f9j59A/YIrCsUgVD6"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/09/43286_ApexLegends_Gibraltar_POP_GLAM-WEB-300x300.png"], ["latitude", 40.847449], ["longitude", -73.851692], ["created_at", "2020-04-15 18:56:42.896589"], ["updated_at", "2020-04-15 18:56:42.896589"]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "dissonance"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Leon Festinger"], ["userName", "dissonance"], ["password_digest", "$2a$12$.RWmYXRJOxJrCuXTDADbBO5bnvxmfZC3CRU7JpHgR9MFTLbt3gLge"], ["avatar", "https://marketline-shop.com/wp-content/uploads/2020/04/43343_CrashBandicoot_CrashSpinning_POP_WEB-300x300.png"], ["latitude", 40.859544], ["longitude", -73.851996], ["created_at", "2020-04-15 18:56:43.235783"], ["updated_at", "2020-04-15 18:56:43.235783"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "billydakid"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "William James"], ["userName", "billydakid"], ["password_digest", "$2a$12$MuJJcdLZgOQggWGibdO1k.9ZzGPSUobhuVONusnwJ.FGWED51Hog6"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/12/46953_Marvel_TheVulture_POP_GLAM-WEB-300x300.png"], ["latitude", 40.868184], ["longitude", -73.853735], ["created_at", "2020-04-15 18:56:43.566792"], ["updated_at", "2020-04-15 18:56:43.566792"]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "oculus"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Ivan Pavlov"], ["userName", "oculus"], ["password_digest", "$2a$12$hx11aUSdjdWenFBvJGLUZugjNvnmsyXWftwia4nhRVHUysz/0K8T2"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/10/44503_Marvel_80th_ScarletWitch_FA_POP_GLAM_WEB-300x300.png"], ["latitude", 40.856103], ["longitude", -73.857839], ["created_at", "2020-04-15 18:56:43.905802"], ["updated_at", "2020-04-15 18:56:43.905802"]]
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) LIMIT $2[0m  [["userName", "iamlistening"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("fullName", "userName", "password_digest", "avatar", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fullName", "Frasier Crane"], ["userName", "iamlistening"], ["password_digest", "$2a$12$g4Wi.YO2RL/o35Hx4Xg.t.9h5kw/i1YPGSBh.zHmLavB0h.T2suuO"], ["avatar", "https://www.poppular.eu/wp-content/uploads/2019/09/43288_ApexLegends_Bloodhound_POP_GLAM-WEB-300x300.png"], ["latitude", 40.861406], ["longitude", -73.824531], ["created_at", "2020-04-15 18:56:44.262724"], ["updated_at", "2020-04-15 18:56:44.262724"]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (1.2ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Marty McFly"], ["image", "https://www.tapoutcollectables.com.au/wp-content/uploads/2020/02/fun46913-back-future-marty-mcfly-1955-outfit-pop-vinyl-figure-300x300.png"], ["created_at", "2020-04-15 18:56:44.275534"], ["updated_at", "2020-04-15 18:56:44.275534"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (1.3ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Scarecrow"], ["image", "https://www.medievalcollectibles.com/wp-content/uploads/2019/04/FK-6291-300x300.png"], ["created_at", "2020-04-15 18:56:44.283017"], ["updated_at", "2020-04-15 18:56:44.283017"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Evie Frye"], ["image", "https://www.medievalcollectibles.com/wp-content/uploads/2019/04/FK-7255-300x300.png"], ["created_at", "2020-04-15 18:56:44.290063"], ["updated_at", "2020-04-15 18:56:44.290063"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Space Rick"], ["image", "https://s3.thcdn.com/productimg/300/300/12219247-1454726957551195.png"], ["created_at", "2020-04-15 18:56:44.295826"], ["updated_at", "2020-04-15 18:56:44.295826"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (2.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SS Vegeta"], ["image", "https://www.drunexplained.com/wp-content/uploads/2019/12/vegeta_oob-300x300.png"], ["created_at", "2020-04-15 18:56:44.300234"], ["updated_at", "2020-04-15 18:56:44.300234"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Harley Quinn"], ["image", "https://www.getreadycomics.com/wp-content/uploads/2020/04/Birds-of-Prey-Pop-Harley-Quinn-Roller-Derby-Figure-300x300.png"], ["created_at", "2020-04-15 18:56:44.307493"], ["updated_at", "2020-04-15 18:56:44.307493"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Deadpool The Duck"], ["image", "https://funkopoptees.com/wp-content/uploads/2020/04/dpd-01-300x300.png"], ["created_at", "2020-04-15 18:56:44.312506"], ["updated_at", "2020-04-15 18:56:44.312506"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Korg"], ["image", "https://www.poppular.eu/wp-content/uploads/2019/09/45140_Avengers_Gamer_Korg_POP_GLAM_WEB-300x300.png"], ["created_at", "2020-04-15 18:56:44.316824"], ["updated_at", "2020-04-15 18:56:44.316824"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Wolverine"], ["image", "https://www.medievalcollectibles.com/wp-content/uploads/2019/04/FK-12458-300x300.png"], ["created_at", "2020-04-15 18:56:44.321644"], ["updated_at", "2020-04-15 18:56:44.321644"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Gumby"], ["image", "https://secureservercdn.net/198.71.233.129/ggd.3c5.myftpupload.com/wp-content/uploads/2019/11/46581_Television_Gumby_POP_GLAM-WEB-bd2a2a661e930f6306f288a052b8f93a-300x300.png"], ["created_at", "2020-04-15 18:56:44.326041"], ["updated_at", "2020-04-15 18:56:44.326041"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tsunade"], ["image", "https://s4.thcdn.com/productimg/300/300/12275525-2804730580514359.png"], ["created_at", "2020-04-15 18:56:44.330758"], ["updated_at", "2020-04-15 18:56:44.330758"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Cable"], ["image", "https://www.medievalcollectibles.com/wp-content/uploads/2019/04/FK-11694-300x300.png"], ["created_at", "2020-04-15 18:56:44.335187"], ["updated_at", "2020-04-15 18:56:44.335187"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mr. Satan"], ["image", "https://www.tapoutcollectables.com.au/wp-content/uploads/2020/02/fun47682-dragon-ball-super-hercule-funko-pop-vinyl-figure-300x300.png"], ["created_at", "2020-04-15 18:56:44.340839"], ["updated_at", "2020-04-15 18:56:44.340839"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Captain America"], ["image", "https://www.poppular.eu/wp-content/uploads/2019/09/45137_Avengers_CaptainAmerica_ShieldMjolnir_POP_GLAM_WEB-300x300.png"], ["created_at", "2020-04-15 18:56:44.345295"], ["updated_at", "2020-04-15 18:56:44.345295"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.7ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Thor"], ["image", "https://www.poppular.eu/wp-content/uploads/2019/09/45142_Avengers_Bro_Thor_POP_GLAM_WEB-300x300.png"], ["created_at", "2020-04-15 18:56:44.349652"], ["updated_at", "2020-04-15 18:56:44.349652"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Orochimaru"], ["image", "https://s3.thcdn.com/productimg/300/300/12275524-1014730580388842.png"], ["created_at", "2020-04-15 18:56:44.354231"], ["updated_at", "2020-04-15 18:56:44.354231"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.5ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Coco Bandicoot"], ["image", "https://i.ya-webdesign.com/images/crash-bandicoot-coco-png-11.png"], ["created_at", "2020-04-15 18:56:44.359268"], ["updated_at", "2020-04-15 18:56:44.359268"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Michonne"], ["image", "https://www.poppular.eu/wp-content/uploads/2019/09/43536_TWD_Michonne_POP_GLAM-1-300x300.png"], ["created_at", "2020-04-15 18:56:44.363740"], ["updated_at", "2020-04-15 18:56:44.363740"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "MewTwo"], ["image", "https://gamecuddle.com/wp-content/uploads/2020/02/mew-300x300.png"], ["created_at", "2020-04-15 18:56:44.367596"], ["updated_at", "2020-04-15 18:56:44.367596"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.6ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lamar Jackson"], ["image", "https://crawfordsgiftshop.com/wp-content/uploads/E2D32275-D0EB-48E1-8D96-04F601422527-300x300.png"], ["created_at", "2020-04-15 18:56:44.372489"], ["updated_at", "2020-04-15 18:56:44.372489"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Poison Ivy"], ["image", "https://www.letstango.com/media/catalog/product/cache/1/thumbnail/300x300/9df78eab33525d08d6e5fb8d27136e95/5/7/5747efd5cdefc4.15544909.png"], ["created_at", "2020-04-15 18:56:44.377266"], ["updated_at", "2020-04-15 18:56:44.377266"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAvatar Create (0.4ms)[0m  [1m[32mINSERT INTO "avatars" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Doc Brown"], ["image", "https://www.tapoutcollectables.com.au/wp-content/uploads/2020/02/fun46914-back-to-the-future-dr-emmett-brown-helmet-funko-pop-vinyl-figure-300x300.png"], ["created_at", "2020-04-15 18:56:44.381446"], ["updated_at", "2020-04-15 18:56:44.381446"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
