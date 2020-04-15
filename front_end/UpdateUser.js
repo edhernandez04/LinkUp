@@ -41,7 +41,6 @@ handleSubmit = () => {
 }
 
 render(){
-console.log(this.props.currentUser)
     return (
         <View style={styles.container}>
         <ImageBackground  style= { styles.backgroundImage } source={require('./assets/atlas.jpg')} >

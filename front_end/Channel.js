@@ -37,7 +37,6 @@ newChatSubmit = () => {
 }
 
 joinChatRoom = (room) => {
-console.log(room)
     this.createChannelWebsocketConnection(room.id);
     Actions.messages({chat:room, currentUser: this.props.currentUser})
 }

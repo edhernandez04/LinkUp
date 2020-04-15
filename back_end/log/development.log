@@ -20605,3 +20605,709 @@ Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.5ms | Allocations: 2132)
   ↳ app/channels/channel_channel.rb:4:in `subscribed'
 ChannelChannel is transmitting the subscription confirmation
 ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvNA
+Started GET "/users" for 127.0.0.1 at 2020-04-14 19:41:27 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 9.0ms | ActiveRecord: 7.3ms | Allocations: 2132)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 19:42:44 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (1.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 1.1ms | Allocations: 870)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-14 19:42:46 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-14 19:42:46 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 19:42:46 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 1.5ms | Allocations: 1740)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 19:42:46 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.9ms | Allocations: 2132)
+
+
+  [1m[36mChannel Load (18.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvNA
+Started POST "/login" for 127.0.0.1 at 2020-04-14 20:11:26 -0400
+  [1m[35m (9.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (22.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 503ms (Views: 1.5ms | ActiveRecord: 78.5ms | Allocations: 8726)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 20:11:28 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 2171)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-14 20:32:02 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (59.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 230ms (Views: 16.1ms | ActiveRecord: 201.2ms | Allocations: 4140)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-14 20:32:06 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-14 20:32:06 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-14 20:32:06 -0400
+Started GET "/users" for 127.0.0.1 at 2020-04-14 20:32:06 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (26.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Processing by UsersController#index as HTML
+Completed 200 OK in 65ms (Views: 17.7ms | ActiveRecord: 38.4ms | Allocations: 8490)
+
+
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 28ms (Views: 11.8ms | ActiveRecord: 16.3ms | Allocations: 6698)
+
+
+  [1m[36mChannel Load (25.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvNA
+Started POST "/login" for 127.0.0.1 at 2020-04-14 21:37:33 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (34.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 442ms (Views: 4.9ms | ActiveRecord: 34.6ms | Allocations: 1012)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 21:37:34 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.6ms | Allocations: 2152)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 21:43:39 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 16.6ms | ActiveRecord: 1.2ms | Allocations: 2214)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 21:44:02 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 19.0ms | ActiveRecord: 1.3ms | Allocations: 2134)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 21:44:47 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 112ms (Views: 102.0ms | ActiveRecord: 3.3ms | Allocations: 2136)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 21:46:35 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 34ms (Views: 27.8ms | ActiveRecord: 1.8ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 21:48:44 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 24.5ms | ActiveRecord: 1.0ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 21:57:37 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 15.0ms | ActiveRecord: 3.6ms | Allocations: 2214)
+
+
+Started PATCH "/users/undefined" for 127.0.0.1 at 2020-04-14 21:58:43 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>"40.7916", "longitude"=>"-73.884365", "id"=>"undefined", "user"=>{"latitude"=>"40.7916", "longitude"=>"-73.884365"}}
+Started GET "/users" for 127.0.0.1 at 2020-04-14 21:58:43 -0400
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+Completed 404 Not Found in 55ms (ActiveRecord: 7.3ms | Allocations: 1156)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:30:in `update'
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 37ms (Views: 23.5ms | ActiveRecord: 4.7ms | Allocations: 2222)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:00:46 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 28ms (Views: 20.3ms | ActiveRecord: 1.6ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:02:44 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.4ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-14 22:03:20 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"ohcanada", "password"=>"[FILTERED]", "auth"=>{"userName"=>"ohcanada", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "ohcanada"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 394ms (Views: 2.1ms | ActiveRecord: 6.8ms | Allocations: 924)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:03:21 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.9ms | Allocations: 2133)
+
+
+Started PATCH "/users/undefined" for 127.0.0.1 at 2020-04-14 22:03:34 -0400
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:03:34 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"latitude"=>40.7916, "longitude"=>-73.884365, "id"=>"undefined", "user"=>{"latitude"=>40.7916, "longitude"=>-73.884365}}
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+Completed 404 Not Found in 5ms (ActiveRecord: 1.5ms | Allocations: 1037)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:30:in `update'
+  [1m[36mUser Load (44.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 56ms (Views: 10.7ms | ActiveRecord: 44.8ms | Allocations: 29276)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:06:10 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 21.2ms | ActiveRecord: 1.0ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-14 22:06:42 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"oculus", "password"=>"[FILTERED]", "auth"=>{"userName"=>"oculus", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "oculus"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 417ms (Views: 3.2ms | ActiveRecord: 4.0ms | Allocations: 897)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:06:43 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.8ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:07:55 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 1.2ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:08:20 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.9ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:09:08 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.8ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:10:27 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 21.5ms | ActiveRecord: 2.2ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:12:00 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 17.7ms | ActiveRecord: 1.5ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-14 22:13:49 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 485ms (Views: 3.6ms | ActiveRecord: 4.8ms | Allocations: 896)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:13:50 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.6ms | Allocations: 2132)
+
+
+Started GET "/avatars" for 127.0.0.1 at 2020-04-14 22:14:08 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (25.3ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 318ms (Views: 53.5ms | ActiveRecord: 254.1ms | Allocations: 6648)
+
+
+Started PATCH "/users/3" for 127.0.0.1 at 2020-04-14 22:14:57 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"userName"=>"lolconscious", "fullName"=>"Sigmund Freud", "avatar"=>"https://s3.thcdn.com/productimg/300/300/12275524-1014730580388842.png", "id"=>"3", "user"=>{"fullName"=>"Sigmund Freud", "userName"=>"lolconscious", "avatar"=>"https://s3.thcdn.com/productimg/300/300/12275524-1014730580388842.png"}}
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[35m (13.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Exists? (23.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."userName") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["userName", "lolconscious"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Update (44.5ms)[0m  [1m[33mUPDATE "users" SET "avatar" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["avatar", "https://s3.thcdn.com/productimg/300/300/12275524-1014730580388842.png"], ["updated_at", "2020-04-15 02:14:57.767793"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[35m (29.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+Completed 200 OK in 384ms (Views: 1.5ms | ActiveRecord: 172.8ms | Allocations: 4511)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:14:58 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 2133)
+
+
+Started GET "/avatars" for 127.0.0.1 at 2020-04-14 22:16:59 -0400
+Processing by AvatarsController#index as HTML
+  [1m[36mAvatar Load (188.9ms)[0m  [1m[34mSELECT "avatars".* FROM "avatars"[0m
+  ↳ app/controllers/avatars_controller.rb:4:in `index'
+Completed 200 OK in 277ms (Views: 80.6ms | ActiveRecord: 188.9ms | Allocations: 3369)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:27:29 -0400
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:27:29 -0400
+Processing by UsersController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (153.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mUser Load (153.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 180ms (Views: 26.5ms | ActiveRecord: 153.2ms | Allocations: 4359)
+
+
+Completed 200 OK in 182ms (Views: 23.6ms | ActiveRecord: 153.5ms | Allocations: 2775)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:28:04 -0400
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:28:04 -0400
+Processing by UsersController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 38ms (Views: 27.7ms | ActiveRecord: 5.2ms | Allocations: 2564)
+
+
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 43ms (Views: 40.5ms | ActiveRecord: 2.2ms | Allocations: 4404)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:28:13 -0400
+Processing by UsersController#index as HTML
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:28:13 -0400
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 55ms (Views: 43.8ms | ActiveRecord: 2.2ms | Allocations: 2402)
+
+
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 1.5ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:28:17 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.8ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-14 22:28:17 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 2.4ms | Allocations: 2132)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-15 09:19:39 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (26.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 62ms (Views: 30.1ms | ActiveRecord: 26.9ms | Allocations: 928)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 09:52:34 -0400
+  [1m[35m (16.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"ohcanada", "password"=>"[FILTERED]", "auth"=>{"userName"=>"ohcanada", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (40.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "ohcanada"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 764ms (Views: 20.3ms | ActiveRecord: 153.4ms | Allocations: 8467)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 09:53:01 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"ohcanada", "password"=>"[FILTERED]", "auth"=>{"userName"=>"ohcanada", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "ohcanada"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 815ms (Views: 12.0ms | ActiveRecord: 1.9ms | Allocations: 936)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 09:53:03 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 1.3ms | Allocations: 2171)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-15 09:53:24 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (36.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 90ms (Views: 15.5ms | ActiveRecord: 57.5ms | Allocations: 4032)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-15 09:53:27 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-15 09:53:27 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-15 09:53:27 -0400
+Processing by MessagesController#index as HTML
+Started GET "/users" for 127.0.0.1 at 2020-04-15 09:53:27 -0400
+  [1m[36mMessage Load (26.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 84ms (Views: 16.1ms | ActiveRecord: 48.5ms | Allocations: 8461)
+
+
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 10.8ms | ActiveRecord: 5.9ms | Allocations: 2214)
+
+
+  [1m[36mChannel Load (13.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvNA
+Started POST "/messages" for 127.0.0.1 at 2020-04-15 09:54:22 -0400
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"this is just a test", "channel_id"=>4, "user_id"=>4, "message"=>{"content"=>"this is just a test", "channel_id"=>4, "user_id"=>4}}
+  [1m[35m (15.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[36mChannel Load (3.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[36mUser Load (23.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[36mMessage Create (64.5ms)[0m  [1m[32mINSERT INTO "messages" ("content", "channel_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "this is just a test"], ["channel_id", 4], ["user_id", 4], ["created_at", "2020-04-15 13:54:23.249633"], ["updated_at", "2020-04-15 13:54:23.249633"]]
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+  [1m[35m (26.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:16:in `create'
+Completed 200 OK in 315ms (Views: 2.2ms | ActiveRecord: 133.4ms | Allocations: 7563)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-15 09:54:33 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-15 09:54:33 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-15 09:54:34 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (18.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 4.3ms | ActiveRecord: 18.0ms | Allocations: 1852)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 09:54:34 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.7ms | Allocations: 2132)
+
+
+  [1m[36mChannel Load (13.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvNA
+Started POST "/channels" for 127.0.0.1 at 2020-04-15 09:54:46 -0400
+Processing by ChannelsController#create as JSON
+  Parameters: {"name"=>"newchatt", "channel"=>{"name"=>"newchatt"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[36mChannel Create (5.1ms)[0m  [1m[32mINSERT INTO "channels" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "newchatt"], ["created_at", "2020-04-15 13:54:46.302030"], ["updated_at", "2020-04-15 13:54:46.302030"]]
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/channels_controller.rb:10:in `create'
+Completed 200 OK in 38ms (Views: 3.7ms | ActiveRecord: 7.3ms | Allocations: 2338)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-15 09:54:49 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-15 09:54:49 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-15 09:54:49 -0400
+Processing by MessagesController#index as HTML
+Started GET "/users" for 127.0.0.1 at 2020-04-15 09:54:49 -0400
+  [1m[36mMessage Load (1.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.9ms | Allocations: 2007)
+
+
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.8ms | Allocations: 2132)
+
+
+  [1m[36mChannel Load (4.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvNQ
+Started GET "/cable" for 127.0.0.1 at 2020-04-15 09:54:56 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-15 09:54:56 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/users" for 127.0.0.1 at 2020-04-15 09:54:56 -0400
+Started GET "/messages" for 127.0.0.1 at 2020-04-15 09:54:56 -0400
+Processing by MessagesController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 2.6ms | Allocations: 2132)
+
+
+  [1m[36mMessage Load (13.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 7.4ms | ActiveRecord: 13.9ms | Allocations: 4205)
+
+
+  [1m[36mChannel Load (1.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvNA
+Started POST "/login" for 127.0.0.1 at 2020-04-15 09:55:25 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"lolconscious", "password"=>"[FILTERED]", "auth"=>{"userName"=>"lolconscious", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "lolconscious"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 475ms (Views: 1.4ms | ActiveRecord: 0.7ms | Allocations: 899)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 09:55:26 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 3.7ms | Allocations: 2151)
+
+
+Started GET "/channels" for 127.0.0.1 at 2020-04-15 09:55:35 -0400
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (1.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ app/controllers/channels_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 1.3ms | Allocations: 971)
+
+
+Started GET "/cable" for 127.0.0.1 at 2020-04-15 09:55:44 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2020-04-15 09:55:44 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/messages" for 127.0.0.1 at 2020-04-15 09:55:45 -0400
+Processing by MessagesController#index as HTML
+Started GET "/users" for 127.0.0.1 at 2020-04-15 09:55:45 -0400
+  [1m[36mMessage Load (32.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 43ms (Views: 10.2ms | ActiveRecord: 32.0ms | Allocations: 2135)
+
+
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 1.3ms | Allocations: 2132)
+
+
+  [1m[36mChannel Load (476.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:4:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vcXVlc3QtZ3BzL0NoYW5uZWwvNA
+Started GET "/users" for 127.0.0.1 at 2020-04-15 09:58:20 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (13.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 44ms (Views: 22.9ms | ActiveRecord: 13.7ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 09:59:00 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (16.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 82ms (Views: 60.5ms | ActiveRecord: 16.0ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 10:00:46 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (20.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 583ms (Views: 548.6ms | ActiveRecord: 20.7ms | Allocations: 2141)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 10:01:25 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 48ms (Views: 37.6ms | ActiveRecord: 2.4ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 10:03:11 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 34ms (Views: 23.7ms | ActiveRecord: 5.0ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 10:03:33 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 12.1ms | ActiveRecord: 2.4ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 10:04:04 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 44ms (Views: 34.1ms | ActiveRecord: 4.1ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 10:05:18 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (71.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 109ms (Views: 24.3ms | ActiveRecord: 71.6ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 10:17:31 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"aircrib", "password"=>"[FILTERED]", "auth"=>{"userName"=>"aircrib", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (17.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "aircrib"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 532ms (Views: 6.2ms | ActiveRecord: 18.6ms | Allocations: 1002)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 10:17:33 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.9ms | Allocations: 2134)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 10:19:10 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 39ms (Views: 20.8ms | ActiveRecord: 1.5ms | Allocations: 2132)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 10:22:19 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 47ms (Views: 38.7ms | ActiveRecord: 3.1ms | Allocations: 2132)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 10:46:07 -0400
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"ohcanada", "password"=>"[FILTERED]", "auth"=>{"userName"=>"ohcanada", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (20.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "ohcanada"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 461ms (Views: 2.2ms | ActiveRecord: 83.3ms | Allocations: 8727)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 10:46:09 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.9ms | Allocations: 2171)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 10:47:28 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 16.2ms | ActiveRecord: 1.5ms | Allocations: 2152)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 10:54:25 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"oculus", "password"=>"[FILTERED]", "auth"=>{"userName"=>"oculus", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (31.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "oculus"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 416ms (Views: 4.9ms | ActiveRecord: 31.7ms | Allocations: 1013)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 10:54:26 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 11.7ms | ActiveRecord: 0.7ms | Allocations: 2155)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-04-15 11:11:47 -0400
+Processing by AuthController#login as JSON
+  Parameters: {"userName"=>"oculus", "password"=>"[FILTERED]", "auth"=>{"userName"=>"oculus", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (23.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."userName" = $1 LIMIT $2[0m  [["userName", "oculus"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4:in `login'
+Completed 200 OK in 457ms (Views: 11.2ms | ActiveRecord: 27.4ms | Allocations: 1003)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 11:11:48 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.5ms | Allocations: 2135)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-04-15 11:12:28 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 37ms (Views: 25.1ms | ActiveRecord: 4.4ms | Allocations: 2135)
+
+

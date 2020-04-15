@@ -19,28 +19,33 @@ componentDidMount(){
 findMe = () => {
     const granted = PermissionsAndroid.check( PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION );
         if (granted) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => { console.log(JSON.stringify(position))
-                    let lat = JSON.stringify(position.coords.latitude)
-                    let lng = JSON.stringify(position.coords.longitude)
-                        fetch(`http://10.0.2.2:3000/users/${this.props.id}`, {
-                            method: 'PATCH',
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'Accept': 'application/json'
-                            },
-                            body: JSON.stringify({
-                                latitude: lat,
-                                longitude: lng
-                             })
-                        })
-                        .then(fetch('http://10.0.2.2:3000/users').then(resp => resp.json())
-                            .then(allUsers => this.setState({allUsers})))
-                                .then(this.moveMap(lat, lng))
-                }, { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 } )
+            navigator.geolocation.getCurrentPosition( this.success , this.error , { enableHighAccuracy: false, timeout: 20000, maximumAge: 10000 } )
         } else {
             console.log( "ACCESS_FINE_LOCATION permission denied" )
         }
+}
+
+success = (position) => {
+    let lat = JSON.stringify(position.coords.latitude)
+    let lng = JSON.stringify(position.coords.longitude)
+        fetch(`http://10.0.2.2:3000/users/${this.props.id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                latitude: lat,
+                longitude: lng
+            })
+        })
+        .then(fetch('http://10.0.2.2:3000/users').then(resp => resp.json())
+            .then(allUsers => this.setState({allUsers})))
+            .then(this.moveMap(lat, lng))
+}
+
+error = (err) => {
+    console.log(`ERROR(${err.code}): ${err.message}`)
 }
 
 moveMap = (lat, lng) => {
