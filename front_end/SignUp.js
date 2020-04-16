@@ -44,8 +44,8 @@ render(){
         <Text style={styles.theTitle}>LinkUp</Text>
             <View style={styles.signupForm}>
                 <TextInput style={styles.inputText} placeholder="username" value={this.state.username} name="username" onChangeText={username => {this.setState({username})}}/>
-                <TextInput style={styles.inputText} placeholder="password" value={this.state.password} name="password" onChangeText={password => {this.setState({password})}}/>
-                <TextInput style={styles.inputText} placeholder="confirm password" value={this.state.passwordConfirmation} name="passwordConfirmation" onChangeText={passwordConfirmation => {this.setState({passwordConfirmation})}}/>
+                <TextInput style={styles.inputText} secureTextEntry={true} placeholder="password" value={this.state.password} name="password" onChangeText={password => {this.setState({password})}}/>
+                <TextInput style={styles.inputText} secureTextEntry={true} placeholder="confirm password" value={this.state.passwordConfirmation} name="passwordConfirmation" onChangeText={passwordConfirmation => {this.setState({passwordConfirmation})}}/>
                 <Button title="register" onPress={this.handleSubmit} />
             </View>
         </ImageBackground>

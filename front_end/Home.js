@@ -39,6 +39,16 @@ success = (position) => {
                 longitude: lng
             })
         }).then(this.moveMap(lat, lng))
+//            .then(resp => resp.json()).then(updateUser => {
+//                let newUsers = this.state.allUsers.map(user => {
+//                   if (user.id === updateUser.id) {
+//                       return updateUser
+//                   } else {
+//                       return user
+//                   }
+//                })
+//            this.setState({allUsers: newUsers})
+//            })
 }
 
 error = (err) => {
@@ -49,10 +59,12 @@ moveMap = (lat, lng) => {
     let r = {
         latitude: lat,
         longitude: lng,
-        latitudeDelta: 0.008,
-        longitudeDelta: 0.003,
+        latitudeDelta: 0.006,
+        longitudeDelta: 0.001,
     };
+    setTimeout(() => {  console.log("waiting!"); }, 10000);
     this.map.animateToRegion(r, 1000)
+    this.resetCurrentUser()
 }
 
 resetCurrentUser = () => {
@@ -60,6 +72,7 @@ resetCurrentUser = () => {
 }
 
 render() {
+console.log(this.props.currentUser)
     return (
         <View style={styles.container}>
 

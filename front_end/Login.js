@@ -39,7 +39,7 @@ render() {
             <Text style={styles.theTitle}>LinkUp</Text>
             <View style={styles.loginForm}>
             <TextInput style={styles.inputText} placeholder="username" value={this.state.username} name="username" onChangeText={username => {this.setState({username})}}/>
-            <TextInput style={styles.inputText} placeholder="password" value={this.state.password} name="password" onChangeText={password => {this.setState({password})}}/>
+            <TextInput style={styles.inputText} secureTextEntry={true} placeholder="password" value={this.state.password} name="password" onChangeText={password => {this.setState({password})}}/>
             <Button title="Login" onPress={this.handleLogIn} />
                 <Text style={styles.newAccLine} >Dont have an account? </Text>
                 <Button title="Sign Up" onPress={() => {Actions.signup()}} />
