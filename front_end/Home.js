@@ -11,7 +11,7 @@ state = {
 }
 
 componentDidMount(){
-    fetch('http://10.0.2.2:3000/users')
+    fetch('http://localhost:3000/users')
         .then(resp => resp.json())
         .then(allUsers => this.setState({allUsers}))
 }
@@ -26,9 +26,9 @@ findMe = () => {
 }
 
 success = (position) => {
-    let lat = parseFloat(JSON.stringify(position.coords.latitude))
-    let lng = parseFloat(JSON.stringify(position.coords.longitude))
-        fetch(`http://10.0.2.2:3000/users/${this.props.currentUser.id}`, {
+    const lat = parseFloat(JSON.stringify(position.coords.latitude))
+    const lng = parseFloat(JSON.stringify(position.coords.longitude))
+        fetch(`http://127.0.0.1:3000/users/${this.props.currentUser.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -39,16 +39,6 @@ success = (position) => {
                 longitude: lng
             })
         }).then(this.moveMap(lat, lng))
-//            .then(resp => resp.json()).then(updateUser => {
-//                let newUsers = this.state.allUsers.map(user => {
-//                   if (user.id === updateUser.id) {
-//                       return updateUser
-//                   } else {
-//                       return user
-//                   }
-//                })
-//            this.setState({allUsers: newUsers})
-//            })
 }
 
 error = (err) => {

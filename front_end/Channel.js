@@ -11,7 +11,7 @@ state = {
 }
 
 componentDidMount() {
-    fetch('http://10.0.2.2:3000/channels')
+    fetch('http://127.0.0.1:3000/channels')
         .then(resp => resp.json())
         .then(chatRooms => this.setState({chatRooms}))
 }
@@ -25,7 +25,7 @@ renderMessage = (message) => {
 }
 
 newChatSubmit = () => {
-    fetch('http://10.0.2.2:3000/channels', {
+    fetch('http://127.0.0.1:3000/channels', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -42,16 +42,16 @@ joinChatRoom = (room) => {
 }
 
 deleteChatRoom = (room) => {
-    fetch(`http://10.0.2.2:3000/channels/${room.id}`, {
+    fetch(`http://127.0.0.1:3000/channels/${room.id}`, {
             method: 'DELETE'
         })
-    fetch('http://10.0.2.2:3000/channels')
+    fetch('http://127.0.0.1:3000/channels')
         .then(resp => resp.json())
         .then(chatRooms => this.setState({chatRooms}))
 }
 
 createChannelWebsocketConnection = channelId => {
-    let socket = new WebSocket('ws://10.0.2.2:3000/cable')
+    let socket = new WebSocket('ws://127.0.0.1:3000/cable')
 
     socket.onopen = function(event) {
         console.log('WebSocket is connected.');

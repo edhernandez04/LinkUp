@@ -12,12 +12,12 @@ state = {
 }
 
 componentDidMount() {
-    fetch('http://10.0.2.2:3000/messages')
+    fetch('http://127.0.0.1:3000/messages')
         .then(resp => resp.json())
         .then(allMessages => this.setState({allMessages}))
         .then(() => this.setChat())
 
-    fetch('http://10.0.2.2:3000/users')
+    fetch('http://127.0.0.1:3000/users')
         .then(resp => resp.json())
         .then(allUsers => this.setState({allUsers}))
 }
@@ -37,7 +37,7 @@ findUser = (message) => {
 }
 
 newMessage = () => {
-    fetch('http://10.0.2.2:3000/messages', {
+    fetch('http://127.0.0.1:3000/messages', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

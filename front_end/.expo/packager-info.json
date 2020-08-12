@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19003,
-  "packagerPid": 2291,
-  "expoServerNgrokUrl": "https://8t-jtd.anonymous.front-end.exp.direct",
-  "packagerNgrokUrl": "https://packager.8t-jtd.anonymous.front-end.exp.direct",
-  "ngrokPid": 2309,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null
 }

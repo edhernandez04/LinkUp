@@ -11,7 +11,7 @@ state = {
 
 handleSubmit = () => {
     if (this.state.password === this.state.passwordConfirmation){
-        fetch('http://10.0.2.2:3000/signup', {
+        fetch('http://127.0.0.1:3000/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
